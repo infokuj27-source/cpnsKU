@@ -676,9 +676,19 @@ body.dark .nav-menu a{
 
     overflow:hidden;
 
+    background:linear-gradient(
+        -45deg,
+        #2563eb,
+        #3b82f6,
+        #06b6d4,
+        #38bdf8
+    );
+
+    background-size:400% 400%;
+
+    animation:gradientMove 15s ease infinite;
+
 }
-
-
 
 /* Background Glow */
 
@@ -2365,9 +2375,29 @@ footer{
         transform:translateY(0);
 
     }
-
 }
 
+   @keyframes gradientMove{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    50%{
+
+        background-position:100% 50%;
+
+    }
+
+    100%{
+
+        background-position:0% 50%;
+
+    }
+
+}
 
 /* ==========================================================
    RESPONSIVE PREVIEW
