@@ -150,7 +150,43 @@ section{
 
 }
 
+/* ==========================================
+   THEME BUTTON
+========================================== */
 
+.theme-btn{
+
+    width:46px;
+
+    height:46px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:18px;
+
+    transition:.35s;
+
+}
+
+.theme-btn:hover{
+
+    transform:rotate(180deg) scale(1.08);
+
+}
 
 /* ==========================================================
    SCROLLBAR
