@@ -1903,22 +1903,6 @@ body.dark .info-card{
 
 }
 
-.countdown-container{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    flex-wrap:wrap;
-
-    gap:30px;
-
-    margin-top:50px;
-
-}
-
 .countdown::before{
 
     content:"";
