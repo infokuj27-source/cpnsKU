@@ -1887,19 +1887,19 @@ body.dark .info-card{
 
 .countdown{
 
-    position:relative;
+position:relative;
 
-    padding:120px 8%;
+padding:120px 8%;
 
-    background:linear-gradient(
-        135deg,
-        #0f172a,
-        #1e3a8a
-    );
+background:linear-gradient(
+    135deg,
+    #0f172a,
+    #1e3a8a
+);
 
-    color:#fff;
+color:#fff;
 
-    overflow:hidden;
+overflow:hidden;
 
 }
 
