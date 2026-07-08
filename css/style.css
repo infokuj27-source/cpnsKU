@@ -12,6 +12,44 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+/* ==========================================
+   MENU BUTTON
+========================================== */
+
+.menu-btn{
+
+display:none;
+
+width:46px;
+
+height:46px;
+
+border:none;
+
+border-radius:50%;
+
+cursor:pointer;
+
+background:var(--primary);
+
+color:#fff;
+
+font-size:20px;
+
+align-items:center;
+
+justify-content:center;
+
+transition:.3s;
+
+}
+
+.menu-btn:hover{
+
+transform:rotate(90deg);
+
+}
+
 
 /* ==========================================================
    ROOT COLOR
