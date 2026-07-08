@@ -461,6 +461,9 @@ img{
 
 
 
+
+
+
 section{
 
     padding:90px 8%;
@@ -741,11 +744,7 @@ left:100%;
    SECTION
 ========================================================== */
 
-.section{
-
-    position:relative;
-   scroll-margin-top:120px;
-}
+.section{ position:relative; scroll-margin-top:120px; padding:100px 0; }
 
 
 
