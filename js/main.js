@@ -12,6 +12,7 @@ import { initDarkMode } from "./darkmode.js";
 import { initMobileMenu } from "./mobile-menu.js";
 import { initScroll } from "./scroll.js";
 import { initSearch } from "./search.js";
+import { initCountdown } from "./countdown.js";
 
 // Nanti akan ditambah modul lain
 // import { initNavbar } from "./navbar.js";
@@ -32,4 +33,5 @@ document.addEventListener("DOMContentLoaded", () => {
     initMobileMenu();
     initScroll();
     initSearch();
+    initCountdown();
 });
