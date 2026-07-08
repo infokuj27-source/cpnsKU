@@ -768,10 +768,12 @@ left:100%;
     box-shadow:var(--shadow);
 
     transition:var(--transition);
+   transform:translateX(-100px);
 
+   position:relative;
+   margin-left:-50px;
+    overflow:hidden;
 }
-
-
 
 .card:hover{
 
@@ -1171,11 +1173,9 @@ padding:90px 0;
 }
 
 .container{
-
-width:min(92%,1300px);
-
-margin:auto;
-
+    max-width:1300px;
+    width:92%;
+    margin:auto;
 }
 
 /* Left */
@@ -1578,14 +1578,6 @@ body.dark .search-box{
 /* ==========================================================
    MATERIAL & SOAL CARD
 ========================================================== */
-
-.card{
-
-    position:relative;
-
-    overflow:hidden;
-
-}
 
 .card::after{
 
