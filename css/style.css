@@ -531,6 +531,28 @@ transition:.4s;
 
 }
 
+/* ==========================================
+   NAVBAR SCROLLED
+========================================== */
+
+.navbar.scrolled{
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(25px);
+
+    -webkit-backdrop-filter:blur(25px);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+body.dark .navbar.scrolled{
+
+    background:rgba(15,23,42,.88);
+
+}
+
 body.dark .navbar{
 
     background:rgba(15,23,42,.85);
