@@ -65,20 +65,23 @@
 
 .search-box > i{
 
-    position:absolute;
+position:absolute;
 
-    left:22px;
+left:25px;
 
-    top:50%;
+top:50%;
 
-    transform:translateY(-50%);
+transform:translateY(-50%);
 
-    color:var(--primary);
+font-size:20px;
 
-    font-size:20px;
+pointer-events:none;
+
+z-index:2;
+padding-left:65px;
+color:var(--primary);
 
 }
-
 /* ==========================================
    CLEAR BUTTON
 ========================================== */
@@ -274,6 +277,17 @@ body.dark .clear-search{
     background:#334155;
 
     color:#fff;
+
+}
+body.dark .search-section .section-title h2{
+
+    color:#ffffff;
+
+}
+
+body.dark .search-section .section-title p{
+
+    color:#cbd5e1;
 
 }
 
@@ -1056,11 +1070,14 @@ body.dark .nav-menu a{
 
     grid-template-columns:repeat(2,1fr);
 
+
+     text-align:center;
+
     align-items:center;
 
     gap:70px;
 
-    padding-top:130px;
+    padding-top:120px;
 
     position:relative;
 
@@ -2809,12 +2826,6 @@ opacity:.15;
 ========================================================== */
 
 @media(max-width:992px){
-
-    .hero{
-
-        grid-template-columns:1fr;
-
-        text-align:center;
 
     }
 
