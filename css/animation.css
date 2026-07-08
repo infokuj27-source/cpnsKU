@@ -1,1 +1,401 @@
+/* ==========================================================
+   ANIMATION.CSS
+   Premium Animation Library
+========================================================== */
 
+/* ==========================================
+   TRANSITION
+========================================== */
+
+*{
+
+    transition:
+        background .35s,
+        color .35s,
+        box-shadow .35s,
+        transform .35s;
+
+}
+
+/* ==========================================
+   FADE UP
+========================================== */
+
+.fade-up{
+
+    animation:fadeUp .9s ease forwards;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   FADE LEFT
+========================================== */
+
+.fade-left{
+
+    animation:fadeLeft .8s ease forwards;
+
+}
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ==========================================
+   FADE RIGHT
+========================================== */
+
+.fade-right{
+
+    animation:fadeRight .8s ease forwards;
+
+}
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ==========================================
+   FLOATING
+========================================== */
+
+.float{
+
+    animation:floating 5s ease-in-out infinite;
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Hero Image */
+
+.hero-right img{
+
+    animation:floating 5s ease infinite;
+
+}
+
+/* ==========================================
+   BUTTON SHINE
+========================================== */
+
+.btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-120%;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    rgba(255,255,255,.45),
+
+    transparent);
+
+}
+
+.btn:hover::before{
+
+    animation:shine .9s;
+
+}
+
+@keyframes shine{
+
+0%{
+
+left:-120%;
+
+}
+
+100%{
+
+left:120%;
+
+}
+
+}
+
+/* ==========================================
+   CARD HOVER
+========================================== */
+
+.card{
+
+    transform-style:preserve-3d;
+
+}
+
+.card:hover{
+
+    transform:
+
+    perspective(1000px)
+
+    rotateX(5deg)
+
+    rotateY(-5deg)
+
+    translateY(-12px);
+
+}
+
+.card i{
+
+    transition:.6s;
+
+}
+
+.card:hover i{
+
+    transform:
+
+    rotate(360deg)
+
+    scale(1.1);
+
+}
+
+/* ==========================================
+   LOADER
+========================================== */
+
+.spinner{
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* ==========================================
+   STATISTICS
+========================================== */
+
+.stat-card:hover{
+
+    transform:
+
+    translateY(-12px)
+
+    scale(1.05);
+
+}
+
+/* ==========================================
+   PULSE
+========================================== */
+
+.pulse{
+
+animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+box-shadow:0 0 0 0 rgba(37,99,235,.5);
+
+}
+
+70%{
+
+box-shadow:0 0 0 18px rgba(37,99,235,0);
+
+}
+
+100%{
+
+box-shadow:0 0 0 0 rgba(37,99,235,0);
+
+}
+
+}
+
+/* ==========================================
+   BOUNCE
+========================================== */
+
+.bounce{
+
+animation:bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}
+
+/* ==========================================
+   GLOW
+========================================== */
+
+.glow:hover{
+
+box-shadow:
+
+0 0 25px rgba(37,99,235,.35);
+
+}
+/* ==========================================
+   GRADIENT
+========================================== */
+
+.gradient{
+
+background:
+
+linear-gradient(
+
+-45deg,
+
+#2563eb,
+
+#3b82f6,
+
+#06b6d4,
+
+#38bdf8);
+
+background-size:400%;
+
+animation:gradientMove 15s ease infinite;
+
+}
+
+@keyframes gradientMove{
+
+0%{
+
+background-position:0% 50%;
+
+}
+
+50%{
+
+background-position:100% 50%;
+
+}
+
+100%{
+
+background-position:0% 50%;
+
+}
+
+}
