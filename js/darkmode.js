@@ -10,7 +10,7 @@
 export function initDarkMode() {
 
     // Ambil tombol dark mode
-    const toggle = document.getElementById("themeToggle");
+   const toggle = document.getElementById("darkMode");
 
     // Jika tombol tidak ada, hentikan
     if (!toggle) return;
