@@ -1,35 +1,40 @@
 /**
- * ==========================================
- * Loader Module
- * ==========================================
+ * ==========================================================
+ * File      : loader.js
+ * Module    : Loader
+ * Project   : CPNS Learning Center
+ * Version   : 1.0.0
+ * ==========================================================
  */
 
-function initLoader() {
+export function initLoader() {
 
+    // Ambil elemen loader
     const loader = document.getElementById("loader");
 
-    if (!loader) {
-        return;
-    }
+    // Jika loader tidak ada, hentikan fungsi
+    if (!loader) return;
 
+    // Konfigurasi
+    const LOADER_DELAY = 800;
+    const FADE_DURATION = 600;
+
+    // Hilangkan loader setelah halaman selesai dimuat
     window.addEventListener("load", () => {
 
         setTimeout(() => {
 
             loader.style.opacity = "0";
-
             loader.style.pointerEvents = "none";
 
             setTimeout(() => {
 
                 loader.remove();
 
-            },600);
+            }, FADE_DURATION);
 
-        },800);
+        }, LOADER_DELAY);
 
     });
 
 }
-
-initLoader();
