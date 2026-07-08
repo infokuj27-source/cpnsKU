@@ -12,150 +12,184 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+
 /* ==========================================
-   SEARCH
+   SEARCH SECTION
 ========================================== */
 
 .search-section{
 
-padding:90px 0;
+    padding:90px 0;
 
-background:var(--bg-light);
+    background:var(--bg-light);
 
 }
 
 .search-box{
 
-position:relative;
+    position:relative;
 
-max-width:700px;
+    max-width:700px;
 
-margin:40px auto;
+    margin:40px auto;
 
 }
 
 .search-box input{
 
-width:100%;
+    width:100%;
 
-padding:18px 60px 18px 55px;
+    padding:18px 60px 18px 55px;
 
-font-size:17px;
+    border:none;
 
-border:none;
+    outline:none;
 
-outline:none;
+    border-radius:50px;
 
-border-radius:50px;
+    font-size:17px;
 
-background:#fff;
+    background:#fff;
 
-box-shadow:0 15px 40px rgba(0,0,0,.08);
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
 
-transition:.35s;
+    transition:.35s;
 
 }
 
 .search-box input:focus{
 
-box-shadow:0 20px 45px rgba(37,99,235,.25);
+    box-shadow:0 20px 45px rgba(37,99,235,.25);
 
 }
 
-.search-box i{
+.search-box > i{
 
-position:absolute;
+    position:absolute;
 
-left:22px;
+    left:22px;
 
-top:50%;
+    top:50%;
 
-transform:translateY(-50%);
+    transform:translateY(-50%);
 
-color:var(--primary);
+    color:var(--primary);
 
-font-size:20px;
+    font-size:20px;
 
 }
+
+/* ==========================================
+   CLEAR BUTTON
+========================================== */
+
 .clear-search{
 
-position:absolute;
+    position:absolute;
 
-right:15px;
+    right:15px;
 
-top:50%;
+    top:50%;
 
-transform:translateY(-50%);
+    transform:translateY(-50%);
 
-width:36px;
+    width:38px;
 
-height:36px;
+    height:38px;
 
-border:none;
+    border:none;
 
-border-radius:50%;
+    border-radius:50%;
 
-cursor:pointer;
+    background:#f3f4f6;
 
-background:#f3f4f6;
+    cursor:pointer;
 
-display:none;
+    display:none;
 
-transition:.3s;
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.3s;
 
 }
 
 .clear-search:hover{
 
-background:var(--primary);
+    background:var(--primary);
 
-color:#fff;
+    color:#fff;
 
 }
+
+/* ==========================================
+   SEARCH RESULT
+========================================== */
+
 .search-result{
 
-margin-top:30px;
+    margin-top:25px;
 
-display:grid;
+    display:grid;
 
-gap:15px;
+    gap:15px;
 
 }
+
 .search-item{
 
-padding:18px;
+    background:#fff;
 
-background:#fff;
+    padding:18px;
 
-border-radius:15px;
+    border-radius:16px;
 
-cursor:pointer;
+    border-left:5px solid var(--primary);
 
-transition:.35s;
+    cursor:pointer;
 
-border-left:5px solid var(--primary);
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
 
 }
 
 .search-item:hover{
 
-transform:translateY(-5px);
+    transform:translateY(-4px);
 
-box-shadow:0 15px 35px rgba(0,0,0,.12);
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
 
 }
 
 .search-item h4{
 
-margin-bottom:6px;
+    margin-bottom:8px;
+
+    color:var(--primary);
 
 }
 
 .search-item span{
 
-font-size:14px;
+    display:inline-block;
 
-color:#666;
+    margin-bottom:8px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#666;
+
+}
+
+.search-item p{
+
+    color:#555;
+
+    line-height:1.6;
 
 }
 
@@ -165,33 +199,34 @@ color:#666;
 
 .search-highlight{
 
-animation:searchHighlight 2s;
+    animation:searchHighlight 2s;
 
 }
 
 @keyframes searchHighlight{
 
-0%{
+    0%{
 
-transform:scale(1);
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.02);
+
+        box-shadow:0 0 30px rgba(37,99,235,.45);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
 
 }
 
-50%{
-
-transform:scale(1.02);
-
-box-shadow:0 0 30px rgba(37,99,235,.45);
-
-}
-
-100%{
-
-transform:scale(1);
-
-}
-
-}
 
 /* ==========================================
    MENU BUTTON
