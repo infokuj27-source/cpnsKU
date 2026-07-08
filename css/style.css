@@ -768,10 +768,8 @@ left:100%;
     box-shadow:var(--shadow);
 
     transition:var(--transition);
-   transform:translateX(-100px);
 
    position:relative;
-   margin-left:-50px;
     overflow:hidden;
 }
 
