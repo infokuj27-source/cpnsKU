@@ -11,6 +11,7 @@ import { initNavbar } from "./navbar.js";
 import { initDarkMode } from "./darkmode.js";
 import { initMobileMenu } from "./mobile-menu.js";
 import { initScroll } from "./scroll.js";
+import { initSearch } from "./search.js";
 
 // Nanti akan ditambah modul lain
 // import { initNavbar } from "./navbar.js";
@@ -30,4 +31,5 @@ document.addEventListener("DOMContentLoaded", () => {
     initDarkMode();
     initMobileMenu();
     initScroll();
+    initSearch();
 });
