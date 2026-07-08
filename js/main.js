@@ -9,6 +9,8 @@
 import { initLoader } from "./loader.js";
 import { initNavbar } from "./navbar.js";
 import { initDarkMode } from "./darkmode.js";
+import { initMobileMenu } from "./mobile-menu.js";
+import { initScroll } from "./scroll.js";
 
 // Nanti akan ditambah modul lain
 // import { initNavbar } from "./navbar.js";
@@ -26,4 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initLoader();
     initNavbar();
     initDarkMode();
+    initMobileMenu();
+    initScroll();
 });
