@@ -7,6 +7,8 @@
  */
 
 import { initLoader } from "./loader.js";
+import { initNavbar } from "./navbar.js";
+import { initDarkMode } from "./darkmode.js";
 
 // Nanti akan ditambah modul lain
 // import { initNavbar } from "./navbar.js";
@@ -22,5 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Inisialisasi modul
     initLoader();
-
+    initNavbar();
+    initDarkMode();
 });
