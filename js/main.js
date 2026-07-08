@@ -1,41 +1,26 @@
 /**
  * ==========================================================
- * CPNS Learning Center
- * Main JavaScript Entry Point
- * ==========================================================
- * Author  : Jayade Atafani
- * Version : 1.0.0
+ * File      : main.js
+ * Project   : CPNS Learning Center
+ * Version   : 1.0.0
  * ==========================================================
  */
 
-/* ===========================
-   Import Modules
-=========================== */
+import { initLoader } from "./loader.js";
 
-import "./loader.js";
-import "./navbar.js";
-import "./mobile-menu.js";
-import "./darkmode.js";
-import "./scroll.js";
-import "./animation.js";
-import "./backtotop.js";
-import "./countdown.js";
-import "./progress.js";
-import "./counter.js";
-import "./faq.js";
-import "./quote.js";
-import "./search.js";
-
-/* ===========================
-   Website Initialization
-=========================== */
+// Nanti akan ditambah modul lain
+// import { initNavbar } from "./navbar.js";
+// import { initDarkMode } from "./darkmode.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    console.log("=======================================");
+    console.log("=====================================");
     console.log("🚀 CPNS Learning Center");
     console.log("Version : 1.0.0");
-    console.log("Status  : Ready");
-    console.log("=======================================");
+    console.log("Status  : Running");
+    console.log("=====================================");
+
+    // Inisialisasi modul
+    initLoader();
 
 });
