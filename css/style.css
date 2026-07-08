@@ -223,25 +223,6 @@ section{
 }
 
 
-
-.spinner{
-
-    width:70px;
-
-    height:70px;
-
-    border-radius:50%;
-
-    border:6px solid #ddd;
-
-    border-top:6px solid var(--primary);
-
-    animation:spin 1s linear infinite;
-
-}
-
-
-
 #loader h2{
 
     margin-top:20px;
@@ -441,12 +422,6 @@ left:100%;
 
 .card:hover{
 
-    transform:
-        perspective(1000px)
-        rotateX(5deg)
-        rotateY(-5deg)
-        translateY(-12px);
-
     box-shadow:var(--shadow-hover);
 
 }
@@ -465,17 +440,6 @@ left:100%;
 
     margin-bottom:20px;
    transition:.5s;
-
-}
-
-
-.card:hover i{
-
-transform:
-
-rotate(360deg)
-
-scale(1.1);
 
 }
 
@@ -994,16 +958,7 @@ body.dark .hero-info div{
 
     max-width:560px;
 
-    animation:floating 4s ease-in-out infinite;
-
-    filter:
-        drop-shadow(
-            0 40px 80px rgba(37,99,235,.3));
-
 }
-
-
-
 /* ==========================================================
    SEARCH BOX
 ========================================================== */
@@ -2162,16 +2117,6 @@ body.dark .statistics{
 
 }
 
-.stat-card:hover{
-
-    transform:
-        translateY(-10px)
-        scale(1.05);
-
-    box-shadow:var(--shadow-hover);
-
-}
-
 .stat-card i{
 
     font-size:50px;
@@ -2475,63 +2420,6 @@ opacity:.15;
 /* ==========================================================
    ANIMATION
 ========================================================== */
-
-@keyframes spin{
-
-    100%{
-
-        transform:rotate(360deg);
-
-    }
-
-}
-
-@keyframes floating{
-
-    0%{
-
-        transform:translateY(0);
-
-    }
-
-    50%{
-
-        transform:translateY(-20px);
-
-    }
-
-    100%{
-
-        transform:translateY(0);
-
-    }
-
-}
-
-.fade-up{
-
-    animation:fadeUp .8s ease;
-
-}
-
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(40px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-}
 
    @keyframes gradientMove{
 
