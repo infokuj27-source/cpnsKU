@@ -227,6 +227,55 @@
 
 }
 
+/* ==========================================
+   SEARCH DARK MODE
+========================================== */
+
+body.dark .search-section{
+
+    background:#0f172a;
+
+}
+
+body.dark .search-box input{
+
+    background:#1e293b;
+
+    color:#fff;
+
+}
+
+body.dark .search-box input::placeholder{
+
+    color:#94a3b8;
+
+}
+
+body.dark .search-item{
+
+    background:#1e293b;
+
+}
+
+body.dark .search-item span{
+
+    color:#cbd5e1;
+
+}
+
+body.dark .search-item p{
+
+    color:#e2e8f0;
+
+}
+
+body.dark .clear-search{
+
+    background:#334155;
+
+    color:#fff;
+
+}
 
 /* ==========================================
    MENU BUTTON
