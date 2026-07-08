@@ -13,6 +13,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 /* ==========================================
+   SEARCH
+========================================== */
+
+.search-section{
+
+padding:90px 0;
+
+background:var(--bg-light);
+
+}
+
+.search-box{
+
+position:relative;
+
+max-width:700px;
+
+margin:40px auto;
+
+}
+
+.search-box input{
+
+width:100%;
+
+padding:18px 60px 18px 55px;
+
+font-size:17px;
+
+border:none;
+
+outline:none;
+
+border-radius:50px;
+
+background:#fff;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.search-box input:focus{
+
+box-shadow:0 20px 45px rgba(37,99,235,.25);
+
+}
+
+.search-box i{
+
+position:absolute;
+
+left:22px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+color:var(--primary);
+
+font-size:20px;
+
+}
+
+
+/* ==========================================
    MENU BUTTON
 ========================================== */
 
