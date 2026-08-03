@@ -1,0 +1,278 @@
+/*==========================================
+TABLET
+==========================================*/
+
+@media (max-width:992px){
+
+    section{
+
+        padding:80px 6%;
+
+    }
+
+    .navbar{
+
+        padding:18px 6%;
+
+    }
+
+    #hero{
+
+        flex-direction:column-reverse;
+
+        text-align:center;
+
+        gap:50px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:2.8rem;
+
+    }
+
+    .hero-btn{
+
+        justify-content:center;
+
+    }
+
+    .hero-image img{
+
+        max-width:420px;
+
+    }
+
+}
+
+/*==========================================
+MOBILE MENU
+==========================================*/
+
+@media (max-width:768px){
+
+    #menuBtn{
+
+        display:block;
+
+    }
+
+    .nav-links{
+
+        position:absolute;
+
+        top:100%;
+
+        left:0;
+
+        width:100%;
+
+        background:#fff;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:0;
+
+        max-height:0;
+
+        overflow:hidden;
+
+        transition:.4s;
+
+        box-shadow:var(--shadow);
+
+    }
+
+    .nav-links.active{
+
+        max-height:400px;
+
+    }
+
+    .nav-links li{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .nav-links a{
+
+        display:block;
+
+        padding:18px;
+
+    }
+
+}
+
+
+/*==========================================
+MOBILE
+==========================================*/
+
+@media (max-width:576px){
+
+    section{
+
+        padding:70px 5%;
+
+    }
+
+    .hero-content h1{
+
+        font-size:2.1rem;
+
+    }
+
+    .hero-content p{
+
+        font-size:.95rem;
+
+    }
+
+    .hero-btn{
+
+        flex-direction:column;
+
+    }
+
+    .btn-primary,
+
+    .btn-secondary{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    #countdownBox{
+
+        gap:15px;
+
+    }
+
+    #countdownBox div{
+
+        min-width:90px;
+
+        padding:18px;
+
+    }
+
+    #countdownBox h3{
+
+        font-size:1.8rem;
+
+    }
+
+    .section-title h2{
+
+        font-size:1.8rem;
+
+    }
+
+    .card{
+
+        padding:22px;
+
+    }
+
+    .card h3{
+
+        font-size:1.1rem;
+
+    }
+
+    #quote p{
+
+        font-size:1rem;
+
+    }
+
+    footer{
+
+        padding:50px 5%;
+
+    }
+
+    .footer-link{
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    #backToTop{
+
+        width:45px;
+
+        height:45px;
+
+        right:18px;
+
+        bottom:18px;
+
+    }
+
+}
+
+/* ==============================
+   ANNOUNCEMENT
+================================= */
+
+@media(max-width:768px){
+
+    .announcement-content{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .announcement-btn{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
+
+/*==========================================
+SMALL PHONE
+==========================================*/
+
+@media (max-width:390px){
+
+    .hero-content h1{
+
+        font-size:1.8rem;
+
+    }
+
+    .hero-image img{
+
+        max-width:280px;
+
+    }
+
+    #countdownBox{
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}

@@ -1,0 +1,441 @@
+/*====================================
+ANIMATION TRANSITION
+====================================*/
+
+*{
+
+    transition:
+    background .35s ease,
+    color .35s ease,
+    transform .35s ease,
+    box-shadow .35s ease,
+    border .35s ease;
+
+}
+
+/*====================================
+CARD HOVER
+====================================*/
+
+.card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        transparent,
+        rgba(37,99,235,.08),
+        transparent
+    );
+
+    transform:translateX(-100%);
+
+    transition:.7s;
+
+}
+
+.card:hover::before{
+
+    transform:translateX(100%);
+
+}
+
+.card:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.02);
+
+}
+
+/*====================================
+BUTTON EFFECT
+====================================*/
+
+.btn-primary,
+
+.btn-secondary{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.btn-primary::before,
+
+.btn-secondary::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:40px;
+
+    height:200%;
+
+    background:rgba(255,255,255,.4);
+
+    top:-50%;
+
+    left:-100px;
+
+    transform:rotate(25deg);
+
+}
+
+.btn-primary:hover::before,
+
+.btn-secondary:hover::before{
+
+    animation:shine .8s;
+
+}
+
+/*====================================
+NAVBAR
+====================================*/
+
+.nav-links a{
+
+    position:relative;
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:3px;
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+/*====================================
+LOGO
+====================================*/
+
+.logo i{
+
+    animation:bounce 3s infinite;
+
+}
+
+/*====================================
+BACK TO TOP
+====================================*/
+
+#backToTop:hover{
+
+    animation:updown .6s infinite;
+
+}
+
+/*====================================
+IMAGE FLOAT
+====================================*/
+
+.hero-image{
+
+    animation:floating 5s ease-in-out infinite;
+
+}
+
+/*====================================
+QUOTE
+====================================*/
+
+#quote{
+
+    animation:fadeQuote 8s infinite;
+
+}
+
+/*====================================
+LOADER TEXT
+====================================*/
+
+#loader h2{
+
+    animation:pulse 1.3s infinite;
+
+}
+
+/*====================================
+COUNTDOWN
+====================================*/
+
+#countdownBox div:hover{
+
+    box-shadow:
+
+    0 15px 35px rgba(255,255,255,.25);
+
+}
+
+/*====================================
+CARD ICON
+====================================*/
+
+.card i{
+
+    transition:.4s;
+
+}
+
+.card:hover i{
+
+    transform:
+
+    rotate(-10deg)
+
+    scale(1.2);
+
+}
+
+/*====================================
+FAQ
+====================================*/
+
+.faq-item{
+
+    transition:.35s;
+
+}
+
+.faq-item:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/*====================================
+FOOTER LINK
+====================================*/
+
+.footer-link a{
+
+    position:relative;
+
+}
+
+.footer-link a::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-5px;
+
+    left:0;
+
+    width:0;
+
+    height:2px;
+
+    background:white;
+
+    transition:.3s;
+
+}
+
+.footer-link a:hover::after{
+
+    width:100%;
+
+}
+
+/*====================================
+KEYFRAME
+====================================*/
+
+@keyframes shine{
+
+    from{
+
+        left:-120px;
+
+    }
+
+    to{
+
+        left:130%;
+
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes bounce{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes updown{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-20px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeQuote{
+
+    0%{
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    85%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+.hero-image{
+
+    animation:floating 5s ease-in-out infinite;
+
+}
