@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "judul": "Drive Materi 1",
+        "deskripsi": "Kumpulan materi CPNS gratis.",
+        "icon": "fa-solid fa-folder-open",
+        "link": "https://drive.google.com/drive/folders/1Rqu1Ur-NniMXlsxx1Iieu5q6sFWPiZme",
+        "warna": "#2563eb"
+    },
+    {
+        "id": 2,
+        "judul": "Drive Materi 2",
+        "deskripsi": "Materi CPNS tambahan gratis.",
+        "icon": "fa-solid fa-book-open",
+        "link": "https://drive.google.com/drive/folders/1KknVeAZuAffhD93E0SKOyVfoBNcW9UW6?usp=sharing",
+        "warna": "#3b82f6"
+    }
+]

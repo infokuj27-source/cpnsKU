@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "nama": "Tonas SKD",
+        "status": "Gratis",
+        "icon": "fa-solid fa-pen",
+        "link": "https://tonas.simulasicat.id/tonas-skd-gratis-2024/#"
+    },
+    {
+        "id": 2,
+        "nama": "TemanCPNS",
+        "status": "Gratis",
+        "icon": "fa-solid fa-user-group",
+        "link": "https://temancpns.com/"
+    },
+    {
+        "id": 3,
+        "nama": "IDCPNS",
+        "status": "Gratis",
+        "icon": "fa-solid fa-graduation-cap",
+        "link": "https://idcpns.com/"
+    },
+    {
+        "id": 4,
+        "nama": "Tryout CASN",
+        "status": "Sebagian Gratis",
+        "icon": "fa-solid fa-medal",
+        "link": "https://www.tryoutcasn.id/"
+    }
+]

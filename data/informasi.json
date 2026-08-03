@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "judul": "Kisi-Kisi & Nilai Ambang Batas SKD",
+        "deskripsi": "Panduan lengkap mengenai kisi-kisi dan passing grade SKD.",
+        "icon": "fa-solid fa-file-lines",
+        "link": "https://bit.ly/KisiKisidanNIlaiAmbangBatasSKDCPNS2024"
+    },
+    {
+        "id": 2,
+        "judul": "3 Hal yang Harus Diketahui",
+        "deskripsi": "Informasi penting sebelum mengikuti seleksi CPNS.",
+        "icon": "fa-solid fa-circle-info",
+        "link": "https://www.updatecpns.com/?m=1"
+    },
+    {
+        "id": 3,
+        "judul": "PrestasiCPNS",
+        "deskripsi": "Kumpulan materi, soal, tryout, dan informasi lengkap.",
+        "icon": "fa-solid fa-star",
+        "link": "https://prestasicpns.id"
+    }
+]

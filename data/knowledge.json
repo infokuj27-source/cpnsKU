@@ -1,0 +1,61 @@
+[
+    {
+        "id": 1,
+        "keyword": [
+            "twk",
+            "tes wawasan kebangsaan"
+        ],
+        "pertanyaan": "Apa itu TWK?",
+        "jawaban": "TWK (Tes Wawasan Kebangsaan) adalah tes yang mengukur penguasaan terhadap Pancasila, UUD 1945, NKRI, Bhinneka Tunggal Ika, nasionalisme, integritas, bela negara, dan bahasa Indonesia.",
+        "link": "#materi"
+    },
+    {
+        "id": 2,
+        "keyword": [
+            "tiu",
+            "tes intelegensia umum"
+        ],
+        "pertanyaan": "Apa itu TIU?",
+        "jawaban": "TIU (Tes Intelegensia Umum) bertujuan mengukur kemampuan verbal, numerik, logika, dan analitis peserta.",
+        "link": "#materi"
+    },
+    {
+        "id": 3,
+        "keyword": [
+            "tkp",
+            "tes karakteristik pribadi"
+        ],
+        "pertanyaan": "Apa itu TKP?",
+        "jawaban": "TKP mengukur karakteristik pribadi seperti pelayanan publik, profesionalisme, integritas, kerja sama, dan kemampuan beradaptasi.",
+        "link": "#materi"
+    },
+    {
+        "id": 4,
+        "keyword": [
+            "skd"
+        ],
+        "pertanyaan": "Apa itu SKD?",
+        "jawaban": "SKD merupakan Seleksi Kompetensi Dasar yang terdiri dari TWK, TIU, dan TKP.",
+        "link": "#materi"
+    },
+    {
+        "id": 5,
+        "keyword": [
+            "skb"
+        ],
+        "pertanyaan": "Apa itu SKB?",
+        "jawaban": "SKB adalah Seleksi Kompetensi Bidang yang menguji kemampuan sesuai jabatan yang dilamar.",
+        "link": "#materi"
+    },
+    {
+        "id": 6,
+        "keyword": [
+            "akun",
+            "sscasn",
+            "buat akun"
+        ],
+        "pertanyaan": "Bagaimana cara membuat akun SSCASN?",
+        "jawaban": "Pembuatan akun dilakukan melalui website resmi SSCASN dengan menggunakan NIK, KK, email aktif, dan nomor HP aktif.",
+        "link": "https://daftar-sscasn.bkn.go.id/akun"
+    }
+]
