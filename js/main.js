@@ -13,6 +13,8 @@ async function initWebsite() {
 
         ${await createMateri()}
 
+        ${createExamMenu()}
+
         ${await createSoal()}
 
         ${await createInformasi()}
