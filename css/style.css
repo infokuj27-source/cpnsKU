@@ -685,6 +685,109 @@ box-shadow:0 10px 25px rgba(0,0,0,.15);
 
 }
 
+/* =========================================
+   ANNOUNCEMENT ACTIONS
+========================================= */
+
+.announcement-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+
+/* TOMBOL */
+
+.announcement-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:180px;
+
+    padding:16px 28px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+
+/* TOMBOL DAFTAR */
+
+.announcement-btn.primary{
+
+    background:white;
+
+    color:#2563eb;
+
+}
+
+
+/* TOMBOL CEK FORMASI */
+
+.announcement-btn.secondary{
+
+    background:#1d4ed8;
+
+    color:white;
+
+    border:2px solid white;
+
+}
+
+
+/* HOVER */
+
+.announcement-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .announcement-actions{
+
+        width:100%;
+
+        margin-top:20px;
+
+    }
+
+    .announcement-btn{
+
+        width:100%;
+
+        min-width:0;
+
+    }
+
+}
+
 
 /*==============================
 SECTION TITLE
