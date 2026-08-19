@@ -1,12 +1,331 @@
 [
     {
         "id": 1,
-        "pertanyaan": "Apa dasar negara Indonesia?",
+        "pertanyaan": "Apa dasar negara Republik Indonesia?",
         "pilihan": [
             "Pancasila",
             "UUD 1945",
             "Bhinneka Tunggal Ika",
             "NKRI"
+        ],
+        "jawaban": 0
+    },
+    {
+        "id": 2,
+        "pertanyaan": "Pancasila terdiri atas berapa sila?",
+        "pilihan": [
+            "Tiga sila",
+            "Empat sila",
+            "Lima sila",
+            "Enam sila"
+        ],
+        "jawaban": 2
+    },
+    {
+        "id": 3,
+        "pertanyaan": "Bunyi sila pertama Pancasila adalah...",
+        "pilihan": [
+            "Kemanusiaan yang Adil dan Beradab",
+            "Ketuhanan Yang Maha Esa",
+            "Persatuan Indonesia",
+            "Keadilan Sosial bagi Seluruh Rakyat Indonesia"
+        ],
+        "jawaban": 1
+    },
+    {
+        "id": 4,
+        "pertanyaan": "Lambang sila ketiga Pancasila adalah...",
+        "pilihan": [
+            "Bintang",
+            "Rantai",
+            "Pohon beringin",
+            "Kepala banteng"
+        ],
+        "jawaban": 2
+    },
+    {
+        "id": 5,
+        "pertanyaan": "Semboyan Bhinneka Tunggal Ika memiliki arti...",
+        "pilihan": [
+            "Bersatu kita teguh",
+            "Berbeda-beda tetapi tetap satu",
+            "Satu bangsa satu bahasa",
+            "Persatuan dalam keberagaman"
+        ],
+        "jawaban": 1
+    },
+    {
+        "id": 6,
+        "pertanyaan": "UUD Negara Republik Indonesia Tahun 1945 merupakan...",
+        "pilihan": [
+            "Dasar negara",
+            "Konstitusi negara",
+            "Semboyan negara",
+            "Lambang negara"
+        ],
+        "jawaban": 1
+    },
+    {
+        "id": 7,
+        "pertanyaan": "Pembukaan UUD 1945 terdiri atas...",
+        "pilihan": [
+            "2 alinea",
+            "3 alinea",
+            "4 alinea",
+            "5 alinea"
+        ],
+        "jawaban": 2
+    },
+    {
+        "id": 8,
+        "pertanyaan": "Tujuan negara Indonesia tercantum dalam...",
+        "pilihan": [
+            "Pembukaan UUD 1945",
+            "Batang tubuh UUD 1945",
+            "Pancasila",
+            "Sumpah Pemuda"
+        ],
+        "jawaban": 0
+    },
+    {
+        "id": 9,
+        "pertanyaan": "Bahasa negara Indonesia adalah...",
+        "pilihan": [
+            "Bahasa Melayu",
+            "Bahasa Indonesia",
+            "Bahasa Jawa",
+            "Bahasa Nasional"
+        ],
+        "jawaban": 1
+    },
+    {
+        "id": 10,
+        "pertanyaan": "Indonesia merupakan negara kesatuan yang berbentuk...",
+        "pilihan": [
+            "Kerajaan",
+            "Federasi",
+            "Republik",
+            "Konfederasi"
+        ],
+        "jawaban": 2
+    },
+    {
+        "id": 11,
+        "pertanyaan": "Semboyan Bhinneka Tunggal Ika berasal dari kitab...",
+        "pilihan": [
+            "Negarakertagama",
+            "Sutasoma",
+            "Pararaton",
+            "Arjunawiwaha"
+        ],
+        "jawaban": 1
+    },
+    {
+        "id": 12,
+        "pertanyaan": "Lambang negara Republik Indonesia adalah...",
+        "pilihan": [
+            "Garuda Pancasila",
+            "Burung Elang",
+            "Burung Rajawali",
+            "Garuda Nusantara"
+        ],
+        "jawaban": 0
+    },
+    {
+        "id": 13,
+        "pertanyaan": "Sila kedua Pancasila dilambangkan dengan...",
+        "pilihan": [
+            "Bintang",
+            "Rantai",
+            "Pohon beringin",
+            "Padi dan kapas"
+        ],
+        "jawaban": 1
+    },
+    {
+        "id": 14,
+        "pertanyaan": "Sila keempat Pancasila dilambangkan dengan...",
+        "pilihan": [
+            "Kepala banteng",
+            "Rantai",
+            "Pohon beringin",
+            "Padi dan kapas"
+        ],
+        "jawaban": 0
+    },
+    {
+        "id": 15,
+        "pertanyaan": "Sila kelima Pancasila dilambangkan dengan...",
+        "pilihan": [
+            "Bintang",
+            "Kepala banteng",
+            "Padi dan kapas",
+            "Rantai"
+        ],
+        "jawaban": 2
+    },
+    {
+        "id": 16,
+        "pertanyaan": "Proklamasi Kemerdekaan Indonesia dibacakan pada...",
+        "pilihan": [
+            "17 Agustus 1945",
+            "18 Agustus 1945",
+            "20 Mei 1908",
+            "28 Oktober 1928"
+        ],
+        "jawaban": 0
+    },
+    {
+        "id": 17,
+        "pertanyaan": "Proklamasi Kemerdekaan Indonesia dibacakan di...",
+        "pilihan": [
+            "Jalan Pegangsaan Timur No. 56",
+            "Jalan Diponegoro No. 10",
+            "Istana Merdeka",
+            "Gedung Pancasila"
+        ],
+        "jawaban": 0
+    },
+    {
+        "id": 18,
+        "pertanyaan": "Tokoh yang membacakan teks Proklamasi Kemerdekaan Indonesia adalah...",
+        "pilihan": [
+            "Mohammad Hatta",
+            "Soekarno",
+            "Ahmad Soebardjo",
+            "Sutan Sjahrir"
+        ],
+        "jawaban": 1
+    },
+    {
+        "id": 19,
+        "pertanyaan": "Tokoh yang mendampingi Soekarno saat pembacaan Proklamasi adalah...",
+        "pilihan": [
+            "Mohammad Hatta",
+            "Ahmad Soebardjo",
+            "Soepomo",
+            "Mohammad Yamin"
+        ],
+        "jawaban": 0
+    },
+    {
+        "id": 20,
+        "pertanyaan": "Sumpah Pemuda diperingati setiap tanggal...",
+        "pilihan": [
+            "20 Mei",
+            "17 Agustus",
+            "28 Oktober",
+            "10 November"
+        ],
+        "jawaban": 2
+    },
+    {
+        "id": 21,
+        "pertanyaan": "Salah satu isi Sumpah Pemuda adalah...",
+        "pilihan": [
+            "Kami putra dan putri Indonesia mengaku bertumpah darah yang satu, tanah air Indonesia",
+            "Kami bangsa Indonesia menjunjung satu agama",
+            "Kami putra dan putri Indonesia memiliki satu budaya",
+            "Kami bangsa Indonesia memiliki satu suku"
+        ],
+        "jawaban": 0
+    },
+    {
+        "id": 22,
+        "pertanyaan": "Hari Kebangkitan Nasional diperingati setiap...",
+        "pilihan": [
+            "20 Mei",
+            "28 Oktober",
+            "10 November",
+            "1 Juni"
+        ],
+        "jawaban": 0
+    },
+    {
+        "id": 23,
+        "pertanyaan": "Sikap yang mencerminkan persatuan dalam keberagaman adalah...",
+        "pilihan": [
+            "Mengutamakan kelompok sendiri",
+            "Menghargai perbedaan suku, agama, dan budaya",
+            "Menolak budaya daerah lain",
+            "Memaksakan pendapat kepada orang lain"
+        ],
+        "jawaban": 1
+    },
+    {
+        "id": 24,
+        "pertanyaan": "Bela negara merupakan tanggung jawab...",
+        "pilihan": [
+            "TNI saja",
+            "Polri saja",
+            "Pemerintah saja",
+            "Setiap warga negara"
+        ],
+        "jawaban": 3
+    },
+    {
+        "id": 25,
+        "pertanyaan": "Contoh sikap nasionalisme dalam kehidupan sehari-hari adalah...",
+        "pilihan": [
+            "Merusak fasilitas umum",
+            "Menggunakan produk dalam negeri secara bijak",
+            "Mengutamakan kepentingan pribadi",
+            "Tidak peduli terhadap lingkungan"
+        ],
+        "jawaban": 1
+    },
+    {
+        "id": 26,
+        "pertanyaan": "Integritas dapat diwujudkan dengan sikap...",
+        "pilihan": [
+            "Jujur dan konsisten terhadap nilai yang benar",
+            "Mengikuti semua keinginan orang lain",
+            "Menyembunyikan kesalahan",
+            "Mengutamakan keuntungan pribadi"
+        ],
+        "jawaban": 0
+    },
+    {
+        "id": 27,
+        "pertanyaan": "Sikap rela berkorban demi kepentingan bangsa dan negara merupakan contoh...",
+        "pilihan": [
+            "Individualisme",
+            "Patriotisme",
+            "Materialisme",
+            "Primordialisme"
+        ],
+        "jawaban": 1
+    },
+    {
+        "id": 28,
+        "pertanyaan": "Gotong royong mencerminkan nilai...",
+        "pilihan": [
+            "Kerja sama dan kebersamaan",
+            "Persaingan bebas",
+            "Individualisme",
+            "Eksklusivisme"
+        ],
+        "jawaban": 0
+    },
+    {
+        "id": 29,
+        "pertanyaan": "Sikap menghormati perbedaan keyakinan merupakan penerapan nilai...",
+        "pilihan": [
+            "Toleransi",
+            "Diskriminasi",
+            "Fanatisme",
+            "Eksklusivisme"
+        ],
+        "jawaban": 0
+    },
+    {
+        "id": 30,
+        "pertanyaan": "Salah satu bentuk pengamalan sila kelima Pancasila adalah...",
+        "pilihan": [
+            "Bersikap adil terhadap sesama",
+            "Memaksakan kehendak",
+            "Mengutamakan kepentingan kelompok",
+            "Mengabaikan hak orang lain"
         ],
         "jawaban": 0
     }
