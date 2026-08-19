@@ -5,6 +5,7 @@
 let soalUjian = [];
 let nomorSoal = 0;
 let jawabanUser = [];
+let jenisUjianAktif = "";
 
 
 /* ==========================================
@@ -12,6 +13,8 @@ let jawabanUser = [];
    ========================================== */
 
 async function mulaiUjian(jenis) {
+
+    jenisUjianAktif = jenis;
 
     let fileSoal = "";
 
@@ -313,10 +316,11 @@ function selesaiUjian() {
 
     if (belumDijawab > 0) {
 
-        const lanjut =
-            confirm(
-                `Masih ada ${belumDijawab} soal yang belum dijawab.\n\nYakin ingin menyelesaikan ujian?`
-            );
+        const lanjut = confirm(
+            `Masih ada ${belumDijawab} soal yang belum dijawab.\n\n` +
+            `Soal yang belum dijawab akan dianggap salah.\n\n` +
+            `Yakin ingin menyelesaikan ujian?`
+        );
 
 
         if (!lanjut) {
@@ -328,6 +332,11 @@ function selesaiUjian() {
     }
 
 
+    // Tandai ujian selesai
+    tandaiUjianSelesai(jenisUjianAktif);
+
+
+    // Hitung nilai
     hitungNilai();
 
 }
@@ -458,7 +467,7 @@ function tampilkanHasil(
 
                 <button
                     class="btn-primary"
-                    onclick="location.hash='materi'; location.reload();"
+                    onclick="location.hash='soal'; location.reload();"
                 >
                     ← Kembali ke Website
                 </button>
@@ -470,3 +479,112 @@ function tampilkanHasil(
     `;
 
 }
+
+/* ==========================================
+   STATUS UJIAN CPNS
+   ========================================== */
+
+function tandaiUjianSelesai(jenisUjian) {
+
+    localStorage.setItem(
+        `ujian_${jenisUjian}_selesai`,
+        "true"
+    );
+
+    updateFinalButton();
+
+}
+
+
+/* ==========================================
+   CEK STATUS UJIAN
+   ========================================== */
+
+function cekUjianSelesai(jenisUjian) {
+
+    return localStorage.getItem(
+        `ujian_${jenisUjian}_selesai`
+    ) === "true";
+
+}
+
+
+/* ==========================================
+   UPDATE TOMBOL FINAL
+   ========================================== */
+
+function updateFinalButton() {
+
+    const finalButton =
+        document.getElementById("finalExamButton");
+
+    if (!finalButton) return;
+
+
+    const twkSelesai =
+        cekUjianSelesai("twk");
+
+    const tiuSelesai =
+        cekUjianSelesai("tiu");
+
+    const tkpSelesai =
+        cekUjianSelesai("tkp");
+
+
+    if (
+        twkSelesai &&
+        tiuSelesai &&
+        tkpSelesai
+    ) {
+
+        finalButton.disabled = false;
+
+        finalButton.classList.remove("locked");
+
+        finalButton.classList.add("unlocked");
+
+        finalButton.innerHTML = `
+
+            <div class="exam-menu-icon">
+                🏆
+            </div>
+
+            <div class="exam-menu-info">
+
+                <h3>FINAL CPNS</h3>
+
+                <p>
+                    Gabungan TWK, TIU & TKP
+                </p>
+
+                <span>
+                    🔓 Siap dikerjakan
+                </span>
+
+            </div>
+
+            <div class="exam-menu-arrow">
+                →
+            </div>
+
+        `;
+
+        finalButton.onclick = function(){
+
+            mulaiUjian("final");
+
+        };
+
+    }
+
+}
+
+/* ==========================================
+   CEK STATUS SAAT WEBSITE DIBUKA
+   ========================================== */
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    updateFinalButton();
+
+});
