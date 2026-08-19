@@ -1755,3 +1755,338 @@ transform:translateY(0);
 }
 
 }
+
+/* ==========================================
+   MENU UJIAN CPNS
+   ========================================== */
+
+.exam-menu{
+
+    padding:50px 7% 70px;
+
+}
+
+
+.exam-menu-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:30px;
+
+}
+
+
+.exam-menu-header > span{
+
+    font-size:2rem;
+
+}
+
+
+.exam-menu-header h2{
+
+    margin:0;
+
+    font-size:2rem;
+
+    color:#0f172a;
+
+}
+
+
+.exam-menu-header p{
+
+    margin:5px 0 0;
+
+    color:var(--text-light);
+
+}
+
+
+/* GRID */
+
+.exam-menu-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4, 1fr);
+
+    gap:20px;
+
+}
+
+
+/* CARD */
+
+.exam-menu-card{
+
+    position:relative;
+
+    border:none;
+
+    border-radius:22px;
+
+    padding:25px;
+
+    min-height:150px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    text-align:left;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+
+    background:white;
+
+    box-shadow:0 12px 35px rgba(15,23,42,.08);
+
+}
+
+
+.exam-menu-card:hover:not(:disabled){
+
+    transform:translateY(-7px);
+
+    box-shadow:0 20px 45px rgba(15,23,42,.14);
+
+}
+
+
+/* ICON */
+
+.exam-menu-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:1.8rem;
+
+    flex-shrink:0;
+
+}
+
+
+/* TEXT */
+
+.exam-menu-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+
+}
+
+
+.exam-menu-info h3{
+
+    margin:0;
+
+    font-size:1.25rem;
+
+}
+
+
+.exam-menu-info p{
+
+    margin:0;
+
+    font-size:.85rem;
+
+    line-height:1.4;
+
+    color:#64748b;
+
+}
+
+
+.exam-menu-info span{
+
+    margin-top:5px;
+
+    font-size:.8rem;
+
+    font-weight:700;
+
+}
+
+
+/* ARROW */
+
+.exam-menu-arrow{
+
+    margin-left:auto;
+
+    font-size:1.3rem;
+
+}
+
+
+/* TWK */
+
+.exam-menu-card.twk{
+
+    border-top:4px solid #2563eb;
+
+}
+
+
+.exam-menu-card.twk .exam-menu-icon{
+
+    background:#dbeafe;
+
+}
+
+
+.exam-menu-card.twk .exam-menu-info h3{
+
+    color:#2563eb;
+
+}
+
+
+/* TIU */
+
+.exam-menu-card.tiu{
+
+    border-top:4px solid #7c3aed;
+
+}
+
+
+.exam-menu-card.tiu .exam-menu-icon{
+
+    background:#ede9fe;
+
+}
+
+
+.exam-menu-card.tiu .exam-menu-info h3{
+
+    color:#7c3aed;
+
+}
+
+
+/* TKP */
+
+.exam-menu-card.tkp{
+
+    border-top:4px solid #ea580c;
+
+}
+
+
+.exam-menu-card.tkp .exam-menu-icon{
+
+    background:#ffedd5;
+
+}
+
+
+.exam-menu-card.tkp .exam-menu-info h3{
+
+    color:#ea580c;
+
+}
+
+
+/* FINAL */
+
+.exam-menu-card.final{
+
+    border-top:4px solid #64748b;
+
+    background:#f1f5f9;
+
+}
+
+
+.exam-menu-card.final .exam-menu-icon{
+
+    background:#e2e8f0;
+
+}
+
+
+.exam-menu-card.final .exam-menu-info h3{
+
+    color:#475569;
+
+}
+
+
+.exam-menu-card.final.locked{
+
+    cursor:not-allowed;
+
+    opacity:.75;
+
+}
+
+
+.exam-menu-card.final.locked:hover{
+
+    transform:none;
+
+    box-shadow:0 12px 35px rgba(15,23,42,.08);
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:1100px){
+
+    .exam-menu-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .exam-menu{
+
+        padding:40px 5% 50px;
+
+    }
+
+
+    .exam-menu-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .exam-menu-card{
+
+        min-height:120px;
+
+    }
+
+}
