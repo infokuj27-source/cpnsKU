@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "pertanyaan": "Apa dasar negara Indonesia?",
+        "pilihan": [
+            "Pancasila",
+            "UUD 1945",
+            "Bhinneka Tunggal Ika",
+            "NKRI"
+        ],
+        "jawaban": 0
+    }
+]

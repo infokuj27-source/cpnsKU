@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "pertanyaan": "Anda mendapatkan tugas baru yang belum pernah dikerjakan sebelumnya. Apa yang Anda lakukan?",
+        "pilihan": [
+            "Menolak tugas tersebut",
+            "Mencari informasi dan mempelajari cara mengerjakannya",
+            "Menunggu teman mengerjakannya",
+            "Mengabaikan tugas tersebut"
+        ],
+        "jawaban": 1
+    }
+]
