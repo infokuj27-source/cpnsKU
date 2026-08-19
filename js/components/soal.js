@@ -59,6 +59,21 @@ async function createSoal() {
 
 function createExamMenu() {
 
+    const twkSelesai =
+        localStorage.getItem("ujian_twk_selesai") === "true";
+
+    const tiuSelesai =
+        localStorage.getItem("ujian_tiu_selesai") === "true";
+
+    const tkpSelesai =
+        localStorage.getItem("ujian_tkp_selesai") === "true";
+
+    const semuaSelesai =
+        twkSelesai &&
+        tiuSelesai &&
+        tkpSelesai;
+
+
     return `
 
     <section class="exam-menu">
@@ -68,11 +83,13 @@ function createExamMenu() {
             <span>📚</span>
 
             <div>
+
                 <h2>Latihan SKD CPNS</h2>
 
                 <p>
                     Uji kemampuanmu melalui TWK, TIU, dan TKP
                 </p>
+
             </div>
 
         </div>
@@ -84,12 +101,14 @@ function createExamMenu() {
             <!-- TWK -->
 
             <button
-                class="exam-menu-card twk"
+                class="exam-menu-card twk ${twkSelesai ? "completed" : ""}"
                 onclick="mulaiUjian('twk')"
             >
 
                 <div class="exam-menu-icon">
-                    🇮🇩
+
+                    ${twkSelesai ? "✅" : "🇮🇩"}
+
                 </div>
 
                 <div class="exam-menu-info">
@@ -101,13 +120,20 @@ function createExamMenu() {
                     </p>
 
                     <span>
-                        30 Soal
+
+                        ${twkSelesai
+                            ? "✅ Sudah selesai"
+                            : "30 Soal"
+                        }
+
                     </span>
 
                 </div>
 
                 <div class="exam-menu-arrow">
-                    →
+
+                    ${twkSelesai ? "✓" : "→"}
+
                 </div>
 
             </button>
@@ -117,12 +143,14 @@ function createExamMenu() {
             <!-- TIU -->
 
             <button
-                class="exam-menu-card tiu"
+                class="exam-menu-card tiu ${tiuSelesai ? "completed" : ""}"
                 onclick="mulaiUjian('tiu')"
             >
 
                 <div class="exam-menu-icon">
-                    🧠
+
+                    ${tiuSelesai ? "✅" : "🧠"}
+
                 </div>
 
                 <div class="exam-menu-info">
@@ -134,13 +162,20 @@ function createExamMenu() {
                     </p>
 
                     <span>
-                        35 Soal
+
+                        ${tiuSelesai
+                            ? "✅ Sudah selesai"
+                            : "35 Soal"
+                        }
+
                     </span>
 
                 </div>
 
                 <div class="exam-menu-arrow">
-                    →
+
+                    ${tiuSelesai ? "✓" : "→"}
+
                 </div>
 
             </button>
@@ -150,12 +185,14 @@ function createExamMenu() {
             <!-- TKP -->
 
             <button
-                class="exam-menu-card tkp"
+                class="exam-menu-card tkp ${tkpSelesai ? "completed" : ""}"
                 onclick="mulaiUjian('tkp')"
             >
 
                 <div class="exam-menu-icon">
-                    👤
+
+                    ${tkpSelesai ? "✅" : "👤"}
+
                 </div>
 
                 <div class="exam-menu-info">
@@ -167,13 +204,20 @@ function createExamMenu() {
                     </p>
 
                     <span>
-                        45 Soal
+
+                        ${tkpSelesai
+                            ? "✅ Sudah selesai"
+                            : "45 Soal"
+                        }
+
                     </span>
 
                 </div>
 
                 <div class="exam-menu-arrow">
-                    →
+
+                    ${tkpSelesai ? "✓" : "→"}
+
                 </div>
 
             </button>
@@ -183,13 +227,15 @@ function createExamMenu() {
             <!-- FINAL -->
 
             <button
-                class="exam-menu-card final locked"
+                class="exam-menu-card final ${semuaSelesai ? "unlocked" : "locked"}"
                 id="finalExamButton"
-                disabled
+                ${semuaSelesai ? "" : "disabled"}
             >
 
                 <div class="exam-menu-icon">
-                    🔒
+
+                    ${semuaSelesai ? "🏆" : "🔒"}
+
                 </div>
 
                 <div class="exam-menu-info">
@@ -201,13 +247,21 @@ function createExamMenu() {
                     </p>
 
                     <span>
-                        Selesaikan 3 tes terlebih dahulu
+
+                        ${
+                            semuaSelesai
+                            ? "🔓 Siap dikerjakan"
+                            : "Selesaikan 3 tes terlebih dahulu"
+                        }
+
                     </span>
 
                 </div>
 
                 <div class="exam-menu-arrow">
-                    🔒
+
+                    ${semuaSelesai ? "→" : "🔒"}
+
                 </div>
 
             </button>
