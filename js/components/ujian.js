@@ -6,6 +6,9 @@ let soalUjian = [];
 let nomorSoal = 0;
 let jawabanUser = [];
 let jenisUjianAktif = "";
+let timerFinal = null;
+let waktuFinal = 100 * 60;
+let waktuMulaiFinal = null;
 
 
 /* ==========================================
@@ -47,9 +50,13 @@ async function mulaiUjian(jenis) {
 
         nomorSoal = 0;
 
-        jawabanUser = new Array(soalUjian.length).fill(null);
+   jawabanUser = new Array(soalUjian.length).fill(null);
 
-        tampilkanUjian(jenis);
+if (jenis === "final") {
+    mulaiTimerFinal();
+}
+
+tampilkanUjian(jenis);
 
     } catch (error) {
 
@@ -89,17 +96,27 @@ function tampilkanUjian(jenis) {
 
             <div class="ujian-card">
 
-                <div class="ujian-info">
+<div class="ujian-info">
 
-                    <span id="nomorSoal">
-                        Soal 1
-                    </span>
+    <span id="nomorSoal">
+        Soal 1
+    </span>
 
-                    <span id="jumlahSoal">
-                        ${soalUjian.length} Soal
-                    </span>
+    <span id="jumlahSoal">
+        ${soalUjian.length} Soal
+    </span>
 
-                </div>
+    ${
+        jenis === "final"
+        ? `
+        <span id="timerFinal" class="timer-final">
+            ⏱️ 100:00
+        </span>
+        `
+        : ""
+    }
+
+</div>
 
 
                 <div id="soalContainer">
@@ -222,6 +239,15 @@ function tampilkanSoal() {
 
 function simpanJawaban(index) {
 
+    if (
+        jenisUjianAktif === "final" &&
+        !timerFinal
+    ) {
+
+        return;
+
+    }
+
     jawabanUser[nomorSoal] = index;
 
 }
@@ -307,6 +333,19 @@ function updateTombol() {
    ========================================== */
 
 function selesaiUjian() {
+   if (jenisUjianAktif === "final") {
+
+    if (timerFinal) {
+
+        clearInterval(timerFinal);
+
+        timerFinal = null;
+
+    }
+
+    localStorage.removeItem("final_waktu_mulai");
+
+}
 
     const belumDijawab =
         jawabanUser.filter(
@@ -588,3 +627,155 @@ document.addEventListener("DOMContentLoaded", function() {
     updateFinalButton();
 
 });
+
+/* ==========================================
+   TIMER FINAL CPNS
+   ========================================== */
+
+function mulaiTimerFinal() {
+
+    // Hentikan timer sebelumnya jika ada
+    if (timerFinal) {
+        clearInterval(timerFinal);
+    }
+
+    const sekarang = Date.now();
+
+    // Ambil waktu mulai yang tersimpan
+    const waktuTersimpan =
+        localStorage.getItem("final_waktu_mulai");
+
+    if (waktuTersimpan) {
+
+        waktuMulaiFinal =
+            parseInt(waktuTersimpan);
+
+    } else {
+
+        waktuMulaiFinal = sekarang;
+
+        localStorage.setItem(
+            "final_waktu_mulai",
+            waktuMulaiFinal
+        );
+
+    }
+
+
+    timerFinal = setInterval(() => {
+
+        const sekarangSekarang = Date.now();
+
+        const waktuBerjalan =
+            Math.floor(
+                (sekarangSekarang - waktuMulaiFinal) / 1000
+            );
+
+        const sisaWaktu =
+            (100 * 60) - waktuBerjalan;
+
+
+        if (sisaWaktu <= 0) {
+
+            clearInterval(timerFinal);
+
+            timerFinal = null;
+
+            waktuFinalHabis();
+
+            return;
+
+        }
+
+
+        tampilkanWaktuFinal(sisaWaktu);
+
+    }, 1000);
+
+
+    // Tampilkan waktu langsung
+    const waktuBerjalan =
+        Math.floor(
+            (sekarang - waktuMulaiFinal) / 1000
+        );
+
+    const sisaWaktu =
+        (100 * 60) - waktuBerjalan;
+
+
+    if (sisaWaktu <= 0) {
+
+        waktuFinalHabis();
+
+    } else {
+
+        tampilkanWaktuFinal(sisaWaktu);
+
+    }
+
+}
+
+
+/* ==========================================
+   TAMPILKAN WAKTU
+   ========================================== */
+
+function tampilkanWaktuFinal(totalDetik) {
+
+    const timer =
+        document.getElementById("timerFinal");
+
+    if (!timer) return;
+
+
+    const menit =
+        Math.floor(totalDetik / 60);
+
+    const detik =
+        totalDetik % 60;
+
+
+    timer.innerText =
+        `⏱️ ${String(menit).padStart(2, "0")}:${String(detik).padStart(2, "0")}`;
+
+
+    // Peringatan ketika waktu hampir habis
+    if (totalDetik <= 300) {
+
+        timer.classList.add("timer-warning");
+
+    }
+
+}
+
+
+/* ==========================================
+   WAKTU FINAL HABIS
+   ========================================== */
+
+function waktuFinalHabis() {
+
+    // Pastikan timer berhenti
+    if (timerFinal) {
+
+        clearInterval(timerFinal);
+
+        timerFinal = null;
+
+    }
+
+
+    alert(
+        "⏰ Waktu ujian telah habis!\n\n" +
+        "Jawaban akan dikumpulkan secara otomatis."
+    );
+
+
+    // Tandai Final selesai
+    tandaiUjianSelesai("final");
+
+
+    // Hitung nilai otomatis
+    hitungNilai();
+
+}
