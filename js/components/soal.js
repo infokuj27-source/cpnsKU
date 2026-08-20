@@ -229,7 +229,7 @@ function createExamMenu() {
             <button
                 class="exam-menu-card final ${semuaSelesai ? "unlocked" : "locked"}"
                 id="finalExamButton"
-                ${semuaSelesai ? "" : "disabled"}
+                 ${semuaSelesai ? 'onclick="mulaiUjian(\'final\')"' : "disabled"}
             >
 
                 <div class="exam-menu-icon">
