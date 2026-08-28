@@ -328,5 +328,713 @@
             "Mengabaikan hak orang lain"
         ],
         "jawaban": 0
-    }
+    },
+  {
+    "id": 31,
+    "pertanyaan": "Pembentukan pemerintah negara dengan berdasarkan Pancasila merupakan salah satu isi dari Pembukaan UUD 1945 alinea ....",
+    "pilihan": [
+      "Ke-1",
+      "Ke-2",
+      "Ke-3",
+      "Ke-4",
+      "Ke-5"
+    ],
+    "jawaban": 3
+  },
+  {
+    "id": 32,
+    "pertanyaan": "Amandemen UUD 1945 yang kedua dilaksanakan pada ....",
+    "pilihan": [
+      "17 Agustus 1998",
+      "30 Oktober 1999",
+      "16 Mei 2000",
+      "17 Agustus 2000",
+      "18 Agustus 2000"
+    ],
+    "jawaban": 4
+  },
+  {
+    "id": 33,
+    "pertanyaan": "Berdasarkan UUD 1945 Pasal 1 Ayat 1, Negara Indonesia adalah suatu ....",
+    "pilihan": [
+      "Negara Kesatuan",
+      "Negara Pancasila",
+      "Negara Hukum",
+      "Negara Demokrasi",
+      "Negara Merdeka"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 34,
+    "pertanyaan": "Yang bukan merupakan dampak/akibat dari Dekrit Presiden 5 Juli 1959 adalah ....",
+    "pilihan": [
+      "Konstituante dibubarkan",
+      "UUDS tidak berlaku",
+      "Kembali ke UUD 1945",
+      "Dibentuk DPRS",
+      "Dibentuk DPAS"
+    ],
+    "jawaban": 3
+  },
+  {
+    "id": 35,
+    "pertanyaan": "Bagian dari UUD 1945 yang terdiri dari 16 bab dan terperinci menjadi 37 pasal adalah ....",
+    "pilihan": [
+      "Preambule",
+      "Pembukaan",
+      "Batang tubuh",
+      "Penutup",
+      "Penjelasan resmi"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 36,
+    "pertanyaan": "Bunyi Pasal 36 B Undang-Undang Dasar 1945 adalah ....",
+    "pilihan": [
+      "Bendera Negara Indonesia ialah Sang Merah Putih",
+      "Bahasa Negara ialah Bahasa Indonesia",
+      "Mata Uang Negara ialah Rupiah",
+      "Lambang Negara ialah Garuda Pancasila dengan semboyan Bhinneka Tunggal Ika",
+      "Lagu Kebangsaan ialah Indonesia Raya"
+    ],
+    "jawaban": 4
+  },
+  {
+    "id": 37,
+    "pertanyaan": "Fakir miskin dan anak-anak yang terlantar dipelihara oleh negara. Merupakan bunyi UUD 1945 Pasal ....",
+    "pilihan": [
+      "32 Ayat 1",
+      "34 Ayat 1",
+      "33",
+      "32 Ayat 2",
+      "34 Ayat 2"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 38,
+    "pertanyaan": "Pada amandemen keempat UUD 1945 pasal 29 telah disepakati ....",
+    "pilihan": [
+      "Penjelasan lebih rinci",
+      "Penambahan ayat",
+      "Perubahan hanya pada ayat (1)",
+      "Perubahan hanya pada ayat (2)",
+      "Tidak mengalami perubahan"
+    ],
+    "jawaban": 4
+  },
+  {
+    "id": 39,
+    "pertanyaan": "Kedudukan Dewan Perwakilan Rakyat menurut UUD 1945 kuat karena ....",
+    "pilihan": [
+      "Berhak menetapkan anggaran pendapatan dan belanja negara",
+      "Seluruh anggota DPR merangkap menjadi anggota MPR",
+      "Setiap Undang-Undang menghendaki persetujuan DPR",
+      "Merupakan mitra presiden di bidang legislatif",
+      "Turut serta meratifikasi perjanjian internasional"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 40,
+    "pertanyaan": "Pancasila sebagai way of life dalam kehidupan berbangsa, bernegara, dan bermasyarakat. Dalam hal ini Pancasila memiliki makna sebagai ....",
+    "pilihan": [
+      "Kristalisasi nilai",
+      "Ciri-ciri warga negara",
+      "Kepribadian bangsa",
+      "Karakteristik bangsa",
+      "Pedoman hidup"
+    ],
+    "jawaban": 4
+  },
+  {
+    "id": 41,
+    "pertanyaan": "Nilai-nilai Pancasila dijadikan tuntunan, pedoman/tolak ukur tentang tingkah laku manusia Indonesia, karena Pancasila berfungsi sebagai ....",
+    "pilihan": [
+      "Dasar negara",
+      "Jiwa bangsa",
+      "Ideologi negara",
+      "Pandangan hidup",
+      "Kepribadian bangsa"
+    ],
+    "jawaban": 3
+  },
+  {
+    "id": 42,
+    "pertanyaan": "Pancasila mengandung nilai-nilai humanitis yang terkandung dalam ....",
+    "pilihan": [
+      "Sila pertama",
+      "Sila kedua",
+      "Sila ketiga",
+      "Sila keempat",
+      "Sila kelima"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 43,
+    "pertanyaan": "Keunggulan demokrasi Pancasila dalam setiap pengambil keputusan ialah...",
+    "pilihan": [
+      "Hasil keputusan harus dapat dipertanggungjawabkan",
+      "Kepentingan tiap individu didahulukan",
+      "Pengambil keputusan oleh pimpinan rapat",
+      "Keputusan diambil melalui musyawarah mufakat",
+      "Masalah harus diselesaikan dengan hati-hati"
+    ],
+    "jawaban": 3
+  },
+  {
+    "id": 44,
+    "pertanyaan": "Istilah Pancasila termuat dalam kitab sastra peninggalan Kerajaan Majapahit, yaitu ....",
+    "pilihan": [
+      "Sutasoma",
+      "Ramayana",
+      "Negara Kertagama",
+      "Arjuna Wiwaha",
+      "Serat Pekaton"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 45,
+    "pertanyaan": "Cinta kepada tanah air dan bangsa dapat dibuktikan dengan cara ....",
+    "pilihan": [
+      "Mengekspor semua hasil bumi Indonesia dan mengimpor barang luar negeri.",
+      "Tidak melakukan hubungan dengan negara lain dan melakukan proteksi.",
+      "Menggunakan produksi dalam negeri meskipun mampu membelinya.",
+      "Tidak menggunakan produksi luar negeri meskipun mampu membelinya.",
+      "Mengurangi impor barang dari luar negeri agar devisa tetap stabil."
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 46,
+    "pertanyaan": "Pada saat menjelang perayaan HUT Republik Indonesia sering diadakan pawai dan perlombaan untuk memeriahkannya. Bentuk keikutsertaan Anda untuk memeriahkannya adalah dengan ....",
+    "pilihan": [
+      "Memasang bendera",
+      "Menyanyikan lagu Indonesia Raya",
+      "Menikmati hari libur tanggal 17 Agustus",
+      "Menyumbang untuk kegiatan",
+      "Menonton perlombaan"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 47,
+    "pertanyaan": "Seorang pemimpin seharusnya memberikan pekerjaan kepada bawahannya dengan bijaksana, yaitu ....",
+    "pilihan": [
+      "Selalu memberikan contoh pada setiap pekerjaan.",
+      "Memberikan pekerjaan sesuai dengan kodrat kemanusiaannya.",
+      "Memilih dengan teliti pekerjaan yang akan pantas diberikan.",
+      "Melakukan pengecekan langsung terhadap semua hasil kerja bawahan.",
+      "Menasihati setiap hari agar pekerjaan berhasil dengan baik."
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 48,
+    "pertanyaan": "Contoh hak pilih pasif adalah ....",
+    "pilihan": [
+      "Tidak mengikuti pemilu",
+      "Belum terdaftar dalam pemilu",
+      "Dicalonkan sebagai anggota DPRD",
+      "Mengikuti pemilu, tetapi tidak memilih satu pun tanda gambar",
+      "Mengikuti pemungutan suara di TPS"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 49,
+    "pertanyaan": "Upaya bela negara menurut UU No. 3 tahun 2002 diselenggarakan melalui, kecuali ....",
+    "pilihan": [
+      "Pelatihan dasar kemiliteran",
+      "Pendidikan militer sejak dini",
+      "Pengabdian sebagai prajurit TNI",
+      "Pengabdian sesuai dengan profesi",
+      "Pendidikan kewarganegaraan"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 50,
+    "pertanyaan": "Konsekuensi dari hubungan kausal organis antara pancasila, pembukaan UUD 1945, dan batang tubuh UUD 1945 yang tidak dapat terpisahkan adalah ....",
+    "pilihan": [
+      "Tiap pasal tidak boleh saling bertentangan",
+      "Nilai pancasila harus ada dalam tiap pasal",
+      "Unsur tersebut harus saling mengisi",
+      "Batang tubuh merupakan penjelasan pancasila",
+      "UUD 1945 harus merangkum silasila pada pancasila"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 51,
+    "pertanyaan": "GBHN 1999-2004 telah mengamanatkan terselenggaranya pemilu secara lebih demokratis pada tahun 2004 yang dilaksanakan oleh sebuah badan penyelenggara pemilu yang independen dan nonpartisan, yaitu ....",
+    "pilihan": [
+      "Komisi pemilihan umum",
+      "Lembaga pemilihan umum",
+      "Badan pemilihan umum",
+      "Biro pemilihan umum",
+      "Pelaksanaan pemilihan umum"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 52,
+    "pertanyaan": "Undang-Undang (UU) No. 5 tahun 1999 mengatur tentang ....",
+    "pilihan": [
+      "pengaturan keuangan daerah",
+      "sistem pendidikan nasional",
+      "larangan praktik monopoli dan persaingan tidak sehat",
+      "Pemilu",
+      "sistem perbankan di Indonesia"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 53,
+    "pertanyaan": "Dalam kehidupan bernegara pemilu bagi rakyat Indonesia merupakan sesuatu yang penting karena pemilu ....",
+    "pilihan": [
+      "Merupakan pengakuan terhadap hak asasi manusia",
+      "Merupakan sarana untuk memilih wakil rakyat",
+      "Merupakan hak sebagai warga negara",
+      "Merupakan sarana untuk mewujudkan kedaulatan rakyat",
+      "Merupakan peluang untuk menjadi wakil rakyat"
+    ],
+    "jawaban": 3
+  },
+  {
+    "id": 54,
+    "pertanyaan": "Jika dibandingkan dengan kabinet parlementer kelebihan kabinet presidensial adalah dalam hal ....",
+    "pilihan": [
+      "Pembentukan kabinet sangat demokratis",
+      "Jalanya pemerintahan lebih stabil",
+      "Para menteri bertanggung jawab secara kolektif",
+      "Para menteri dapat diganti sewaktu-waktu",
+      "Pemerintahan lebih mencerminkan aspirasi rakyat"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 55,
+    "pertanyaan": "Kebijakan pemerintah tentang pemisahan TNI dan POLRI sesuai dengan ....",
+    "pilihan": [
+      "TAP MPR No. VI Tahun 2000",
+      "TAP MPR No. VII Tahun 2000",
+      "TAP MPR No. VIII Tahun 2000",
+      "TAP MPR No. IX Tahun 2000",
+      "TAP MPR No. X Tahun 2000"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 56,
+    "pertanyaan": "Sesuai dengan keputusan presiden nomor 27 tahun 1998, untuk menyehatkan perbankan dibentuklah ... yang kini telah dibubarkan.",
+    "pilihan": [
+      "LPS",
+      "BPPN",
+      "BPK",
+      "KPK",
+      "Komisi Yudisial"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 57,
+    "pertanyaan": "Kebijakan pemerintah untuk memperbaiki kualitas ekonomi yang berkaitan dengan Anggaran Pendapatan Belanja Negara disebut dengan ....",
+    "pilihan": [
+      "Kebijakan fiskal",
+      "Kebijakan moneter",
+      "Kebijakan obligasi",
+      "Kebijakan sektoral",
+      "Kebijakan fungsional"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 58,
+    "pertanyaan": "Hak pemerintah dan pemerintah daerah dalam penyelenggaraan pendidikan sesuai dengan undangundang sistem pendidikan nasional adalah ....",
+    "pilihan": [
+      "Mengarahkan",
+      "Mengawasi",
+      "Membantu",
+      "Membimbing",
+      "Semua benar"
+    ],
+    "jawaban": 4
+  },
+  {
+    "id": 59,
+    "pertanyaan": "Uang murah adalah suatu kebijakan pemerintah yang bertujuan untuk ....",
+    "pilihan": [
+      "Membuat harga barang menjadi murah",
+      "Membantu meningkatkan persediaan uang",
+      "Menutup bank yang tidak memiliki izin",
+      "Menahan laju perputaran uang",
+      "Menarik investor asing untuk masuk"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 60,
+    "pertanyaan": "Terwujudnya manusia dan masyarakat Indonesia yang berkualitas merupakan arah dari kebijakan ....",
+    "pilihan": [
+      "Konsolidasi nasional",
+      "Rekonsiliasi nasional",
+      "Pembangunan nasional",
+      "Landasan nasional",
+      "Pengembangan nasional"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 61,
+    "pertanyaan": "Fluktuasi nilai rupiah terhadap mata uang asing memberi kesempatan pada pemerintah untuk melakukan kebijakan ....",
+    "pilihan": [
+      "Mengembangkan nilai kurs",
+      "Membatasi investor asing",
+      "Menurunkan suku bunga",
+      "Membuka lapangan kerja baru",
+      "Mengurangi ekspor barang dan jasa"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 62,
+    "pertanyaan": "Berdasarkan pengalaman dan kebijakan ekonomi masa lalu, dalam era reformasi ini peranan koperasi perlu ditingkatkan terutama untuk ....",
+    "pilihan": [
+      "Mengembangkan ekonomi pertanian",
+      "Membatasi peran badan usaha lain",
+      "Melatih rakyat dalam berusaha",
+      "Mewujudkan swasembada pangan",
+      "Memberdayakan ekonomi rakyat"
+    ],
+    "jawaban": 4
+  },
+  {
+    "id": 63,
+    "pertanyaan": "Pada awal berdirinya, Republik Indonesia terdiri dari 8 (delapan) provinsi, yang salah satunya adalah....",
+    "pilihan": [
+      "DI Aceh",
+      "DI Yogyakarta",
+      "DKI Jakarta",
+      "Jawa Tengah",
+      "Papua Barat"
+    ],
+    "jawaban": 3
+  },
+  {
+    "id": 64,
+    "pertanyaan": "Hak DPR untuk melakukan penyelidikan terhadap pelaksanaan suatu undang-undang atau kebijakan Pemerintah disebut dengan ....",
+    "pilihan": [
+      "Hak Legislasi",
+      "Hak Angket",
+      "Hak Menyatakan Pendapat",
+      "Hak Interpelasi",
+      "Hak Intelijen"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 65,
+    "pertanyaan": "Pemegang kekuasaan eksekutif dalam pemerintahan Republik Indonesia adalah ....",
+    "pilihan": [
+      "DPD",
+      "MPR",
+      "Presiden",
+      "BPK",
+      "DPR"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 66,
+    "pertanyaan": "sebagai lembaga tinggi negara yang memiliki wewenang memeriksa Pengelolaan dan tanggung jawab keuangan negara, anggota Badan Pemeriksa Keuangan dipilih oleh ....",
+    "pilihan": [
+      "Presiden",
+      "MPR",
+      "DPR",
+      "KPK",
+      "Menteri Keuangan"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 67,
+    "pertanyaan": "Untuk dapat ditetapkan sebagai Kepala Daerah, harus memenuhi syarat sebagai berikut, kecuali ....",
+    "pilihan": [
+      "Tidak sedang dicabut hak pilihnya",
+      "Menyerahkan daftar kekayaan pribadi",
+      "Sehat jasmani dan rohani",
+      "Bertaqwa kepada Tuhan Yang Maha Esa",
+      "Berumur sekurang-kurangnya 25 (dua puluh lima) tahun"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 68,
+    "pertanyaan": "Pengakuan de jure dari suatu negara terhadap negara yang lain ditandai oleh ....",
+    "pilihan": [
+      "Bantuan diplomasi",
+      "Kerja sama militer",
+      "Hubungan diplomatik",
+      "Kunjungan kepala negara",
+      "Bantuan ekonomi"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 69,
+    "pertanyaan": "Dilihat dari segi tujuannya, negara kepolisian bertujuan ....",
+    "pilihan": [
+      "Meningkatkan kesejahteraan",
+      "Mewujudkan ketertiban",
+      "Memelihara kekuasaan",
+      "Menjamin keamanan",
+      "Mempertahankan persatuan"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 70,
+    "pertanyaan": "Anggota Dewan Perwakilan Rakyat menurut UUD 1945 mempunyai hak interpelasi, yakni hak untuk ....",
+    "pilihan": [
+      "Bertanya kepada pemerintah",
+      "Melakukan penyelidikan",
+      "Melakukan perubahan terhadap RUU",
+      "Mengawasi jalannya pemerintahan",
+      "Ikut serta menetapkan APBN"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 71,
+    "pertanyaan": "Berdasarkan UUD 1945, Mahkamah Agung hanya mempunyai hak menguji formal terhadap peraturan perundang-undangan yang berupa ....",
+    "pilihan": [
+      "Undang-undang",
+      "Peraturan pemerintah",
+      "Keputusan presiden",
+      "Keputusan menteri",
+      "Peraturan daerah"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 72,
+    "pertanyaan": "Organisasi PBB yang melakukan pengawasan di bidang ketenagakerjaan dan perburuhan adalah ....",
+    "pilihan": [
+      "WHO",
+      "UNESCO",
+      "ASEAN",
+      "ILO",
+      "UNHCR"
+    ],
+    "jawaban": 3
+  },
+  {
+    "id": 73,
+    "pertanyaan": "Orang yang disebut sebagai Bapak Palang Merah Dunia adalah ....",
+    "pilihan": [
+      "Henri Dunant",
+      "Galileo Galilei",
+      "Leonardo da Vinci",
+      "Edward Butler",
+      "Thoma Savery"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 74,
+    "pertanyaan": "Charles Conrad adalah salah satu astronot Amerika Serikat yang berhasil melakukan pendaratan di bulan dengan menggunakan pesawat ruang angkasa ....",
+    "pilihan": [
+      "Apollo 10",
+      "Apollo 11",
+      "Apollo 12",
+      "Apollo 13",
+      "Apollo 14"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 75,
+    "pertanyaan": "Negara yang bukan merupakan anggota kelompok negara-negara maju G-8 di dunia adalah ....",
+    "pilihan": [
+      "Italia",
+      "Rusia",
+      "Swedia",
+      "Kanada",
+      "Jerman"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 76,
+    "pertanyaan": "Pemerintah Darurat RI pernah memindahkan ibukota Indonesia ke kota ....",
+    "pilihan": [
+      "Yogyakarta",
+      "Bukit Tinggi",
+      "Jakarta",
+      "Surabaya",
+      "Padang"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 77,
+    "pertanyaan": "Konferensi Meja Bundar diadakan di kota ....",
+    "pilihan": [
+      "Den Haag",
+      "Jakarta",
+      "Berlin",
+      "Perth",
+      "Washington"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 78,
+    "pertanyaan": "Kemerdekaan Indonesia diakui Belanda pada tanggal ....",
+    "pilihan": [
+      "1 Maret 1949",
+      "27 Desember 1949",
+      "13 Agustus 1950",
+      "17 Agustus 1945",
+      "4 September 2008"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 79,
+    "pertanyaan": "Kerajaan tertua yang pernah ada di Indonesia adalah ....",
+    "pilihan": [
+      "Kerajaan Tarumanegara",
+      "Kerajaan Kutai",
+      "Kerajaan Kediri",
+      "Kerajaan Singasari",
+      "Kerajaan Kalingga"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 80,
+    "pertanyaan": "Flora yang menjadi Puspa Bangsa adalah ....",
+    "pilihan": [
+      "Anggrek Bulan",
+      "Melati",
+      "Rafflesia Arnoldi",
+      "Kepel",
+      "Bunga mawar"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 81,
+    "pertanyaan": "Salah satu penandatangan Deklarasi Bangkok yang menjadi tanda berdirinya ASEAN adalah Narciso Ramos yang menjadi wakil dari negara ....",
+    "pilihan": [
+      "Singapura",
+      "Laos",
+      "Malaysia",
+      "Thailand",
+      "Filipina"
+    ],
+    "jawaban": 4
+  },
+  {
+    "id": 82,
+    "pertanyaan": "Islam sudah masuk ke Indonesia pada abad ke-7, bukti ini diungkapkan oleh ....",
+    "pilihan": [
+      "Marcopolo",
+      "I-tsing",
+      "Tomi Pires",
+      "Ibnu Batutah",
+      "Balaputeradewa"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 83,
+    "pertanyaan": "Fosil Pithecantropus Erectus lebih lengkap ditemukan di Indonesia di daerah ....",
+    "pilihan": [
+      "Sangiran",
+      "Malang",
+      "Trinil",
+      "Pacitan",
+      "Jepara"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 84,
+    "pertanyaan": "Pemimpin Partai Komunis Indonesia adalah ....",
+    "pilihan": [
+      "D. N. Aidit",
+      "Umar Dhani",
+      "Subandrio",
+      "Surahman",
+      "Kahar Muzakar"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 85,
+    "pertanyaan": "Tujuan diselenggarakannya Konferensi Asia Afrika adalah di antaranya ....",
+    "pilihan": [
+      "Ikut mengawasi perdamaian dunia",
+      "Mempererat serta menggalang persatuan",
+      "Mempererat kerjasama bangsa-bangsa Asia",
+      "Mempererat serta menggalang persatuan dan ikut mengawasi perdamaian dunia",
+      "Meredakan ketegangan antara blok Barat dan Timur"
+    ],
+    "jawaban": 3
+  },
+  {
+    "id": 86,
+    "pertanyaan": "Bangsa Eropa yang pertama kali datang ke Indonesia adalah ....",
+    "pilihan": [
+      "Belanda",
+      "Spanyol",
+      "Portugis",
+      "Inggris",
+      "Jepang"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 87,
+    "pertanyaan": "Dikuasainya wilayah Indonesia oleh penjajah Belanda menyebabkan terjadinya perubahan pelapisan sosial pada masyarakat Indonesia. Pada masa itu golongan yang termasuk warga kelas dua adalah bangsa ....",
+    "pilihan": [
+      "Indonesia",
+      "Cina dan Arab",
+      "Inggris",
+      "Belanda",
+      "Portugis"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 88,
+    "pertanyaan": "Sebagai konsekuensi ditetapkannya politik etis, Belanda mendirikan berbagai tingkatan sekolah untuk bangsa Indonesia dengan tujuan ....",
+    "pilihan": [
+      "Mendapatkan tenaga terdidik dengan upah rendah",
+      "Sebagai balasan atas jasa bangsa Indonesia",
+      "Agar rakyat Indonesia tidak terlalu terbelakang",
+      "Memenuhi tuntutan Partai Liberal di Negeri Belanda",
+      "Meningkatkan kesejahteraan Bangsa Indonesia"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 89,
+    "pertanyaan": "Salah satu agenda reformasi yang dituntut oleh kaum reformis di Indonesia pada tahun 1998 adalah ....",
+    "pilihan": [
+      "Otonomi khusus bagi semua provinsi",
+      "Mengganti UUD 1945 dengan UUD baru",
+      "Membubarkan DPR dan MPR",
+      "Tersedianya tembakau bagi rakyat miskin",
+      "Penghapusan dwi fungsi ABRI"
+    ],
+    "jawaban": 4
+  }
 ]
