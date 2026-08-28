@@ -15,84 +15,208 @@ let waktuMulaiFinal = null;
    MEMBUAT HALAMAN UJIAN
    ========================================== */
 
+function acakSoal(daftarSoal, jumlah) {
+    const soalAcak = [...daftarSoal];
+
+    for (let i = soalAcak.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+
+        [soalAcak[i], soalAcak[j]] = [
+            soalAcak[j],
+            soalAcak[i]
+        ];
+    }
+
+    return soalAcak.slice(0, jumlah);
+}
+
 async function mulaiUjian(jenis) {
 
     jenisUjianAktif = jenis;
 
-    let fileSoal = "";
-
-    if (jenis === "twk") {
-        fileSoal = "data/soal/twk.json";
-    }
-
-    if (jenis === "tiu") {
-        fileSoal = "data/soal/tiu.json";
-    }
-
-    if (jenis === "tkp") {
-        fileSoal = "data/soal/tkp.json";
-    }
-
-    if (jenis === "final") {
-        fileSoal = "data/soal/final.json";
-    }
-
-
     try {
 
-        const response = await fetch(fileSoal);
+        /* ==========================================
+           FINAL CPNS
+           AMBIL SOAL DARI TWK, TIU DAN TKP
+           ========================================== */
 
-        if (!response.ok) {
-            throw new Error("File soal tidak ditemukan");
+        if (jenis === "final") {
+
+            const [
+                responseTWK,
+                responseTIU,
+                responseTKP
+            ] = await Promise.all([
+
+                fetch("data/soal/twk.json"),
+                fetch("data/soal/tiu.json"),
+                fetch("data/soal/tkp.json")
+
+            ]);
+
+
+            if (
+                !responseTWK.ok ||
+                !responseTIU.ok ||
+                !responseTKP.ok
+            ) {
+
+                throw new Error(
+                    "Salah satu file soal tidak ditemukan"
+                );
+
+            }
+
+
+            const dataTWK =
+                await responseTWK.json();
+
+            const dataTIU =
+                await responseTIU.json();
+
+            const dataTKP =
+                await responseTKP.json();
+
+
+            /* ==========================================
+               AMBIL SOAL ACAK
+               ========================================== */
+
+            const soalTWK =
+                acakSoal(dataTWK, 35);
+
+            const soalTIU =
+                acakSoal(dataTIU, 30);
+
+            const soalTKP =
+                acakSoal(dataTKP, 45);
+
+
+            /* ==========================================
+               GABUNGKAN SOAL
+               ========================================== */
+
+            soalUjian = [
+
+                ...soalTWK,
+                ...soalTIU,
+                ...soalTKP
+
+            ];
+
+
+            nomorSoal = 0;
+
+            jawabanUser = new Array(
+                soalUjian.length
+            ).fill(null);
+
+
+            tampilkanUjian(jenis);
+
+            return;
+
         }
 
-        soalUjian = await response.json();
 
-        // Acak semua soal menggunakan metode Fisher-Yates
-for (let i = soalUjian.length - 1; i > 0; i--) {
+        /* ==========================================
+           UJIAN TWK, TIU DAN TKP
+           ========================================== */
 
-    const randomIndex =
-        Math.floor(Math.random() * (i + 1));
+        let fileSoal = "";
 
-    [soalUjian[i], soalUjian[randomIndex]] =
-        [soalUjian[randomIndex], soalUjian[i]];
 
-}
+        if (jenis === "twk") {
 
-// Tentukan jumlah soal
-let jumlahSoal = 0;
+            fileSoal = "data/soal/twk.json";
+
+        }
+
+
+        if (jenis === "tiu") {
+
+            fileSoal = "data/soal/tiu.json";
+
+        }
+
+
+        if (jenis === "tkp") {
+
+            fileSoal = "data/soal/tkp.json";
+
+        }
+
+
+        const response =
+            await fetch(fileSoal);
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "File soal tidak ditemukan"
+            );
+
+        }
+
+
+       const dataSoal =
+    await response.json();
+
+
+/* ==========================================
+   ACAK DAN AMBIL JUMLAH SOAL
+   ========================================== */
+
+let jumlahSoalUjian;
+
 
 if (jenis === "twk") {
-    jumlahSoal = 30;
+
+    jumlahSoalUjian = 35;
+
 }
 
-if (jenis === "tiu") {
-    jumlahSoal = 35;
+else if (jenis === "tiu") {
+
+    jumlahSoalUjian = 30;
+
 }
 
-if (jenis === "tkp") {
-    jumlahSoal = 45;
+else if (jenis === "tkp") {
+
+    jumlahSoalUjian = 45;
+
 }
 
-// Ambil soal sesuai jumlah
-if (jenis !== "final") {
-    soalUjian = soalUjian.slice(0, jumlahSoal);
-}
+
+/* Acak soal tanpa duplikat */
+
+soalUjian = acakSoal(
+    dataSoal,
+    jumlahSoalUjian
+);
+
+
         nomorSoal = 0;
 
-   jawabanUser = new Array(soalUjian.length).fill(null);
 
-if (jenis === "final") {
-    mulaiTimerFinal();
-}
+        jawabanUser = new Array(
+            soalUjian.length
+        ).fill(null);
 
-tampilkanUjian(jenis);
+
+        tampilkanUjian(jenis);
+
 
     } catch (error) {
 
         console.error(error);
 
-        alert("Soal belum dapat dimuat.");
+        alert(
+            "Soal belum dapat dimuat."
+        );
 
     }
 
@@ -126,6 +250,7 @@ function tampilkanUjian(jenis) {
 
             <div class="ujian-card">
 
+
 <div class="ujian-info">
 
     <span id="nomorSoal">
@@ -135,7 +260,18 @@ function tampilkanUjian(jenis) {
     <span id="jumlahSoal">
         ${soalUjian.length} Soal
     </span>
-
+    ${
+            jenis === "final"
+            ? `
+            <button
+                class="btn-navigasi-soal"
+                onclick="bukaNavigasiSoal()"
+            >
+                📋 Pilih Nomor Soal
+            </button>
+            `
+            : ""
+     }
     ${
         jenis === "final"
         ? `
@@ -174,16 +310,269 @@ function tampilkanUjian(jenis) {
                 </div>
 
             </div>
-
+            
         </section>
 
+        ${
+    jenis === "final"
+    ? `
+    <div
+        id="navigasiSoal"
+        class="navigasi-soal hidden"
+    >
+
+        <div class="navigasi-header">
+
+            <h3>📋 Pilih Nomor Soal</h3>
+
+            <button
+                onclick="tutupNavigasiSoal()"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <div
+            id="daftarNomorSoal"
+            class="daftar-nomor-soal"
+        >
+        </div>
+
+    </div>
+    `
+    : ""
+}
     `;
 
+     /* ==========================================
+       KHUSUS UJIAN FINAL
+       ========================================== */
+    if (jenis === "final") {
 
-    tampilkanSoal();
+    buatNavigasiSoal();
+    mulaiTimerFinal();
 
 }
 
+ /* ==========================================
+       TAMPILKAN SOAL
+       ========================================== */
+
+    tampilkanSoal();
+
+    /* ==========================================
+    ini bagian penutup fungsi tampilkanUjian()
+   ========================================== */
+}
+
+/* ==========================================
+   TIMER UJIAN FINAL
+   ========================================== */
+
+
+function mulaiTimerFinal() {
+
+    const timerElement =
+        document.getElementById(
+            "timerFinal"
+        );
+
+
+    if (!timerElement) {
+
+        return;
+
+    }
+
+
+    /* Hentikan timer lama */
+
+    if (timerFinal !== null) {
+
+        clearInterval(timerFinal);
+
+    }
+
+
+    timerFinal = setInterval(function () {
+
+        waktuFinal--;
+
+
+        const menit =
+            Math.floor(waktuFinal / 60);
+
+
+        const detik =
+            waktuFinal % 60;
+
+
+        timerElement.textContent =
+            "⏱️ " +
+            String(menit).padStart(2, "0") +
+            ":" +
+            String(detik).padStart(2, "0");
+
+
+        /* Jika waktu habis */
+
+        if (waktuFinal <= 0) {
+
+            clearInterval(timerFinal);
+
+            timerFinal = null;
+
+            alert(
+                "Waktu ujian telah habis!"
+            );
+
+        }
+
+    }, 1000);
+
+}
+
+
+
+/* ==========================================
+   BUAT NAVIGASI NOMOR SOAL FINAL
+   ========================================== */
+
+function buatNavigasiSoal() {
+
+    const container =
+        document.getElementById(
+            "daftarNomorSoal"
+        );
+
+
+    if (!container) {
+
+        return;
+
+    }
+
+
+    container.innerHTML = "";
+
+
+    soalUjian.forEach((soal, index) => {
+
+        const nomor = index + 1;
+
+
+        let kategori = "";
+
+
+        if (nomor <= 35) {
+
+            kategori = "TWK";
+
+        }
+
+        else if (nomor <= 65) {
+
+            kategori = "TIU";
+
+        }
+
+        else {
+
+            kategori = "TKP";
+
+        }
+
+
+        const tombol =
+            document.createElement("button");
+
+
+        tombol.className =
+            "nomor-soal-btn";
+
+
+        tombol.textContent =
+            nomor;
+
+
+        tombol.title =
+            `Soal ${nomor} - ${kategori}`;
+
+
+        if (jawabanUser[index] !== null) {
+
+            tombol.classList.add(
+                "sudah-dijawab"
+            );
+
+        }
+
+
+        tombol.onclick = function() {
+
+            nomorSoal = index;
+
+
+            tampilkanSoal();
+
+            tutupNavigasiSoal();
+
+        };
+
+
+        container.appendChild(
+            tombol
+        );
+
+    });
+
+}
+
+/* ==========================================
+   BUKA NAVIGASI SOAL
+   ========================================== */
+
+function bukaNavigasiSoal() {
+
+    const navigasi =
+        document.getElementById(
+            "navigasiSoal"
+        );
+
+
+    if (navigasi) {
+
+        navigasi.classList.remove(
+            "hidden"
+        );
+
+    }
+
+}
+
+/* ==========================================
+   TUTUP NAVIGASI SOAL
+   ========================================== */
+
+function tutupNavigasiSoal() {
+
+    const navigasi =
+        document.getElementById(
+            "navigasiSoal"
+        );
+
+
+    if (navigasi) {
+
+        navigasi.classList.add(
+            "hidden"
+        );
+
+    }
+
+}
 
 /* ==========================================
    TAMPILKAN SOAL
