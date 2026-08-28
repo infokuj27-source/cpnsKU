@@ -48,6 +48,36 @@ async function mulaiUjian(jenis) {
 
         soalUjian = await response.json();
 
+        // Acak semua soal menggunakan metode Fisher-Yates
+for (let i = soalUjian.length - 1; i > 0; i--) {
+
+    const randomIndex =
+        Math.floor(Math.random() * (i + 1));
+
+    [soalUjian[i], soalUjian[randomIndex]] =
+        [soalUjian[randomIndex], soalUjian[i]];
+
+}
+
+// Tentukan jumlah soal
+let jumlahSoal = 0;
+
+if (jenis === "twk") {
+    jumlahSoal = 30;
+}
+
+if (jenis === "tiu") {
+    jumlahSoal = 35;
+}
+
+if (jenis === "tkp") {
+    jumlahSoal = 45;
+}
+
+// Ambil soal sesuai jumlah
+if (jenis !== "final") {
+    soalUjian = soalUjian.slice(0, jumlahSoal);
+}
         nomorSoal = 0;
 
    jawabanUser = new Array(soalUjian.length).fill(null);
@@ -186,27 +216,99 @@ function tampilkanSoal() {
                 : "";
 
 
-        pilihanHTML += `
+        /* ==========================================
+           PILIHAN GAMBAR
+           ========================================== */
 
-            <label class="pilihan-soal">
+        if (
+            typeof pilihan === "object" &&
+            pilihan.gambar
+        ) {
 
-                <input
-                    type="radio"
-                    name="jawaban"
-                    value="${index}"
-                    ${checked}
-                    onchange="simpanJawaban(${index})"
+            pilihanHTML += `
+
+                <label class="pilihan-soal pilihan-gambar">
+
+                    <input
+                        type="radio"
+                        name="jawaban"
+                        value="${index}"
+                        ${checked}
+                        onchange="simpanJawaban(${index})"
+                    >
+
+                    <span class="huruf-pilihan">
+                        ${huruf}
+                    </span>
+
+                    <img
+                        src="${pilihan.gambar}"
+                        alt="Pilihan ${huruf}"
+                        class="gambar-pilihan"
+                    >
+
+                </label>
+
+            `;
+
+        }
+
+
+        /* ==========================================
+           PILIHAN TEKS
+           ========================================== */
+
+        else {
+
+            pilihanHTML += `
+
+                <label class="pilihan-soal">
+
+                    <input
+                        type="radio"
+                        name="jawaban"
+                        value="${index}"
+                        ${checked}
+                        onchange="simpanJawaban(${index})"
+                    >
+
+                    <span>
+                        ${huruf}. ${pilihan}
+                    </span>
+
+                </label>
+
+            `;
+
+        }
+
+    });
+
+
+    /* ==========================================
+       GAMBAR PERTANYAAN
+       ========================================== */
+
+    let gambarHTML = "";
+
+
+    if (soal.gambar) {
+
+        gambarHTML = `
+
+            <div class="gambar-soal-wrapper">
+
+                <img
+                    src="${soal.gambar}"
+                    alt="Gambar soal"
+                    class="gambar-soal"
                 >
 
-                <span>
-                    ${huruf}. ${pilihan}
-                </span>
-
-            </label>
+            </div>
 
         `;
 
-    });
+    }
 
 
     container.innerHTML = `
@@ -216,6 +318,10 @@ function tampilkanSoal() {
             <h2>
                 ${soal.pertanyaan}
             </h2>
+
+
+            ${gambarHTML}
+
 
             <div class="pilihan-container">
 
@@ -504,12 +610,24 @@ function tampilkanHasil(
                 </div>
 
 
-                <button
-                    class="btn-primary"
-                    onclick="location.hash='soal'; location.reload();"
-                >
-                    ← Kembali ke Website
-                </button>
+                <div class="hasil-actions">
+
+    <button
+        class="btn-primary"
+        onclick="cobaLagiUjian()"
+    >
+        🔄 Coba Lagi
+    </button>
+
+
+    <button
+        class="btn-secondary"
+        onclick="location.hash='soal'; location.reload();"
+    >
+        ← Kembali ke Website
+    </button>
+
+</div>
 
             </div>
 
@@ -777,5 +895,35 @@ function waktuFinalHabis() {
 
     // Hitung nilai otomatis
     hitungNilai();
+
+}
+
+/* ==========================================
+   COBA LAGI UJIAN
+   ========================================== */
+
+function cobaLagiUjian() {
+
+    // Jika mengulang Final,
+    // hapus waktu timer sebelumnya
+    if (jenisUjianAktif === "final") {
+
+        localStorage.removeItem(
+            "final_waktu_mulai"
+        );
+
+        if (timerFinal) {
+
+            clearInterval(timerFinal);
+
+            timerFinal = null;
+
+        }
+
+    }
+
+
+    // Mulai ulang ujian
+    mulaiUjian(jenisUjianAktif);
 
 }
