@@ -2090,3 +2090,202 @@ transform:translateY(0);
     }
 
 }
+
+/* ==========================================
+   TIMER FINAL
+   ========================================== */
+
+.timer-final {
+
+    font-weight:700;
+
+    color:#2563eb;
+
+    font-size:1.1rem;
+
+}
+
+
+.timer-final.timer-warning {
+
+    color:#dc2626;
+
+    animation: timerPulse 1s infinite;
+
+}
+
+
+@keyframes timerPulse {
+
+    0% {
+        transform:scale(1);
+    }
+
+    50% {
+        transform:scale(1.08);
+    }
+
+    100% {
+        transform:scale(1);
+    }
+
+}
+/* ==========================================
+   LAYOUT UJIAN
+   ========================================== */
+
+.ujian-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 650px;
+
+}
+
+/* ==========================================
+   AREA SOAL UJIAN SCROLL
+   ========================================== */
+
+#soalContainer {
+
+    min-height: 150px;
+
+    max-height: 300px;
+
+    overflow-y: auto;
+
+    padding-right: 10px;
+
+}
+
+
+/* NAVIGASI UJIAN */
+
+.ujian-navigation {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #e5e7eb;
+
+}
+
+/* ==========================================
+   GAMBAR SOAL TIU FIGURAL
+   ========================================== */
+
+.gambar-soal-wrapper {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    margin: 25px 0;
+
+}
+
+
+.gambar-soal {
+
+    max-width: 100%;
+
+    max-height: 300px;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+}
+
+
+/* ==========================================
+   PILIHAN GAMBAR
+   ========================================== */
+
+/* ==========================================
+   PILIHAN GAMBAR GRID
+   ========================================== */
+
+.pilihan-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+}
+
+
+/* Pilihan gambar */
+
+.pilihan-gambar {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    min-height: 140px;
+
+}
+
+
+/* Pilihan teks tetap normal */
+
+.pilihan-soal:not(.pilihan-gambar) {
+
+    grid-column: 1 / -1;
+
+}
+
+.huruf-pilihan {
+
+    font-weight: 700;
+
+    min-width: 25px;
+
+}
+
+
+.gambar-pilihan {
+
+    max-width: 180px;
+
+    max-height: 120px;
+
+    object-fit: contain;
+
+}
+
+@media (max-width: 600px) {
+
+    .pilihan-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .pilihan-soal:not(.pilihan-gambar) {
+
+        grid-column: auto;
+
+    }
+
+}
