@@ -2140,7 +2140,7 @@ transform:translateY(0);
 
     flex-direction: column;
 
-    min-height: 650px;
+    min-height: 800px;
 
 }
 
@@ -2152,7 +2152,7 @@ transform:translateY(0);
 
     min-height: 250px;
 
-    max-height: 850px;
+    max-height: 750px;
 
     overflow-y: auto;
 
@@ -2288,4 +2288,144 @@ transform:translateY(0);
 
     }
 
+}
+
+/* ==========================================
+   PILIH NOMOR SOAL FINAL
+   ========================================== */
+
+.pilih-soal-container {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+}
+
+
+.pilih-soal-header {
+    margin-bottom: 15px;
+}
+
+
+.pilih-soal-header h3 {
+    margin-bottom: 12px;
+}
+
+
+.legend-soal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+.legend-soal span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+}
+
+
+.legend-soal i {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+
+.legend-twk i {
+    background: #3b82f6;
+}
+
+
+.legend-tiu i {
+    background: #8b5cf6;
+}
+
+
+.legend-tkp i {
+    background: #f59e0b;
+}
+
+
+/* DAFTAR NOMOR */
+
+.daftar-nomor-soal {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(42px, 1fr));
+
+    gap: 8px;
+
+    max-height: 250px;
+
+    overflow-y: auto;
+
+    padding-right: 5px;
+}
+
+
+/* TOMBOL NOMOR */
+
+.nomor-soal-btn {
+    height: 42px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+
+/* TWK */
+
+.nomor-soal-btn.twk-btn {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+
+/* TIU */
+
+.nomor-soal-btn.tiu-btn {
+    background: #ede9fe;
+    color: #6d28d9;
+}
+
+
+/* TKP */
+
+.nomor-soal-btn.tkp-btn {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+
+/* SUDAH DIJAWAB */
+
+.nomor-soal-btn.sudah-dijawab {
+    background: #22c55e !important;
+    color: white !important;
+}
+
+
+/* SOAL AKTIF */
+
+.nomor-soal-btn.aktif {
+    outline: 3px solid #1f2937;
+
+    transform: scale(1.05);
+}
+
+
+.nomor-soal-btn:hover {
+    transform: translateY(-2px);
 }
