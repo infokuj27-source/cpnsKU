@@ -9,5 +9,41 @@
             "10"
         ],
         "jawaban": 2
-    }
+    },
+        {
+        "id": 2,
+        "pertanyaan": "Jika 2 + 3 = 5, maka 5 + 4 = ...",
+        "pilihan": [
+            "7",
+            "8",
+            "9",
+            "10"
+        ],
+        "jawaban": 2
+    },
+    {
+    "id": 36,
+    "kategori": "figural",
+    "pertanyaan": "Perhatikan pola gambar berikut. Pilih gambar yang paling tepat untuk melanjutkan pola.",
+    "gambar": "assets/img/soal/tiu/figural-1.png",
+    "pilihan": [
+        {
+            "gambar": "assets/img/soal/tiu/figural-1-a.png"
+        },
+        {
+            "gambar": "assets/img/soal/tiu/figural-1-b.png"
+        },
+        {
+            "gambar": "assets/img/soal/tiu/figural-1-c.png"
+        },
+        {
+            "gambar": "assets/img/soal/tiu/figural-1-d.png"
+        },
+        {
+            "gambar": "assets/img/soal/tiu/figural-1-e.png"
+        }
+    ],
+    "jawaban": 4
+}
+        
 ]
