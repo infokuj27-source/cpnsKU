@@ -10,40 +10,820 @@
         ],
         "jawaban": 2
     },
-        {
-        "id": 2,
-        "pertanyaan": "Jika 2 + 3 = 5, maka 5 + 4 = ...",
-        "pilihan": [
-            "7",
-            "8",
-            "9",
-            "10"
-        ],
-        "jawaban": 2
-    },
     {
-    "id": 36,
+    "id": 2,
     "kategori": "figural",
     "pertanyaan": "Perhatikan pola gambar berikut. Pilih gambar yang paling tepat untuk melanjutkan pola.",
-    "gambar": "assets/img/soal/TIU/figural-1.png",
+    "gambar": "assets/img/soal/tiu/figural-1.png",
     "pilihan": [
         {
-            "gambar": "assets/img/soal/TIU/figural-1-a.png"
+            "gambar": "assets/img/soal/tiu/figural-1-a.png"
         },
         {
-            "gambar": "assets/img/soal/TIU/figural-1-b.png"
+            "gambar": "assets/img/soal/tiu/figural-1-b.png"
         },
         {
-            "gambar": "assets/img/soal/TIU/figural-1-c.png"
+            "gambar": "assets/img/soal/tiu/figural-1-c.png"
         },
         {
-            "gambar": "assets/img/soal/TIU/figural-1-d.png"
+            "gambar": "assets/img/soal/tiu/figural-1-d.png"
         },
         {
-            "gambar": "assets/img/soal/TIU/figural-1-e.png"
+            "gambar": "assets/img/soal/tiu/figural-1-e.png"
         }
     ],
     "jawaban": 4
 }
-        
+    {
+    "id": 3,
+    "pertanyaan": "REGISTRASI = ....",
+    "pilihan": [
+        "Jadwal ulang",
+        "Pengaturan",
+        "Register",
+        "Pendaftaran kembali",
+        "Pendaftaran"
+    ],
+    "jawaban": 4
+},
+{
+    "id": 4,
+    "pertanyaan": "BOGA = ....",
+    "pilihan": [
+        "Makanan nikmat",
+        "Resep",
+        "Menu",
+        "Pakaian pengantin",
+        "Pakaian kebesaran"
+    ],
+    "jawaban": 0
+},
+{
+    "id": 5,
+    "pertanyaan": "MOBILITAS = ....",
+    "pilihan": [
+        "Motivasi",
+        "Lalu-lintas",
+        "Dinamis",
+        "Gerak",
+        "Dorongan"
+    ],
+    "jawaban": 3
+},
+{
+    "id": 6,
+    "pertanyaan": "ELABORASI = ....",
+    "pilihan": [
+        "Penyusunan dalil",
+        "Pendadaran",
+        "Penjelasan terperinci",
+        "Kontrak kerja",
+        "Penugasan untuk kerja"
+    ],
+    "jawaban": 2
+},
+{
+    "id": 7,
+    "pertanyaan": "KONVENSI = ....",
+    "pilihan": [
+        "Kebijakan",
+        "Kesamaan",
+        "Kesimpulan",
+        "Kesepakatan",
+        "Keputusan"
+    ],
+    "jawaban": 3
+},
+{
+    "id": 8,
+    "pertanyaan": "APORISMA = ....",
+    "pilihan": [
+        "Apriori",
+        "Maksimal",
+        "Bentuk",
+        "Pendekatan",
+        "Prima"
+    ],
+    "jawaban": 2
+},
+{
+    "id": 9,
+    "pertanyaan": "REMISI = ....",
+    "pilihan": [
+        "Pengampunan",
+        "Penghukuman",
+        "Bantuan",
+        "Penghapusan",
+        "Penolakan"
+    ],
+    "jawaban": 0
+},
+{
+    "id": 10,
+    "pertanyaan": "HETEROGEN = ....",
+    "pilihan": [
+        "Homogen",
+        "Khusus",
+        "Unik",
+        "Plural",
+        "Banyak"
+    ],
+    "jawaban": 0
+},
+{
+    "id": 11,
+    "pertanyaan": "MONOTON = ....",
+    "pilihan": [
+        "Terus-menerus",
+        "Berubah-ubah",
+        "Berganti-ganti",
+        "Bergerak-gerak",
+        "Berulang-ulang"
+    ],
+    "jawaban": 4
+},
+{
+    "id": 12,
+    "pertanyaan": "KONTRIBUSI = ....",
+    "pilihan": [
+        "Pajak",
+        "Hibah",
+        "Sumbangan",
+        "Bunga",
+        "Piutang"
+    ],
+    "jawaban": 2
+},
+{
+    "id": 13,
+    "pertanyaan": "LIMIT = ....",
+    "pilihan": [
+        "Batas",
+        "Cukup",
+        "Surplus",
+        "Kontinu",
+        "Kurang"
+    ],
+    "jawaban": 0
+},
+{
+    "id": 14,
+    "pertanyaan": "WARITA = ....",
+    "pilihan": [
+        "Wanita",
+        "Pria",
+        "Cerita",
+        "Gurita",
+        "Fiksi"
+    ],
+    "jawaban": 2
+},
+{
+    "id": 15,
+    "pertanyaan": "ZAIM = ....",
+    "pilihan": [
+        "Serena-mena",
+        "Dholim",
+        "Pemimpin",
+        "Berhalangan",
+        "Adil dan bijaksana"
+    ],
+    "jawaban": 2
+},
+{
+    "id": 16,
+    "pertanyaan": "BRUTAL >< ....",
+    "pilihan": [
+        "Sederhana",
+        "Moderat",
+        "Sopan",
+        "Cinta",
+        "Alim"
+    ],
+    "jawaban": 2
+},
+{
+    "id": 17,
+    "pertanyaan": "FLUKTUASI >< ....",
+    "pilihan": [
+        "Stabil",
+        "Berubah",
+        "Baku",
+        "Tenang",
+        "Terkendali"
+    ],
+    "jawaban": 0
+},
+{
+    "id": 18,
+    "pertanyaan": "RISAU >< ....",
+    "pilihan": [
+        "Tertib",
+        "Bahagia",
+        "Perlahan-lahan",
+        "Nikmat",
+        "Aman"
+    ],
+    "jawaban": 4
+},
+{
+    "id": 19,
+    "pertanyaan": "OPTIMISTIS >< ....",
+    "pilihan": [
+        "Ragu",
+        "Pasti",
+        "Acuh",
+        "Yakin",
+        "Mantap"
+    ],
+    "jawaban": 0
+},
+{
+    "id": 20,
+    "pertanyaan": "PREFIKS >< ....",
+    "pilihan": [
+        "Sisipan",
+        "Awalan",
+        "Kutipan",
+        "Akhiran",
+        "Pelengkap"
+    ],
+    "jawaban": 3
+},
+{
+    "id": 21,
+    "pertanyaan": "FIKSI >< ....",
+    "pilihan": [
+        "Rekaan",
+        "Ilmiah",
+        "Nyata",
+        "Khayalan",
+        "Mimpi"
+    ],
+    "jawaban": 2
+},
+{
+    "id": 22,
+    "pertanyaan": "DELUSI >< ....",
+    "pilihan": [
+        "Ilmiah",
+        "Khayal",
+        "Impian",
+        "Nyata",
+        "Ilusi"
+    ],
+    "jawaban": 3
+},
+{
+    "id": 23,
+    "pertanyaan": "PAMRIH >< ....",
+    "pilihan": [
+        "Imbalan",
+        "Ikhlas",
+        "Pengorbanan",
+        "Sabar",
+        "Rela"
+    ],
+    "jawaban": 1
+},
+{
+    "id": 24,
+    "pertanyaan": "MERGER >< ....",
+    "pilihan": [
+        "Penyatuan",
+        "Penyebaran",
+        "Pemisahan",
+        "Penggabungan",
+        "Perekrutan"
+    ],
+    "jawaban": 2
+},
+{
+    "id": 25,
+    "pertanyaan": "KONEKSI >< ....",
+    "pilihan": [
+        "Kenalan",
+        "Pengantar",
+        "Penghubung",
+        "Musuh",
+        "Teman"
+    ],
+    "jawaban": 3
+},
+{
+    "id": 26,
+    "pertanyaan": "GENAP >< ....",
+    "pilihan": [
+        "Gasal",
+        "Dwi",
+        "Tri",
+        "Utuh",
+        "Sempurna"
+    ],
+    "jawaban": 0
+},
+{
+    "id": 27,
+    "pertanyaan": "DEFENSIF >< ....",
+    "pilihan": [
+        "Bertahan",
+        "Sabar",
+        "Agresif",
+        "Kondusif",
+        "Lambat"
+    ],
+    "jawaban": 2
+},
+{
+    "id": 28,
+    "pertanyaan": "MASKULIN >< ....",
+    "pilihan": [
+        "Tampan",
+        "Feminin",
+        "Jantan",
+        "Sensual",
+        "Betina"
+    ],
+    "jawaban": 1
+},
+{
+    "id": 29,
+    "pertanyaan": "AKIBAT >< ....",
+    "pilihan": [
+        "Risiko",
+        "Hasil",
+        "Bahaya",
+        "Sebab",
+        "Aman"
+    ],
+    "jawaban": 3
+},
+{
+    "id": 30,
+    "pertanyaan": "CERDAS >< ....",
+    "pilihan": [
+        "Idiot",
+        "Pandai",
+        "Jujur",
+        "Cermat",
+        "Hemat"
+    ],
+    "jawaban": 0
+},
+{
+    "id": 31,
+    "pertanyaan": "Mata : Minus : Kacamata = .... : .... : ....",
+    "pilihan": [
+        "Kaki : Cacat : Kursi roda",
+        "Paku : Palu : Kayu",
+        "Api : Kayu : Abu",
+        "Batu : Gerobak : Pondasi",
+        "Bayi : Anak-anak : Remaja"
+    ],
+    "jawaban": 0
+},
+{
+    "id": 32,
+    "pertanyaan": "Kertas : Buku = .... : ....",
+    "pilihan": [
+        "Kayu : Lemari",
+        "Tembok : Ruangan",
+        "Kain : Boneka",
+        "Laci : Meja",
+        "Air : Gelas"
+    ],
+    "jawaban": 0
+},
+{
+    "id": 33,
+    "pertanyaan": "Ombak : Menggulung = .... : ....",
+    "pilihan": [
+        "Kertas : Melipat",
+        "Bola : Menggelinding",
+        "Sepeda : Melompat",
+        "Humor : Lawak",
+        "Wajan : Menggoreng"
+    ],
+    "jawaban": 4
+},
+{
+    "id": 34,
+    "pertanyaan": "Air : Kapal : Pelabuhan = .... : .... : ....",
+    "pilihan": [
+        "Darat : Terminal : Bus",
+        "Sungai : Jembatan : Rakit",
+        "Sepeda : Jalan : Trotoar",
+        "Udara : Pesawat : Bandara",
+        "Desa : Gerobak : Jalan"
+    ],
+    "jawaban": 3
+},
+{
+    "id": 35,
+    "pertanyaan": "Film : Sutradara = .... : ....",
+    "pilihan": [
+        "Murid : Kepala sekolah",
+        "Suporter : Pemandu sorak",
+        "Pertandingan : Wasit",
+        "Uang : Bankir",
+        "Hukum : Kriminalitas"
+    ],
+    "jawaban": 2
+},
+{
+    "id": 36,
+    "pertanyaan": "Topi : Penutup = Staples : ....",
+    "pilihan": [
+        "Penyatu",
+        "Pembuka",
+        "Pendorong",
+        "Penjepit",
+        "Pemukul"
+    ],
+    "jawaban": 3
+},
+{
+    "id": 37,
+    "pertanyaan": "Berbicara : Membentak = .... : ....",
+    "pilihan": [
+        "Menegur : Memanggil",
+        "Virus : Penyakit",
+        "Makan : Minum",
+        "Melihat : Melirik",
+        "Batu : Kerikil"
+    ],
+    "jawaban": 3
+},
+{
+    "id": 38,
+    "pertanyaan": "Panas : Berkeringat = .... : ....",
+    "pilihan": [
+        "Dingin : Berselimut",
+        "Lelah : Kamar tidur",
+        "Tegang : Gemetar",
+        "Belajar : Pintar",
+        "Gembira : Bermain"
+    ],
+    "jawaban": 2
+},
+{
+    "id": 39,
+    "pertanyaan": "Gula : .... = Cabai : Pedas",
+    "pilihan": [
+        "Manis",
+        "Panas",
+        "Pahit",
+        "Asam",
+        "Putih"
+    ],
+    "jawaban": 0
+},
+{
+    "id": 40,
+    "pertanyaan": "Senin : Rabu : Jumat = .... : .... : ....",
+    "pilihan": [
+        "Februari : Juni : Agustus",
+        "Januari : Agustus : Desember",
+        "Desember : November : Oktober",
+        "April : Juni : Maret",
+        "Januari : Maret : Mei"
+    ],
+    "jawaban": 4
+},
+{
+    "id": 41,
+    "pertanyaan": "SIKAT : GIGI = SEMIR : ....",
+    "pilihan": [
+        "Punggung",
+        "Sepatu",
+        "Kuku",
+        "Kaitan",
+        "Kaki"
+    ],
+    "jawaban": 1
+},
+{
+    "id": 42,
+    "pertanyaan": "ATAS : BAWAH = .... : ....",
+    "pilihan": [
+        "Jauh : Panjang",
+        "Pendek : Dekat",
+        "Rendah : Atas",
+        "Kanan : Kiri",
+        "Atas : Tinggi"
+    ],
+    "jawaban": 3
+},
+{
+    "id": 43,
+    "pertanyaan": "MESIR : KAIRO = JERMAN : ....",
+    "pilihan": [
+        "Muenchen",
+        "Milan",
+        "Berlin",
+        "Amsterdam",
+        "Kopenhagen"
+    ],
+    "jawaban": 2
+},
+{
+    "id": 44,
+    "pertanyaan": "Pekanbaru : Riau : Sumatera = .... : .... : ....",
+    "pilihan": [
+        "Surabaya : Malang : Jawa Timur",
+        "Semarang : Yogyakarta : Jawa",
+        "Jawa Barat : Jawa : Bandung",
+        "Jakarta : Bandung : Surabaya",
+        "Semarang : Jawa Tengah : Jawa"
+    ],
+    "jawaban": 4
+},
+{
+    "id": 45,
+    "pertanyaan": "Bus : Transportasi = Telepon : ....",
+    "pilihan": [
+        "Perhubungan",
+        "Perjalanan",
+        "Inisiasi",
+        "Komunikasi",
+        "Surat"
+    ],
+    "jawaban": 3
+},
+{
+    "id": 46,
+    "pertanyaan": "Suku ke-6 dari barisan bilangan 2, 6, 12, 20, 30, ... adalah ....",
+    "pilihan": [
+        "35",
+        "36",
+        "38",
+        "42",
+        "46"
+    ],
+    "jawaban": 3
+},
+{
+    "id": 47,
+    "pertanyaan": "Diketahui barisan bilangan sebagai berikut: 2, 5, 8, 11, 14, ... Suku ke-16 barisan tersebut adalah ....",
+    "pilihan": [
+        "35",
+        "37",
+        "45",
+        "47",
+        "51"
+    ],
+    "jawaban": 3
+},
+{
+    "id": 48,
+    "pertanyaan": "Diketahui barisan bilangan sebagai berikut: 50, 44, 38, 32, ... Suku ke-26 barisan tersebut adalah ....",
+    "pilihan": [
+        "8",
+        "-100",
+        "2",
+        "50",
+        "10"
+    ],
+    "jawaban": 1
+},
+{
+    "id": 49,
+    "pertanyaan": "9 - 8 - 9 - 8 - 9 - 7 - 9 - 7. Seri selanjutnya adalah ....",
+    "pilihan": [
+        "9 - 6 - 9 - 6",
+        "9 - 5 - 9 - 5",
+        "9 - 2 - 9 - 2",
+        "9 - 4 - 9 - 4",
+        "9 - 3 - 9 - 3"
+    ],
+    "jawaban": 0
+},
+{
+    "id": 50,
+    "pertanyaan": "B O C O D O E O .... ....",
+    "pilihan": [
+        "F O",
+        "G O",
+        "H O",
+        "I O",
+        "L O"
+    ],
+    "jawaban": 0
+},
+{
+    "id": 51,
+    "pertanyaan": "1, 3, 5, 7, ....",
+    "pilihan": [
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+    ],
+    "jawaban": 1
+},
+{
+    "id": 52,
+    "pertanyaan": "-17, -10, ..., 1, 5, ..., 10, 11",
+    "pilihan": [
+        "-8 dan 6",
+        "-7 dan 7",
+        "-5 dan 7",
+        "-4 dan 8",
+        "-3 dan 9"
+    ],
+    "jawaban": 3
+},
+{
+    "id": 53,
+    "pertanyaan": "Suku ke-6 dari barisan bilangan 3, 6, 18, 36, 108, ... adalah ....",
+    "pilihan": [
+        "136",
+        "186",
+        "206",
+        "216",
+        "213"
+    ],
+    "jawaban": 3
+},
+{
+    "id": 54,
+    "pertanyaan": "Suku ke-6 dari barisan bilangan 1, 2, 6, 15, 31, ... adalah ....",
+    "pilihan": [
+        "41",
+        "46",
+        "51",
+        "54",
+        "56"
+    ],
+    "jawaban": 4
+},
+{
+  "id": 55,
+  "pertanyaan": "Diketahui barisan bilangan sebagai berikut: 66, 62, 58, 54, 50, ... Suku ke-20 barisan tersebut adalah ...",
+  "pilihan": ["10", "-10", "20", "-20", "25"],
+  "jawaban": 1
+},
+{
+  "id": 56,
+  "pertanyaan": "Diketahui barisan sebagai berikut: 3, 9, 15, 21, 27, ... Suku ke-28 barisan tersebut adalah ...",
+  "pilihan": ["165", "167", "169", "179", "187"],
+  "jawaban": 0
+},
+{
+  "id": 58,
+  "pertanyaan": "18 (171) 19, maka 25 (...) 16",
+  "pilihan": ["124", "150", "186", "200", "225"],
+  "jawaban": 3
+},
+{
+  "id": 59,
+  "pertanyaan": "9 (16) 7, maka 11 (...) 9",
+  "pilihan": ["18", "24", "28", "20", "32"],
+  "jawaban": 3
+},
+{
+  "id": 60,
+  "pertanyaan": "452 (37) 341, maka 225 (...) 123",
+  "pilihan": ["28", "32", "34", "37", "43"],
+  "jawaban": 2
+},
+{
+  "id": 61,
+  "pertanyaan": "Sebuah pabrik memproduksi batu bata dan genteng. Jumlah batu bata dan genteng adalah 360 buah, dengan jumlah genteng sebanyak 3 kali lipat dari jumlah batu bata. Berapakah jumlah genteng yang diproduksi?",
+  "pilihan": ["150 buah", "270 buah", "200 buah", "180 buah", "250 buah"],
+  "jawaban": 1
+},
+{
+  "id": 62,
+  "pertanyaan": "Pak Ahmad menjual sepeda dengan harga Rp950.000,-. Dari penjualan tersebut, Pak Ahmad mendapatkan laba sebanyak 25% dari harga beli. Berapakah harga beli sepeda tersebut?",
+  "pilihan": ["Rp500.000,-", "Rp630.000,-", "Rp1.130.000,-", "Rp820.000,-", "Rp760.000,-"],
+  "jawaban": 4
+},
+{
+  "id": 63,
+  "pertanyaan": "Ayu mengendarai sepeda dengan kecepatan 5 km per 15 menit. Jika Ayu sudah mengendarai sepeda tersebut selama 2,5 jam, berapakah jarak yang telah ditempuh oleh Ayu?",
+  "pilihan": ["30 km", "25 km", "50 km", "75 km", "35 km"],
+  "jawaban": 2
+},
+{
+  "id": 64,
+  "pertanyaan": "Pada pesta pernikahannya, Anto dan Diana membagikan undangan untuk 600 pria dan 300 wanita. Pada hari acara ternyata 50% dari undangan pria hadir, dan 80% undangan wanita hadir. Berapakah persentase tingkat kehadiran dari undangan yang dibagikan?",
+  "pilihan": ["35%", "60%", "45%", "50%", "70%"],
+  "jawaban": 1
+},
+{
+  "id": 65,
+  "pertanyaan": "Sebuah besi memiliki panjang 12 kaki. Besi tersebut kemudian akan dipotong dengan masing-masing potongan panjangnya 8 inch. Banyaknya potongan besi yang berhasil dibuat adalah ...",
+  "pilihan": ["13 buah", "16 buah", "20 buah", "18 buah", "24 buah"],
+  "jawaban": 3
+},
+{
+  "id": 66,
+  "pertanyaan": "Anto memberikan uang tujuh ribu rupiah kepada Budi, lalu Budi memberikan uang lima ribu rupiah kepada Cipto. Uang Anto, Budi dan Cipto sekarang sama banyaknya. Berapakah selisih uang Anto dan Budi mula-mula?",
+  "pilihan": ["Tiga ribu rupiah", "Lima ribu rupiah", "Tujuh ribu rupiah", "Sembilan ribu rupiah", "Sebelas ribu rupiah"],
+  "jawaban": 3
+},
+{
+  "id": 67,
+  "pertanyaan": "Jumlah ayam ternak Banu pada awal tahun pertama ada 100 ekor. Tiap akhir tahun jumlah ayam ternak Banu berkembang biak menjadi satu setengah kali lipatnya, namun selalu terjual sebanyak 50 ekor. Berapakah jumlah ayam ternak Banu pada akhir tahun ke sebelas?",
+  "pilihan": ["100 ekor", "550 ekor", "1.650 ekor", "3.098 ekor", "3.646 ekor"],
+  "jawaban": 0
+},
+{
+  "id": 68,
+  "pertanyaan": "Berapakah bilangan prima terkecil yang dapat membagi habis 25122010?",
+  "pilihan": ["7", "5", "3", "2", "1"],
+  "jawaban": 3
+},
+{
+  "id": 69,
+  "pertanyaan": "Dua buah motor melaju dalam sebuah lintasan memutar sejauh 150 km. Kecepatan motor pertama adalah 175 km/jam, sedangkan kecepatan motor kedua adalah 100 km/jam. Berapa waktu yang diperlukan motor pertama untuk melakukan overlap terhadap motor kedua?",
+  "pilihan": ["2 jam", "2,5 jam", "3 jam", "3,5 jam", "4 jam"],
+  "jawaban": 0
+},
+{
+  "id": 70,
+  "pertanyaan": "Lima orang tukang dapat menyelesaikan sebuah pekerjaan dalam sepuluh hari tanpa libur. Pekerjaan yang sama dikerjakan oleh dua orang tukang dengan waktu libur satu hari setiap lima hari kerja. Berapa lama pekerjaan tersebut dapat diselesaikan?",
+  "pilihan": ["25 hari", "28 hari", "30 hari", "32 hari", "35 hari"],
+  "jawaban": 0
+},
+{
+  "id": 71,
+  "pertanyaan": "Sebuah kantor yang berisi 48 orang. 29 orang berambut pendek dan 4 orang pria yang berambut panjang. Jika jumlah wanita di kantor tersebut ada 21 orang, maka berapakah jumlah wanita yang berambut pendek?",
+  "pilihan": ["4 orang", "5 orang", "6 orang", "7 orang", "8 orang"],
+  "jawaban": 2
+},
+{
+  "id": 72,
+  "pertanyaan": "Seorang siswa memperoleh nilai ujian 78,1; 83,5 dan 92,1 untuk tiga mata pelajaran. Berapa nilai yang harus diperoleh untuk mata pelajaran keempat jika ia ingin mendapatkan rata-rata 87,5 untuk empat mata pelajaran?",
+  "pilihan": ["94,8", "95,3", "95,8", "96,3", "96,8"],
+  "jawaban": 3
+},
+{
+  "id": 73,
+  "pertanyaan": "Seorang pelari maraton menempuh jarak 0,8 km dalam 10 menit. Berapakah waktu yang diperlukan pelari untuk menempuh jarak 60 km?",
+  "pilihan": ["11 jam 30 menit", "12 jam 30 menit", "13 jam 30 menit", "14 jam 30 menit", "15 jam 30 menit"],
+  "jawaban": 1
+},
+{
+  "id": 74,
+  "pertanyaan": "Dua bungkus rokok merk M dan tiga bungkus rokok merk N harganya Rp52.000,00. Tiga bungkus rokok merk M dan dua bungkus rokok merk N harganya Rp50.500,00. Berapakah harga dua bungkus rokok merk M dan dua bungkus rokok merk N?",
+  "pilihan": ["Rp9.500,00", "Rp11.000,00", "Rp20.500,00", "Rp41.000,00", "Rp41.500,00"],
+  "jawaban": 3
+},
+{
+  "id": 75,
+  "pertanyaan": "Seorang mahasiswa memperoleh nilai 64 dan 81 dalam ujian pertama dan kedua mata kuliah matematika. Bobot ujian pertama, kedua dan ujian akhir masing-masing adalah 25%, 30%, dan 45%. Berapakah nilai ujian akhir yang harus dia dapatkan jika dia ingin mendapatkan nilai akhir 75?",
+  "pilihan": ["77,1", "79,3", "80,6", "83,3", "87,1"],
+  "jawaban": 0
+},
+{
+  "id": 76,
+  "pertanyaan": "Semua kucing memakan ikan. Semua kambing tidak memakan daging.",
+  "pilihan": ["Kucing tidak memakan ikan", "Kambing memakan ikan", "Kucing dan kambing tidak memakan ikan dan tidak memakan daging", "Kucing sama dengan kambing", "Semua pernyataan salah"],
+  "jawaban": 4
+},
+{
+  "id": 77,
+  "pertanyaan": "Semua karyawan hotel harus menghadiri apel pagi. Sedangkan office boy adalah karyawan hotel.",
+  "pilihan": ["Semua yang menghadiri apel pagi adalah office boy", "Sementara peserta apel pagi bukan karyawan hotel", "Sementara peserta apel pagi adalah office boy", "Semua office boy hadir dalam apel pagi", "Semua yang hadir bukan office boy"],
+  "jawaban": 3
+},
+{
+  "id": 78,
+  "pertanyaan": "Jika seorang pelari maraton tidak pernah berlatih lagi, staminanya akan menurun drastis. Jika staminanya menurun drastis, pelari tidak akan juara. Jadi, jika pelari maraton tidak pernah berlatih lagi, maka pelari maraton itu tidak akan juara.",
+  "pilihan": ["Benar", "Salah pada premis mayor", "Salah pada premis minor", "Salah pada premis mayor dan premis minor", "Salah pada kesimpulan"],
+  "jawaban": 0
+},
+{
+  "id": 79,
+  "pertanyaan": "Semua mahasiswa UGM adalah orang cerdas. Aji adalah mahasiswa UGM. Oleh karena itu, Aji adalah seorang yang cerdas.",
+  "pilihan": ["Benar", "Salah pada premis mayor", "Salah pada premis minor", "Salah pada premis mayor dan premis minor", "Salah pada kesimpulan"],
+  "jawaban": 0
+},
+{
+  "id": 81,
+  "pertanyaan": "Lazimnya, wirausaha dipandang sebagai seorang individu yang memiliki dan menjalankan usaha kecil. Tetapi, sekadar memiliki dan menjalankan usaha kecil maupun usaha besar sekalipun tidak menjadikan seseorang sebagai wirausaha. Jika seseorang adalah wirausaha sejati, maka ada produk-produk baru yang ia ciptakan, ada cara-cara baru yang ia ciptakan dalam menjalankan usahanya. Dari berikut ini manakah resume terbaik dari paragraf di atas?",
+  "pilihan": ["Seorang pemilik usaha perusahaan besar bisa merupakan seorang wirausaha", "Seseorang yang membangun sebuah perusahaan dapat dianggap sebagai seorang wirausaha", "Wirausaha tidak memiliki dan menjalankan usaha kecil", "Wirausaha adalah investor", "Wirausaha memiliki modal dan hidupnya mewah"],
+  "jawaban": 1
+},
+{
+  "id": 82,
+  "pertanyaan": "Ira lebih tinggi dari Syamsul. Ali lebih tinggi daripada Heri. Heri lebih pendek daripada Gani. Syamsul dan Gani sama tingginya. Jika data di atas benar maka manakah kondisi berikut ini yang benar?",
+  "pilihan": ["Ali lebih tinggi dari Gani", "Ali lebih tinggi dari Ira", "Syamsul lebih pendek dari Ali", "Ira lebih tinggi dari Heri", "Tidak ada pilihan yang benar"],
+  "jawaban": 3
+},
+{
+  "id": 84,
+  "pertanyaan": "Hanya jika berbakat dan bekerja keras seorang atlet dapat sukses sebagai atlet profesional. Berikut ini adalah kesimpulan secara logis yang dapat ditarik dari pernyataan di atas?",
+  "pilihan": ["Jika seorang atlet berbakat dan bekerja keras, maka ia akan sukses sebagai atlet profesional", "Jika seorang atlet tidak profesional maka pasti dia malas", "Jika seorang atlet tidak sukses sebagai atlet profesional, maka ia tidak berbakat", "Jika seorang atlet tidak sukses sebagai atlet profesional, maka ia bukan pekerja keras", "Jika seorang atlet tidak berbakat atau tidak bekerja keras, maka ia tidak akan sukses sebagai atlet profesional"],
+  "jawaban": 4
+},
+{
+  "id": 85,
+  "pertanyaan": "Rahman berbadan tegap. Semua prajurit berbadan tegap. Manakah kesimpulan yang benar dari pernyataan di atas?",
+  "pilihan": ["Rahman adalah seorang prajurit", "Seorang yang berbadan tegap pastilah seorang prajurit", "Rahman berbadan tegap karena ia seorang prajurit", "Rahman belum tentu seorang prajurit", "Tidak dapat ditarik kesimpulan"],
+  "jawaban": 3
+}       
 ]
