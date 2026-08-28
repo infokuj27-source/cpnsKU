@@ -6,7 +6,8 @@
             "Pancasila",
             "UUD 1945",
             "Bhinneka Tunggal Ika",
-            "NKRI"
+            "NKRI",
+            "Enam sila"
         ],
         "jawaban": 0
     },
@@ -17,7 +18,8 @@
             "Tiga sila",
             "Empat sila",
             "Lima sila",
-            "Enam sila"
+            "Enam sila",
+            "delapan sila"
         ],
         "jawaban": 2
     },
@@ -28,7 +30,8 @@
             "Kemanusiaan yang Adil dan Beradab",
             "Ketuhanan Yang Maha Esa",
             "Persatuan Indonesia",
-            "Keadilan Sosial bagi Seluruh Rakyat Indonesia"
+            "Keadilan Sosial bagi Seluruh Rakyat Indonesia",
+            "Enam sila"
         ],
         "jawaban": 1
     },
@@ -39,7 +42,8 @@
             "Bintang",
             "Rantai",
             "Pohon beringin",
-            "Kepala banteng"
+            "Kepala banteng",
+            "padi & kapas"
         ],
         "jawaban": 2
     },
@@ -50,7 +54,8 @@
             "Bersatu kita teguh",
             "Berbeda-beda tetapi tetap satu",
             "Satu bangsa satu bahasa",
-            "Persatuan dalam keberagaman"
+            "Persatuan dalam keberagaman",
+            "Enam kesatuan"
         ],
         "jawaban": 1
     },
@@ -61,7 +66,8 @@
             "Dasar negara",
             "Konstitusi negara",
             "Semboyan negara",
-            "Lambang negara"
+            "Lambang negara",
+            "UUD Negara"
         ],
         "jawaban": 1
     },
@@ -72,7 +78,8 @@
             "2 alinea",
             "3 alinea",
             "4 alinea",
-            "5 alinea"
+            "5 alinea",
+            "Enam sila"
         ],
         "jawaban": 2
     },
@@ -83,7 +90,8 @@
             "Pembukaan UUD 1945",
             "Batang tubuh UUD 1945",
             "Pancasila",
-            "Sumpah Pemuda"
+            "Sumpah Pemuda",
+            "lima sila"
         ],
         "jawaban": 0
     },
@@ -94,7 +102,8 @@
             "Bahasa Melayu",
             "Bahasa Indonesia",
             "Bahasa Jawa",
-            "Bahasa Nasional"
+            "Bahasa Nasional",
+            "bahasa alor"
         ],
         "jawaban": 1
     },
@@ -105,7 +114,8 @@
             "Kerajaan",
             "Federasi",
             "Republik",
-            "Konfederasi"
+            "Konfederasi",
+            "Kepulauan"
         ],
         "jawaban": 2
     },
@@ -116,7 +126,8 @@
             "Negarakertagama",
             "Sutasoma",
             "Pararaton",
-            "Arjunawiwaha"
+            "Arjunawiwaha",
+            "Enam sila"
         ],
         "jawaban": 1
     },
@@ -127,7 +138,8 @@
             "Garuda Pancasila",
             "Burung Elang",
             "Burung Rajawali",
-            "Garuda Nusantara"
+            "Garuda Nusantara",
+            "Moko Alor"
         ],
         "jawaban": 0
     },
@@ -138,7 +150,8 @@
             "Bintang",
             "Rantai",
             "Pohon beringin",
-            "Padi dan kapas"
+            "Padi dan kapas",
+            "kepala banteng"
         ],
         "jawaban": 1
     },
@@ -149,7 +162,8 @@
             "Kepala banteng",
             "Rantai",
             "Pohon beringin",
-            "Padi dan kapas"
+            "Padi dan kapas",
+            "Bintang"
         ],
         "jawaban": 0
     },
@@ -160,7 +174,8 @@
             "Bintang",
             "Kepala banteng",
             "Padi dan kapas",
-            "Rantai"
+            "Rantai",
+            "pohon beringin"
         ],
         "jawaban": 2
     },
@@ -171,7 +186,8 @@
             "17 Agustus 1945",
             "18 Agustus 1945",
             "20 Mei 1908",
-            "28 Oktober 1928"
+            "28 Oktober 1928",
+            "26 desember 2025"
         ],
         "jawaban": 0
     },
@@ -179,23 +195,25 @@
         "id": 17,
         "pertanyaan": "Proklamasi Kemerdekaan Indonesia dibacakan di...",
         "pilihan": [
-            "Jalan Pegangsaan Timur No. 56",
+            "Mola Kabupaten Alor",
             "Jalan Diponegoro No. 10",
             "Istana Merdeka",
-            "Gedung Pancasila"
+            "Gedung Pancasila",
+            "Jalan Pegangsaan Timur No. 56"
         ],
-        "jawaban": 0
+        "jawaban": 4
     },
     {
         "id": 18,
         "pertanyaan": "Tokoh yang membacakan teks Proklamasi Kemerdekaan Indonesia adalah...",
         "pilihan": [
             "Mohammad Hatta",
-            "Soekarno",
+            "Raja Abui",
             "Ahmad Soebardjo",
-            "Sutan Sjahrir"
+            "Sutan Sjahrir",
+            "Soekarno"
         ],
-        "jawaban": 1
+        "jawaban": 4
     },
     {
         "id": 19,
@@ -204,7 +222,8 @@
             "Mohammad Hatta",
             "Ahmad Soebardjo",
             "Soepomo",
-            "Mohammad Yamin"
+            "Mohammad Yamin",
+            "Raja Abui"
         ],
         "jawaban": 0
     },
@@ -215,7 +234,8 @@
             "20 Mei",
             "17 Agustus",
             "28 Oktober",
-            "10 November"
+            "10 November",
+            "14 februari"
         ],
         "jawaban": 2
     },
@@ -226,7 +246,8 @@
             "Kami putra dan putri Indonesia mengaku bertumpah darah yang satu, tanah air Indonesia",
             "Kami bangsa Indonesia menjunjung satu agama",
             "Kami putra dan putri Indonesia memiliki satu budaya",
-            "Kami bangsa Indonesia memiliki satu suku"
+            "Kami bangsa Indonesia memiliki satu suku",
+            "kami Indonesia bersatu"
         ],
         "jawaban": 0
     },
@@ -234,12 +255,13 @@
         "id": 22,
         "pertanyaan": "Hari Kebangkitan Nasional diperingati setiap...",
         "pilihan": [
-            "20 Mei",
+            "2 Mei",
             "28 Oktober",
             "10 November",
-            "1 Juni"
+            "1 Juni",
+            "20 Mei"
         ],
-        "jawaban": 0
+        "jawaban": 4
     },
     {
         "id": 23,
@@ -248,7 +270,8 @@
             "Mengutamakan kelompok sendiri",
             "Menghargai perbedaan suku, agama, dan budaya",
             "Menolak budaya daerah lain",
-            "Memaksakan pendapat kepada orang lain"
+            "Memaksakan pendapat kepada orang lain",
+            "Kepentingan tiap individu didahulukan"
         ],
         "jawaban": 1
     },
@@ -259,7 +282,8 @@
             "TNI saja",
             "Polri saja",
             "Pemerintah saja",
-            "Setiap warga negara"
+            "Setiap warga negara",
+            "Raja Abui"
         ],
         "jawaban": 3
     },
@@ -267,10 +291,11 @@
         "id": 25,
         "pertanyaan": "Contoh sikap nasionalisme dalam kehidupan sehari-hari adalah...",
         "pilihan": [
-            "Merusak fasilitas umum",
+            "Raja Abui",
             "Menggunakan produk dalam negeri secara bijak",
             "Mengutamakan kepentingan pribadi",
-            "Tidak peduli terhadap lingkungan"
+            "Tidak peduli terhadap lingkungan",
+            "Merusak fasilitas umum"
         ],
         "jawaban": 1
     },
@@ -278,12 +303,13 @@
         "id": 26,
         "pertanyaan": "Integritas dapat diwujudkan dengan sikap...",
         "pilihan": [
-            "Jujur dan konsisten terhadap nilai yang benar",
+            "setia kepada pacar",
             "Mengikuti semua keinginan orang lain",
             "Menyembunyikan kesalahan",
-            "Mengutamakan keuntungan pribadi"
+            "Mengutamakan keuntungan pribadi",
+            "Jujur dan konsisten terhadap nilai yang benar"
         ],
-        "jawaban": 0
+        "jawaban": 4
     },
     {
         "id": 27,
@@ -292,7 +318,8 @@
             "Individualisme",
             "Patriotisme",
             "Materialisme",
-            "Primordialisme"
+            "Primordialisme",
+            "Primerium"
         ],
         "jawaban": 1
     },
@@ -303,7 +330,8 @@
             "Kerja sama dan kebersamaan",
             "Persaingan bebas",
             "Individualisme",
-            "Eksklusivisme"
+            "Eksklusivisme",
+            "Primordialisme"
         ],
         "jawaban": 0
     },
@@ -314,7 +342,8 @@
             "Toleransi",
             "Diskriminasi",
             "Fanatisme",
-            "Eksklusivisme"
+            "Eksklusivisme",
+            "Primordialisme"
         ],
         "jawaban": 0
     },
@@ -325,7 +354,8 @@
             "Bersikap adil terhadap sesama",
             "Memaksakan kehendak",
             "Mengutamakan kepentingan kelompok",
-            "Mengabaikan hak orang lain"
+            "Mengabaikan hak orang lain",
+            "Primordialisme"
         ],
         "jawaban": 0
     },
@@ -337,7 +367,8 @@
       "Ke-2",
       "Ke-3",
       "Ke-4",
-      "Ke-5"
+      "Ke-5",
+      "semua salah"
     ],
     "jawaban": 3
   },
@@ -888,7 +919,7 @@
       "Den Haag",
       "Jakarta",
       "Berlin",
-      "Perth",
+      "AlorMola",
       "Washington"
     ],
     "jawaban": 0
@@ -913,7 +944,7 @@
       "Kerajaan Kutai",
       "Kerajaan Kediri",
       "Kerajaan Singasari",
-      "Kerajaan Kalingga"
+      "Kerajaan Abui"
     ],
     "jawaban": 1
   },
@@ -1036,5 +1067,666 @@
       "Penghapusan dwi fungsi ABRI"
     ],
     "jawaban": 4
+  },
+  {
+    "id": 90,
+    "Pertanyaan": "Anggota Dewan Perwakilan Rakyat dipilih melalui pemilihan umum. Tercantum dalam UUD 1945 pasal ....",
+    "pilihan": [
+      "Pasal 13",
+      "Pasal 15",
+      "Pasal 17",
+      "Pasal 19",
+      "Pasal 20"
+    ],
+    "jawaban": 3
+  },
+  {
+    "id": 91,
+    "pertanyaan": "Peran UUD 1945 dalam GBHN adalah ....",
+    "pilihan": [
+      "Sebagai landasan konstitusional",
+      "Sebagai landasan riil",
+      "Sebagai landasan ideal",
+      "Sebagai dasar hukum",
+      "Semua jawaban salah"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 92,
+    "pertanyaan": "Pembukaan UUD 1945 tidak boleh diubah oleh siapa pun karena ....",
+    "pilihan": [
+      "Akan membubarkan negara",
+      "Merupakan janji",
+      "Warisan pahlawan",
+      "Tidak sesuai",
+      "Semua jawaban salah"
+    ],
+    "jawaban": 4
+  },
+  {
+    "id": 93,
+    "pertanyaan": "Saat pertama kali disahkan oleh PPKI, Batang Tubuh UUD 1945 terdiri dari ... bab.",
+    "pilihan": [
+      "9",
+      "11",
+      "13",
+      "14",
+      "16"
+    ],
+    "jawaban": 4
+  },
+  {
+    "id": 94,
+    "pertanyaan": "Amandemen terhadap UUD 1945 dilakukan sebanyak empat kali melalui sidang MPR yaitu, kecuali ....",
+    "pilihan": [
+      "Sidang Tahunan MPR 1999",
+      "Sidang Umum MPR 1999",
+      "Sidang Tahunan MPR 2001",
+      "Sidang Tahunan MPR 2000",
+      "Sidang Tahunan MPR 2002"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 95,
+    "pertanyaan": "Untuk mengubah pasal-pasal UUD 1945, Sidang Majelis Permusyawaratan Rakyat harus dihadiri setidaknya ....",
+    "pilihan": [
+      "1/3 jumlah anggota",
+      "1/2 jumlah anggota",
+      "1/4 jumlah anggota",
+      "2/3 jumlah anggota",
+      "3/4 jumlah anggota"
+    ],
+    "jawaban": 3
+  },
+  {
+    "id": 96,
+    "pertanyaan": "Amandemen kedua UUD 1945 meliputi ... pasal.",
+    "pilihan": [
+      "23",
+      "25",
+      "27",
+      "29",
+      "31"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 97,
+    "pertanyaan": "Bunyi Pasal 32 Ayat 1 tentang kebudayaan nasional Indonesia yaitu ....",
+    "pilihan": [
+      "Setiap warga negara berhak mendapatkan pengetahuan kebudayaan Indonesia",
+      "Negara Indonesia dilandasi oleh keberagaman budaya",
+      "Negara Indonesia terdiri banyak budaya",
+      "Negara menghormati dan memelihara bahasa daerah sebagai kekayaan budaya nasional",
+      "Negara memajukan kebudayaan nasional Indonesia di tengah peradaban dunia dengan menjamin masyarakat kebebasan masyarakat dalam memelihara dan mengembangkan nilai-nilai budayanya"
+    ],
+    "jawaban": 4
+  },
+  {
+    "id": 98,
+    "pertanyaan": "Perwujudan hak asasi manusia dalam kehidupan berbangsa dapat dilihat dalam bentuk ....",
+    "pilihan": [
+      "Menentukan sistem perekonomian",
+      "Menentukan kerja sama dengan bangsa lain",
+      "Mengikuti kebebasan beragama",
+      "Menentukan ketertiban lingkungan",
+      "Menyatakan pendapat dan berorganisasi"
+    ],
+    "jawaban": 4
+  },
+  {
+    "id": 99,
+    "pertanyaan": "Pancasila merupakan suatu dasar nilai serta norma untuk mengatur pemerintahan negara, adalah fungsi Pancasila sebagai ....",
+    "pilihan": [
+      "Pandangan hidup",
+      "Ideologi negara",
+      "Dasar negara",
+      "Tuntunan negara",
+      "Norma hukum"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 100,
+    "pertanyaan": "Fungsi filsafat Pancasila dalam hubungan dengan ideologi-ideologi di dunia adalah sebagai ....",
+    "pilihan": [
+      "Perbandingan perkembangan ideologi",
+      "Penyaringan masuknya ideologi asing",
+      "Perpaduan filsafat dan ideologi",
+      "Perebutan hegemoni filsafat",
+      "Unsur ideologi setiap bangsa"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 101,
+    "pertanyaan": "Dibandingkan dengan agama-agama yang terdapat di Indonesia, Pancasila mempunyai perbedaan yang jelas, yaitu ....",
+    "pilihan": [
+      "Pancasila tidak mengajarkan tata cara untuk hidup rukun dalam bermasyarakat",
+      "Pancasila tidak mengajarkan tata cara untuk beribadah",
+      "Pancasila tidak mengajarkan tata cara untuk menghormati pemeluk agama lain",
+      "Pancasila tidak mengajarkan tata cara untuk hidup selaras dengan alam",
+      "Pancasila tidak mengajarkan tata cara untuk menghormati hak asasi manusia"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 102,
+    "pertanyaan": "Pembangunan ekonomi yang didasarkan pada nilai-nilai Pancasila akan bertujuan untuk ....",
+    "pilihan": [
+      "Mendapatkan keuntungan yang tinggi",
+      "Mengambil manfaat yang sebesar-besarnya dari alam",
+      "Mempercepat pertumbuhan ekonomi",
+      "Mensejahterakan rakyat",
+      "Menurunkan risiko utang negara"
+    ],
+    "jawaban": 3
+  },
+  {
+    "id": 103,
+    "pertanyaan": "Karena nilai dasar Pancasila tetap tidak mengalami perubahan, maka Pancasila tergolong pada ideologi yang ....",
+    "pilihan": [
+      "Kaku",
+      "Terbuka",
+      "pasif",
+      "Progresif",
+      "Kontemporer"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 104,
+    "pertanyaan": "Jumlah bulu leher pada lambang negara Garuda Pancasila adalah ....",
+    "pilihan": [
+      "45 helai",
+      "19 helai",
+      "8 helai",
+      "17 helai",
+      "11 helai"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 105,
+    "pertanyaan": "Pemilihan umum yang dilaksanakan di Indonesia selama Orde Baru memiliki asas langsung, umum, bebas, dan rahasia, sedangkan pada masa reformasi (pemilu 1999) termasuk juga asas ....",
+    "pilihan": [
+      "Kebersamaan",
+      "Semua untuk semua",
+      "Efektif dan efisien",
+      "Jujur dan adil",
+      "Bertanggung jawab"
+    ],
+    "jawaban": 3
+  },
+  {
+    "id": 106,
+    "pertanyaan": "Batas minimal pemilih Pemilu adalah berumur ....",
+    "pilihan": [
+      "17 tahun",
+      "22 tahun",
+      "24 tahun",
+      "20 tahun",
+      "17 tahun atau sudah kawin"
+    ],
+    "jawaban": 4
+  },
+  {
+    "id": 107,
+    "pertanyaan": "Tujuan dilaksanakannya Pemilu pertama di Indonesia pada tahun 1955 adalah untuk ....",
+    "pilihan": [
+      "membuktikan bahwa Indonesia negara demokrasi",
+      "memilih presiden dan wakil presiden",
+      "memilih anggota DPR dan konstituante",
+      "memilih anggota MPR",
+      "menyalurkan aspirasi rakyat"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 108,
+    "pertanyaan": "RUU yang sudah disetujui bersama antara DPR dengan Presiden, paling lambat dalam tujuh hari kerja harus disampaikan oleh .... kepada Presiden untuk disahkan menjadi undang-undang.",
+    "pilihan": [
+      "Pimpinan DPR",
+      "MPR",
+      "Menteri Dalam Negeri",
+      "Ketua MPR",
+      "Sekretaris Negara"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 109,
+    "pertanyaan": "Berikut ini bukan merupakan tujuan program JPS, yaitu ....",
+    "pilihan": [
+      "menciptakan kesempatan kerja produktif",
+      "meningkatkan pendapat dan daya beli masyarakat",
+      "meningkatkan kesejahteraan sosial ekonomi masyarakat",
+      "mengkoordinasikan berbagai program pembangunan penanggulangan dampak krisis",
+      "meningkatkan pembangunan fasilitas publik pemerintah di desa"
+    ],
+    "jawaban": 4
+  },
+  {
+    "id": 110,
+    "pertanyaan": "Dunia perdagangan global akan melalui babak baru pada tahun ....",
+    "pilihan": [
+      "2012",
+      "2015",
+      "2020",
+      "2025",
+      "2030"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 111,
+    "pertanyaan": "Program Nasional Pemberdayaan Masyarakat Mandiri diadakan oleh pemerintah dengan tujuan untuk ....",
+    "pilihan": [
+      "Melibatkan masyarakat dalam pembangunan nasional",
+      "Memberikan fasilitas-fasilitas yang dibutuhkan masyarakat",
+      "Menanggulangi kemiskinan dengan peran serta masyarakat",
+      "Meningkatkan standar pendidikan masyarakat",
+      "Pemerataan pembangunan nasional"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 112,
+    "pertanyaan": "Dalam kaitannya dengan hubungan luar negeri, pengiriman pasukan atau misi pemeliharaan perdamaian ditetapkan oleh ....",
+    "pilihan": [
+      "MPR",
+      "DPR",
+      "Menteri Pertahanan dan Keamanan",
+      "Presiden",
+      "Panglima Besar ABRI"
+    ],
+    "jawaban": 3
+  },
+  {
+    "id": 113,
+    "pertanyaan": "Pendidikan yang diarahkan terutama pada penguasaan ilmu pengetahuan termasuk ke dalam jenis pendidikan ....",
+    "pilihan": [
+      "Umum",
+      "Akademik",
+      "Kejuruan",
+      "Kedinasan",
+      "Profesional"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 114,
+    "pertanyaan": "Menurut Undang-Undang Pemilihan Umum, untuk menjadi calon anggota DPR seseorang harus memenuhi syarat dukungan antara lain pada provinsi yang berpenduduk sampai 1.000.000 (satu juta) jiwa. Oleh sebab itu seseorang harus mendapatkan dukungan sekurang-kurangnya ....",
+    "pilihan": [
+      "1.000 pemilih",
+      "2.500 pemilih",
+      "5.000 pemilih",
+      "7.500 pemilih",
+      "10.000 pemilih"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 115,
+    "pertanyaan": "Salah satu pernyataan di bawah ini merupakan kegiatan untuk mengupayakan pemerataan pendidikan, yaitu ....",
+    "pilihan": [
+      "Mewujudkan manajemen pendidikan yang berbasis sekolah",
+      "Memberdayakan personel dan lembaga pendidikan",
+      "Meningkatkan kualitas lembaga pendidikan baik yang diselenggarakan oleh pemerintah maupun oleh masyarakat",
+      "Mengembangkan transparansi dan akuntabilitas penyelenggaraan pendidikan",
+      "Memberikan subsidi pendidikan bagi lembaga pendidikan yang diselenggarakan oleh masyarakat"
+    ],
+    "jawaban": 4
+  },
+  {
+    "id": 116,
+    "pertanyaan": "Salah satu pernyataan di bawah ini yang tidak termasuk ke dalam upaya penyediaan kebutuhan pokok terutama untuk keluarga miskin adalah ....",
+    "pilihan": [
+      "Peningkatan jumlah penduduk dan keluarga miskin yang terlindungi oleh program pengembangan asuransi sosial",
+      "Penurunan persentase penduduk miskin",
+      "Pemenuhan kebutuhan pangan bagi keluarga miskin dengan harga yang terjangkau",
+      "Penyediaan pelayanan pendidikan bagi keluarga miskin dengan pemberian beasiswa",
+      "Peningkatan sarana kebutuhan air bersih, sanitasi, dan pemukiman dengan harga yang terjangkau bagi keluarga miskin"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 117,
+    "pertanyaan": "Presiden dan Wakil Presiden Republik Indonesia dipilih secara ....",
+    "pilihan": [
+      "Langsung oleh Ketua MPR",
+      "Langsung oleh Sidang DPR",
+      "Langsung oleh Sidang MPR",
+      "Langsung oleh DPD",
+      "Langsung oleh rakyat"
+    ],
+    "jawaban": 4
+  },
+  {
+    "id": 118,
+    "pertanyaan": "Nama-nama yang dapat dicalonkan sebagai hakim agung diusulkan oleh ....",
+    "pilihan": [
+      "Komisi Yudisial",
+      "Mahkamah Agung",
+      "Presiden",
+      "Menteri Kehakiman",
+      "MPR"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 119,
+    "pertanyaan": "Saat terjadi kekosongan wakil presiden, MPR harus menyelenggarakan sidang untuk memilih wakil presiden selambat-lambatnya dalam jangka waktu ....",
+    "pilihan": [
+      "1 minggu",
+      "2 minggu",
+      "1 bulan",
+      "2 bulan",
+      "1 tahun"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 120,
+    "pertanyaan": "Apabila didasarkan pada ajaran Trias Politica, yang dikenal dengan teori pemisahan kekuasaan negara, maka penetapan APBN menurut UUD 1945 merupakan campur tangan ....",
+    "pilihan": [
+      "Presiden dalam kekuasaan Dewan Perwakilan Rakyat",
+      "Dewan Perwakilan Rakyat dalam kekuasaan Presiden",
+      "Presiden dalam kekuasaan Mahkamah Agung",
+      "Mahkamah Agung dalam kekuasaan Presiden",
+      "DPR dalam kekuasaan Mahkamah Agung"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 121,
+    "pertanyaan": "Jika dibandingkan dengan kabinet parlementer kelebihan kabinet presidensial adalah dalam hal ....",
+    "pilihan": [
+      "Pembentukan kabinet sangat demokratis",
+      "Jalannya pemerintahan lebih stabil",
+      "Para menteri bertanggung jawab secara kolektif",
+      "Para menteri dapat diganti sewaktu-waktu",
+      "Pemerintahan lebih mencerminkan aspirasi rakyat"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 122,
+    "pertanyaan": "Dibandingkan dengan berbagai norma sosial lainnya, sanksi norma kesopanan bersumber dari ....",
+    "pilihan": [
+      "Hati nurani",
+      "Masyarakat",
+      "Tuhan",
+      "Lembaga sosial",
+      "Negara"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 123,
+    "pertanyaan": "Berikut ini, hal yang termasuk dalam bidang hukum privat adalah ....",
+    "pilihan": [
+      "Melanggar perjanjian",
+      "Penggelapan barang",
+      "Hubungan antara daerah",
+      "Pelanggaran hukum",
+      "Primordialisme"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 124,
+    "pertanyaan": "Untuk menarik hati rakyat Indonesia, Jepang membentuk dan melantik Badan Penyelidik Usaha Persiapan Kemerdekaan Indonesia pada ....",
+    "pilihan": [
+      "8 Maret 1942",
+      "8 September 1943",
+      "29 April 1945",
+      "29 Mei 1945",
+      "14 Agustus 1945"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 125,
+    "pertanyaan": "Komisi Yudisial yang berfungsi untuk mengawasi perilaku hakim dibentuk pada tahun ....",
+    "pilihan": [
+      "2003",
+      "2004",
+      "2005",
+      "2007",
+      "2009"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 126,
+    "pertanyaan": "Tugas Komisi Yudisial berkaitan dengan pengusulan dan pengangkatan hakim agung adalah, kecuali ....",
+    "pilihan": [
+      "Pendaftaran calon Hakim Agung",
+      "Seleksi Calon Hakim Agung",
+      "Menetapkan Calon Hakim Agung",
+      "Melakukan Tes Kesehatan Calon Hakim Agung",
+      "Mengajukan Calon Hakim Agung ke DPR"
+    ],
+    "jawaban": 3
+  },
+  {
+    "id": 127,
+    "pertanyaan": "Corak negara yang menganut ideologi fasisme mengutamakan ....",
+    "pilihan": [
+      "Kesejahteraan bersama",
+      "Kemakmuran rakyat",
+      "Keadilan sosial",
+      "Ketentraman masyarakat",
+      "Kekuasaan negara"
+    ],
+    "jawaban": 4
+  },
+  {
+    "id": 128,
+    "pertanyaan": "Ciri khas negara kesatuan adalah ....",
+    "pilihan": [
+      "Kepala negaranya adalah seorang presiden",
+      "Kekuasaan asli ada pada pemerintah pusat",
+      "Warga negara mudah berpindah domisili",
+      "Adanya konstitusi yang tertulis",
+      "Kepala negaranya dipilih oleh rakyat"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 129,
+    "pertanyaan": "Desentralisasi sebagai salah satu asas yang dianut dalam penyelenggaraan pemerintahan di daerah maknanya adalah ....",
+    "pilihan": [
+      "Penugasan dari pemerintah kepada daerah untuk melaksanakan tugas tertentu",
+      "Penyerahan kewenangan kepada daerah untuk mengurus rumah tangganya sendiri",
+      "Pendelegasian kewenangan dari pemerintah pusat kepada pemerintah daerah",
+      "Pelimpahan tugas kepada daerah untuk mengurus dan melaksanakan pemerintahan",
+      "Pembagian tugas pemerintahan antara pemerintah pusat dan pemerintah daerah"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 130,
+    "pertanyaan": "Salah satu hal yang menjadi kewenangan pemerintah pusat menurut Undang-undang No. 22 tahun 1999 tentang Otonomi Daerah adalah ....",
+    "pilihan": [
+      "Industri dan perdagangan",
+      "Penanaman modal",
+      "Pemberdayaan sumber daya alam",
+      "Pekerjaan umum",
+      "Pendidikan dan kebudayaan"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 131,
+    "pertanyaan": "Nama penghargaan tertinggi di bidang jurnalisme di Amerika Serikat adalah ....",
+    "pilihan": [
+      "Nobel",
+      "Oscar",
+      "Pulitzer",
+      "Norbert Winner",
+      "Emmy"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 132,
+    "pertanyaan": "Klub sepakbola yang menjadi tempat bermain Lionel Messi adalah ....",
+    "pilihan": [
+      "Real Madrid",
+      "Manchester United",
+      "Chelsea",
+      "Inter Milan",
+      "Barcelona"
+    ],
+    "jawaban": 4
+  },
+  {
+    "id": 133,
+    "pertanyaan": "Efek rumah kaca disebabkan oleh ....",
+    "pilihan": [
+      "Atmosfer yang berlubang",
+      "Suhu panas matahari meningkat",
+      "Karbon dioksida yang terlepas dari atmosfer",
+      "Banyaknya gedung pencakar langit yang menggunakan kaca",
+      "Berkurangnya lahan kosong"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 134,
+    "pertanyaan": "Sebagian besar penduduk asli Jepang tinggal di pulau ....",
+    "pilihan": [
+      "Akita",
+      "Hokkaido",
+      "Fukushima",
+      "Pantar",
+      "Yokohama"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 135,
+    "pertanyaan": "Masjid Al-Aqsa yang diserang Israel berada di Kota ....",
+    "pilihan": [
+      "Madinah",
+      "Mesir",
+      "Ramallah",
+      "Aman",
+      "Yerussalem"
+    ],
+    "jawaban": 4
+  },
+  {
+    "id": 136,
+    "pertanyaan": "Laut teritorial adalah wilayah laut dengan batas ... dari titik ujung terluar pulau-pulau di Indonesia pada saat pasang surut di arah laut.",
+    "pilihan": [
+      "12 mil",
+      "22 mil",
+      "80 mil",
+      "200 mil",
+      "300 mil"
+    ],
+    "jawaban": 0
+  },
+  {
+    "id": 137,
+    "pertanyaan": "Hibernasi dilakukan oleh binatang seperti ...",
+    "pilihan": [
+      "tikus",
+      "semut",
+      "beruang",
+      "ular",
+      "mantan"
+    ],
+    "jawaban": 2
+  },
+  {
+    "id": 138,
+    "pertanyaan": "World Cup pada tahun 2014 akan diselenggarakan di negara ....",
+    "pilihan": [
+      "Jerman",
+      "Brasil",
+      "Rusia",
+      "Perancis",
+      "Inggris"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 139,
+    "pertanyaan": "Indonesia merupakan negara yang sering mengalami gempa karena ....",
+    "pilihan": [
+      "Indonesia negara maritim",
+      "terdapat pertemuan lempeng tektonik",
+      "banyak gunung berapi",
+      "negara korupsi",
+      "negara kepulauan"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 140,
+    "pertanyaan": "Suatu proses meningkatnya harga barang-barang menjadi harga tinggi secara terus-menerus dan berpengaruh pada yang lain karena mekanisme pasar yang tidak stabil disebut ....",
+    "pilihan": [
+      "deflasi",
+      "devaluasi",
+      "defisit",
+      "inflasi",
+      "krisis ekonomi"
+    ],
+    "jawaban": 3
+  },
+  {
+    "id": 141,
+    "pertanyaan": "Candi Muara Takus merupakan peninggalan kerajaan ....",
+    "pilihan": [
+      "Majapahit",
+      "Sriwijaya",
+      "Samudera Pasai",
+      "Kalingga",
+      "Singosari"
+    ],
+    "jawaban": 1
+  },
+  {
+    "id": 142,
+    "pertanyaan": "Hewan yang berada di kawasan peralihan garis Weber dan Wallace adalah ....",
+    "pilihan": [
+      "kiwi",
+      "harimau",
+      "kera",
+      "kanguru",
+      "tapir"
+    ],
+    "jawaban": 3
+  },
+  {
+    "id": 143,
+    "pertanyaan": "Perang Diponegoro dipicu oleh tindakan Belanda yang ....",
+    "pilihan": [
+      "Menyebarkan agama Kristen secara paksa",
+      "Mengadu domba kaum Pangeran Diponegoro",
+      "Membunuh saudara-saudara Pangeran Diponegoro",
+      "Berdagang tanpa izin",
+      "Membuat jalan melalui makam leluhur Pangeran Diponegoro"
+    ],
+    "jawaban": 4
+  },
+  {
+    "id": 144,
+    "pertanyaan": "Kitab yang memuat istilah Bhinneka Tunggal Ika adalah ....",
+    "pilihan": [
+      "Negarakertagama",
+      "Sutasoma",
+      "Negara Kertagama",
+      "Arjuna Wiwaha",
+      "Semua salah"
+    ],
+    "jawaban": 1
   }
 ]
+
