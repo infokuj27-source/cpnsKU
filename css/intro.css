@@ -1,0 +1,290 @@
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    font-family: "Poppins", sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #1e3a8a,
+            #0ea5e9
+        );
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+}
+
+
+.intro-page {
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    text-align: center;
+
+}
+
+
+/* FOTO */
+
+.intro-image-container {
+
+    width: min(380px, 90vw);
+
+    aspect-ratio: 1 / 1;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 60px
+        rgba(0, 0, 0, 0.35);
+
+    animation:
+        munculFoto 1s ease;
+
+}
+
+
+#introImage {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        opacity 0.5s ease;
+
+}
+
+
+@keyframes munculFoto {
+
+    from {
+
+        opacity: 0;
+        transform: scale(0.9);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: scale(1);
+
+    }
+
+}
+
+
+/* LOADING */
+
+.loading-container {
+
+    margin-top: 25px;
+
+    color: white;
+
+}
+
+
+.loading-spinner {
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    border:
+        5px solid
+        rgba(255, 255, 255, 0.25);
+
+    border-top-color: white;
+
+    margin:
+        0 auto 15px;
+
+    animation:
+        putar 1s linear infinite;
+
+}
+
+
+@keyframes putar {
+
+    to {
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+#introText {
+
+    font-size: 14px;
+
+}
+
+
+/* TOMBOL */
+
+.btn-masuk {
+
+    margin-top: 25px;
+
+    padding:
+        14px 28px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #06b6d4
+        );
+
+    opacity: 0;
+
+    transform:
+        translateY(20px);
+
+    pointer-events: none;
+
+    transition:
+        0.5s ease;
+
+}
+
+
+.btn-masuk.muncul {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+    pointer-events: auto;
+
+}
+
+
+.btn-masuk:hover {
+
+    transform:
+        translateY(-3px)
+        scale(1.03);
+
+}
+
+.btn-mulai {
+
+    position: fixed;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    padding:
+        18px 45px;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    color: #0f4c81;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #e8f4ff 50%,
+            #b9ddff 100%
+        );
+
+    border:
+        2px solid
+        rgba(255, 255, 255, 0.8);
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    box-shadow:
+        0 8px 30px
+        rgba(0, 123, 255, 0.25);
+
+    backdrop-filter:
+        blur(10px);
+
+    transition:
+        all 0.4s ease;
+
+}
+
+
+.btn-mulai:hover {
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.08);
+
+    box-shadow:
+        0 12px 35px
+        rgba(0, 123, 255, 0.4);
+
+}
+
+
+.btn-mulai.hilang {
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.8);
+
+}
