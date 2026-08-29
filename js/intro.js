@@ -3,42 +3,30 @@
    ========================================== */
 
 
-/* DAFTAR FOTO */
+/* ==========================================
+   DAFTAR FOTO INTRO
+   Foto setelah tombol Mulai diklik
+   ========================================== */
 
 const daftarFoto = [
 
     "assets/img/intro/intro1.png",
-    "assets/img/intro/intro4.png",
-
 
     "assets/img/intro/intro3.png",
-
 
     "assets/img/intro/intro5.png"
 
 ];
 
 
-/* ELEMEN */
+/* ==========================================
+   ELEMEN
+   ========================================== */
 
 const introImage =
     document.getElementById(
         "introImage"
     );
-
-    if (introImage) {
-
-    introImage.onerror =
-        function () {
-
-            console.error(
-                "Gambar pertama gagal dimuat:",
-                introImage.src
-            );
-
-        };
-
-}
 
 
 const btnMulai =
@@ -59,18 +47,163 @@ const introMusic =
     );
 
 
-/* INDEX FOTO */
+/* ==========================================
+   VARIABEL
+   ========================================== */
 
 let fotoSekarang = 0;
 
-
-/* SLIDESHOW */
-
 let slideshow = null;
+
+let introDimulai = false;
+
+let otomatisMasuk = null;
 
 
 /* ==========================================
-   GANTI FOTO
+   AWAL HALAMAN
+   TAMPILKAN HERO1
+   ========================================== */
+
+if (introImage) {
+
+    introImage.src =
+        "assets/img/hero1.jpg";
+
+}
+
+
+/* ==========================================
+   MULAI INTRO
+   ========================================== */
+
+function mulaiIntro() {
+
+    /* Hindari tombol diklik berulang */
+
+    if (introDimulai) {
+
+        return;
+
+    }
+
+
+    introDimulai = true;
+
+
+    /* ==========================================
+       SEMBUNYIKAN TOMBOL MULAI
+       ========================================== */
+
+    if (btnMulai) {
+
+        btnMulai.classList.add(
+            "hidden"
+        );
+
+    }
+
+
+    /* ==========================================
+       MULAI MUSIK
+       ========================================== */
+
+    if (introMusic) {
+
+        introMusic.volume = 0.7;
+
+
+        introMusic.play()
+            .then(function () {
+
+                console.log(
+                    "Musik intro berhasil diputar"
+                );
+
+            })
+            .catch(function (error) {
+
+                console.log(
+                    "Musik gagal diputar:",
+                    error
+                );
+
+            });
+
+    }
+
+
+    /* ==========================================
+       GANTI DARI HERO1 KE FOTO INTRO
+       ========================================== */
+
+    if (introImage) {
+
+        introImage.style.opacity = "0";
+
+
+        setTimeout(function () {
+
+            fotoSekarang = 0;
+
+
+            introImage.src =
+                daftarFoto[
+                    fotoSekarang
+                ];
+
+
+            introImage.style.opacity = "1";
+
+        }, 400);
+
+    }
+
+
+    /* ==========================================
+       MULAI SLIDESHOW
+       ========================================== */
+
+    slideshow =
+        setInterval(
+            gantiFoto,
+            3000
+        );
+
+
+    /* ==========================================
+       TAMPILKAN TOMBOL MASUK
+       ========================================== */
+
+    setTimeout(function () {
+
+        if (btnMasuk) {
+
+            btnMasuk.classList.add(
+                "muncul"
+            );
+
+        }
+
+    }, 5000);
+
+
+    /* ==========================================
+       OTOMATIS MASUK SETELAH 35 DETIK
+       ========================================== */
+
+    otomatisMasuk =
+        setTimeout(function () {
+
+            masukKeWebsite();
+
+        }, 35000);
+
+}
+
+
+/* ==========================================
+   GANTI FOTO INTRO
    ========================================== */
 
 function gantiFoto() {
@@ -82,8 +215,6 @@ function gantiFoto() {
     }
 
 
-    /* Sembunyikan gambar lama */
-
     introImage.style.opacity = "0";
 
 
@@ -92,8 +223,7 @@ function gantiFoto() {
         fotoSekarang++;
 
 
-        /* Jika sudah gambar terakhir,
-           kembali ke gambar pertama */
+        /* Jika sudah sampai foto terakhir */
 
         if (
             fotoSekarang >=
@@ -105,49 +235,15 @@ function gantiFoto() {
         }
 
 
-        /* Buat gambar sementara */
+        /* Ganti gambar */
 
-        const gambarBaru =
-            new Image();
-
-
-        gambarBaru.src =
-            daftarFoto[fotoSekarang];
+        introImage.src =
+            daftarFoto[
+                fotoSekarang
+            ];
 
 
-        /* Jika gambar berhasil dimuat */
-
-        gambarBaru.onload =
-            function () {
-
-                introImage.src =
-                    gambarBaru.src;
-
-
-                introImage.style.opacity =
-                    "1";
-
-            };
-
-
-        /* Jika gambar gagal dimuat */
-
-        gambarBaru.onerror =
-            function () {
-
-                console.error(
-                    "Gambar gagal dimuat:",
-                    daftarFoto[fotoSekarang]
-                );
-
-
-                /* Tampilkan gambar sebelumnya */
-
-                introImage.style.opacity =
-                    "1";
-
-            };
-
+        introImage.style.opacity = "1";
 
     }, 400);
 
@@ -155,107 +251,12 @@ function gantiFoto() {
 
 
 /* ==========================================
-   TAMPILKAN TOMBOL MASUK
-   ========================================== */
-
-function tampilkanTombolMasuk() {
-
-    setTimeout(
-        function () {
-
-            if (btnMasuk) {
-
-                btnMasuk.classList.add(
-                    "muncul"
-                );
-
-            }
-
-        },
-        5000
-    );
-
-}
-
-
-/* ==========================================
-   MULAI INTRO
-   ========================================== */
-
-function mulaiIntro() {
-
-    /* Cegah tombol diklik berulang */
-
-    btnMulai.disabled = true;
-
-
-    /* Sembunyikan tombol mulai */
-
-    btnMulai.classList.add(
-        "hilang"
-    );
-
-
-    /* PUTAR MUSIK */
-
-    if (introMusic) {
-
-        introMusic.volume = 1.0;
-
-
-        introMusic.play()
-            .then(function () {
-
-                console.log(
-                    "Musik berhasil diputar"
-                );
-
-            })
-            .catch(function (error) {
-
-                console.error(
-                    "Musik gagal diputar:",
-                    error
-                );
-
-            });
-
-    }
-
-
-    /* MULAI SLIDESHOW */
-
-    slideshow =
-        setInterval(
-            gantiFoto,
-            5000
-        );
-
-
-    /* TAMPILKAN TOMBOL MASUK */
-
-    tampilkanTombolMasuk();
-
-
-    /* OTOMATIS MASUK SETELAH 35 DETIK */
-
-    setTimeout(
-        function () {
-
-            masukKeWebsite();
-
-        },
-        35000
-    );
-
-}
-
-
-/* ==========================================
-   MASUK KE HALAMAN UTAMA
+   MASUK KE WEBSITE
    ========================================== */
 
 function masukKeWebsite() {
+
+    /* Hentikan slideshow */
 
     if (slideshow) {
 
@@ -263,8 +264,25 @@ function masukKeWebsite() {
             slideshow
         );
 
+        slideshow = null;
+
     }
 
+
+    /* Hentikan otomatis masuk */
+
+    if (otomatisMasuk) {
+
+        clearTimeout(
+            otomatisMasuk
+        );
+
+        otomatisMasuk = null;
+
+    }
+
+
+    /* Hentikan musik */
 
     if (introMusic) {
 
@@ -275,6 +293,8 @@ function masukKeWebsite() {
     }
 
 
+    /* Pindah ke halaman utama */
+
     window.location.href =
         "home.html";
 
@@ -282,7 +302,7 @@ function masukKeWebsite() {
 
 
 /* ==========================================
-   KLIK TOMBOL MULAI
+   EVENT TOMBOL MULAI
    ========================================== */
 
 if (btnMulai) {
@@ -296,7 +316,7 @@ if (btnMulai) {
 
 
 /* ==========================================
-   KLIK MASUK WEBSITE
+   EVENT TOMBOL MASUK
    ========================================== */
 
 if (btnMasuk) {
