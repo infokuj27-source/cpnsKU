@@ -15,7 +15,8 @@ const daftarFoto = [
 
     "assets/img/intro/intro3.png",
 
-    "assets/img/intro/intro2.png"
+    "assets/img/intro/intro2.png",
+   "assets/img/intro/intro6.png"
 
 ];
 
