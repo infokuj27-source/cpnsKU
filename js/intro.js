@@ -7,11 +7,14 @@
 
 const daftarFoto = [
 
-  "assets/img/intro/intro1.png",
-    "assets/img/intro/intro3.png",
+    "assets/img/intro/intro1.png",
     "assets/img/intro/intro4.png",
-    "assets/img/intro/intro5.png",
-   "assets/img/intro/intro6.png"
+
+
+    "assets/img/intro/intro3.png",
+
+
+    "assets/img/intro/intro5.png"
 
 ];
 
@@ -22,6 +25,20 @@ const introImage =
     document.getElementById(
         "introImage"
     );
+
+    if (introImage) {
+
+    introImage.onerror =
+        function () {
+
+            console.error(
+                "Gambar pertama gagal dimuat:",
+                introImage.src
+            );
+
+        };
+
+}
 
 
 const btnMulai =
@@ -58,8 +75,14 @@ let slideshow = null;
 
 function gantiFoto() {
 
-    if (!introImage) return;
+    if (!introImage) {
 
+        return;
+
+    }
+
+
+    /* Sembunyikan gambar lama */
 
     introImage.style.opacity = "0";
 
@@ -68,6 +91,9 @@ function gantiFoto() {
 
         fotoSekarang++;
 
+
+        /* Jika sudah gambar terakhir,
+           kembali ke gambar pertama */
 
         if (
             fotoSekarang >=
@@ -79,11 +105,49 @@ function gantiFoto() {
         }
 
 
-        introImage.src =
+        /* Buat gambar sementara */
+
+        const gambarBaru =
+            new Image();
+
+
+        gambarBaru.src =
             daftarFoto[fotoSekarang];
 
 
-        introImage.style.opacity = "1";
+        /* Jika gambar berhasil dimuat */
+
+        gambarBaru.onload =
+            function () {
+
+                introImage.src =
+                    gambarBaru.src;
+
+
+                introImage.style.opacity =
+                    "1";
+
+            };
+
+
+        /* Jika gambar gagal dimuat */
+
+        gambarBaru.onerror =
+            function () {
+
+                console.error(
+                    "Gambar gagal dimuat:",
+                    daftarFoto[fotoSekarang]
+                );
+
+
+                /* Tampilkan gambar sebelumnya */
+
+                introImage.style.opacity =
+                    "1";
+
+            };
+
 
     }, 400);
 
