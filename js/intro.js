@@ -7,15 +7,15 @@
 
 const daftarFoto = [
 
-    "assets/img/intro1.jpg",
+  "assets/img/intro/intro1.png",
 
-    "assets/img/intro2.jpg",
+    "assets/img/intro/intro4.png",
 
-    "assets/img/intro3.jpg",
+    "assets/img/intro/intro5.png",
 
-    "assets/img/intro4.jpg",
+    "assets/img/intro/intro3.png",
 
-    "assets/img/intro5.jpg"
+    "assets/img/intro/intro2.png"
 
 ];
 
