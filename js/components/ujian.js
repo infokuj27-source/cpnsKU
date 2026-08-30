@@ -553,6 +553,519 @@ function bukaNavigasiSoal() {
 }
 
 /* ==========================================
+   LIHAT HASIL JAWABAN
+========================================== */
+
+function lihatHasilJawaban() {
+
+    const app =
+        document.getElementById("app");
+
+
+    let daftarSoal = "";
+
+
+    soalUjian.forEach(
+        (soal, index) => {
+
+            const jawabanUserSekarang =
+                jawabanUser[index];
+
+
+            /* ==========================================
+               TENTUKAN JENIS SOAL
+            ========================================== */
+
+            let jenisSoal =
+                soal.jenis;
+
+
+            if (!jenisSoal) {
+
+                jenisSoal =
+                    jenisUjianAktif;
+
+            }
+
+
+            /* ==========================================
+               HURUF JAWABAN USER
+            ========================================== */
+
+            const hurufJawabanUser =
+                jawabanUserSekarang !== null &&
+                jawabanUserSekarang !== undefined
+
+                    ? String.fromCharCode(
+                        65 +
+                        jawabanUserSekarang
+                    )
+
+                    : "Tidak dijawab";
+
+
+            let status = "";
+
+            let statusText = "";
+
+            let jawabanBenar = "";
+
+            let nilaiTKP = null;
+
+
+            /* ==========================================
+               TWK DAN TIU
+            ========================================== */
+
+            if (
+                jenisSoal === "twk" ||
+                jenisSoal === "tiu"
+            ) {
+
+                /*
+                   JSON jawaban bisa berupa
+                   huruf atau index.
+                */
+
+                let jawabanBenarIndex;
+
+
+                if (
+                    typeof soal.jawaban ===
+                    "number"
+                ) {
+
+                    jawabanBenarIndex =
+                        soal.jawaban;
+
+                }
+
+                else {
+
+                    jawabanBenarIndex =
+                        soal.jawaban
+                        .charCodeAt(0) - 65;
+
+                }
+
+
+                jawabanBenar =
+                    String.fromCharCode(
+                        65 +
+                        jawabanBenarIndex
+                    );
+
+
+                if (
+                    jawabanUserSekarang ===
+                    jawabanBenarIndex
+                ) {
+
+                    status = "benar";
+
+                    statusText =
+                        "✓ BENAR";
+
+                }
+
+                else {
+
+                    status = "salah";
+
+                    statusText =
+                        "✕ SALAH";
+
+                }
+
+            }
+
+
+            /* ==========================================
+               TKP
+            ========================================== */
+
+            else if (
+                jenisSoal === "tkp"
+            ) {
+
+                if (
+                    jawabanUserSekarang === null ||
+                    jawabanUserSekarang === undefined
+                ) {
+
+                    status =
+                        "kosong";
+
+                    statusText =
+                        "⚪ TIDAK DIJAWAB";
+
+                }
+
+                else {
+
+                    const pilihanDipilih =
+                        soal.pilihan[
+                            jawabanUserSekarang
+                        ];
+
+
+                    /*
+                       Ambil nilai TKP
+                    */
+
+                    if (
+                        typeof pilihanDipilih ===
+                        "object"
+                    ) {
+
+                        nilaiTKP =
+                            pilihanDipilih.nilai;
+
+                    }
+
+
+                    status =
+                        `nilai-${nilaiTKP}`;
+
+
+                    statusText =
+                        `NILAI ${nilaiTKP}`;
+
+                }
+
+            }
+
+
+            /* ==========================================
+               JIKA TWK / TIU KOSONG
+            ========================================== */
+
+            if (
+                jawabanUserSekarang === null &&
+                jenisSoal !== "tkp"
+            ) {
+
+                status =
+                    "kosong";
+
+                statusText =
+                    "⚪ TIDAK DIJAWAB";
+
+            }
+
+
+            /* ==========================================
+               BUAT PILIHAN JAWABAN
+            ========================================== */
+
+            let pilihanHTML = "";
+
+
+            soal.pilihan.forEach(
+                (pilihan, pilihanIndex) => {
+
+                    const huruf =
+                        String.fromCharCode(
+                            65 +
+                            pilihanIndex
+                        );
+
+
+                    let pilihanClass =
+                        "review-pilihan";
+
+
+                    /*
+                       Tandai jawaban user
+                    */
+
+                    if (
+                        pilihanIndex ===
+                        jawabanUserSekarang
+                    ) {
+
+                        pilihanClass +=
+                            " jawaban-user";
+
+                    }
+
+
+                    /*
+                       Tandai jawaban benar
+                       TWK dan TIU
+                    */
+
+                    if (
+                        (
+                            jenisSoal === "twk" ||
+                            jenisSoal === "tiu"
+                        ) &&
+                        huruf === jawabanBenar
+                    ) {
+
+                        pilihanClass +=
+                            " jawaban-benar";
+
+                    }
+
+
+                    /*
+                       Jika jawaban user salah
+                    */
+
+                    if (
+                        (
+                            jenisSoal === "twk" ||
+                            jenisSoal === "tiu"
+                        ) &&
+                        pilihanIndex ===
+                        jawabanUserSekarang &&
+                        huruf !== jawabanBenar
+                    ) {
+
+                        pilihanClass +=
+                            " jawaban-salah";
+
+                    }
+
+
+                    /*
+                       Ambil teks pilihan
+                    */
+
+                    let teksPilihan = "";
+
+
+                    if (
+                        typeof pilihan ===
+                        "object"
+                    ) {
+
+                        teksPilihan =
+                            pilihan.teks ||
+                            pilihan.text ||
+                            pilihan.jawaban ||
+                            "";
+
+                    }
+
+                    else {
+
+                        teksPilihan =
+                            pilihan;
+
+                    }
+
+
+                    pilihanHTML += `
+
+                        <div
+                            class="${pilihanClass}"
+                        >
+
+                            <strong>
+
+                                ${huruf}.
+
+                            </strong>
+
+                            ${teksPilihan}
+
+                            ${
+                                pilihanIndex ===
+                                jawabanUserSekarang
+
+                                ? `
+                                    <span
+                                        class="label-jawaban-user"
+                                    >
+                                        Jawaban Kamu
+                                    </span>
+                                `
+
+                                : ""
+                            }
+
+                        </div>
+
+                    `;
+
+                }
+            );
+
+
+            /* ==========================================
+               TAMPILAN SOAL
+            ========================================== */
+
+            daftarSoal += `
+
+                <div
+                    class="review-soal
+                    ${status}"
+                >
+
+
+                    <div
+                        class="review-header"
+                    >
+
+                        <h3>
+
+                            Soal ${index + 1}
+
+                        </h3>
+
+
+                        <span
+                            class="review-status
+                            ${status}"
+                        >
+
+                            ${statusText}
+
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="review-pertanyaan"
+                    >
+
+                        ${soal.pertanyaan}
+
+                    </div>
+
+
+                    <div
+                        class="review-pilihan-container"
+                    >
+
+                        ${pilihanHTML}
+
+                    </div>
+
+
+                    ${
+                        jenisSoal === "twk" ||
+                        jenisSoal === "tiu"
+
+                        ? `
+
+                        <div
+                            class="review-kunci"
+                        >
+
+                            🔑 Jawaban Benar:
+                            <strong>
+                                ${jawabanBenar}
+                            </strong>
+
+                        </div>
+
+                        `
+
+                        : ""
+                    }
+
+
+                    ${
+                        jenisSoal === "tkp" &&
+                        nilaiTKP !== null
+
+                        ? `
+
+                        <div
+                            class="review-nilai-tkp"
+                        >
+
+                            Nilai jawaban kamu:
+                            <strong>
+
+                                ${nilaiTKP}
+
+                            </strong>
+
+                        </div>
+
+                        `
+
+                        : ""
+                    }
+
+                </div>
+
+            `;
+
+        }
+    );
+
+
+    /* ==========================================
+       TAMPILKAN HALAMAN REVIEW
+    ========================================== */
+
+    app.innerHTML = `
+
+        <section
+            class="review-page"
+        >
+
+            <div
+                class="review-container"
+            >
+
+
+                <div
+                    class="review-title"
+                >
+
+                    <h1>
+
+                        🔍 Cek Jawaban
+
+                    </h1>
+
+
+                    <p>
+
+                        Lihat kembali jawaban
+                        yang telah kamu kerjakan.
+
+                    </p>
+
+                </div>
+
+
+                ${daftarSoal}
+
+
+                <div
+                    class="review-actions"
+                >
+
+                    <button
+                        class="btn-secondary"
+                        onclick="hitungNilai()"
+                    >
+
+                        ← Kembali ke Hasil
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    `;
+
+}
+
+/* ==========================================
    TUTUP NAVIGASI SOAL
    ========================================== */
 
@@ -786,6 +1299,7 @@ function soalSebelumnya() {
 }
 
 
+
 /* ==========================================
    UPDATE TOMBOL
    ========================================== */
@@ -891,35 +1405,269 @@ function selesaiUjian() {
 
     function hitungNilai() {
 
-    let benar = 0;
+    /* ==========================================
+       DATA NILAI TWK
+    ========================================== */
 
-    let salah = 0;
+    let twk = {
 
-    let tidakDijawab = 0;
+        benar: 0,
 
+        salah: 0,
+
+        kosong: 0,
+
+        poin: 0,
+
+        maksimal: 175
+
+    };
+
+
+    /* ==========================================
+       DATA NILAI TIU
+    ========================================== */
+
+    let tiu = {
+
+        benar: 0,
+
+        salah: 0,
+
+        kosong: 0,
+
+        poin: 0,
+
+        maksimal: 150
+
+    };
+
+
+    /* ==========================================
+       DATA NILAI TKP
+    ========================================== */
+
+    let tkp = {
+
+        nilai5: 0,
+
+        nilai4: 0,
+
+        nilai3: 0,
+
+        nilai2: 0,
+
+        nilai1: 0,
+
+        kosong: 0,
+
+        poin: 0,
+
+        maksimal: 225
+
+    };
+
+
+    /* ==========================================
+       PERIKSA SEMUA SOAL
+    ========================================== */
 
     soalUjian.forEach(
         (soal, index) => {
 
+            const jawaban =
+                jawabanUser[index];
+
+
+            /* ==========================================
+               TENTUKAN JENIS SOAL
+            ========================================== */
+
+            let jenisSoal =
+                soal.jenis;
+
+
+            /*
+               Untuk ujian biasa,
+               jenis soal mengikuti ujian aktif
+            */
+
             if (
-                jawabanUser[index] === null
+                !jenisSoal
             ) {
 
-                tidakDijawab++;
+                jenisSoal =
+                    jenisUjianAktif;
 
             }
+
+
+            /* ==========================================
+               JIKA TIDAK DIJAWAB
+            ========================================== */
+
+            if (
+                jawaban === null
+            ) {
+
+                if (
+                    jenisSoal === "twk"
+                ) {
+
+                    twk.kosong++;
+
+                }
+
+                else if (
+                    jenisSoal === "tiu"
+                ) {
+
+                    tiu.kosong++;
+
+                }
+
+                else if (
+                    jenisSoal === "tkp"
+                ) {
+
+                    tkp.kosong++;
+
+                }
+
+                return;
+
+            }
+
+
+            /* ==========================================
+               PENILAIAN TWK
+            ========================================== */
+
+            if (
+                jenisSoal === "twk"
+            ) {
+
+                if (
+                    jawaban ===
+                    soal.jawaban
+                ) {
+
+                    twk.benar++;
+
+                    twk.poin += 5;
+
+                }
+
+                else {
+
+                    twk.salah++;
+
+                }
+
+            }
+
+
+            /* ==========================================
+               PENILAIAN TIU
+            ========================================== */
 
             else if (
-                jawabanUser[index] === soal.jawaban
+                jenisSoal === "tiu"
             ) {
 
-                benar++;
+                if (
+                    jawaban ===
+                    soal.jawaban
+                ) {
+
+                    tiu.benar++;
+
+                    tiu.poin += 5;
+
+                }
+
+                else {
+
+                    tiu.salah++;
+
+                }
 
             }
 
-            else {
 
-                salah++;
+            /* ==========================================
+               PENILAIAN TKP
+            ========================================== */
+
+            else if (
+                jenisSoal === "tkp"
+            ) {
+
+                const nilaiPilihan =
+                    soal.pilihan[
+                        jawaban
+                    ]?.nilai;
+
+
+                /*
+                   Tambahkan poin TKP
+                */
+
+                if (
+                    nilaiPilihan !==
+                    undefined
+                ) {
+
+                    tkp.poin +=
+                        nilaiPilihan;
+
+
+                    /*
+                       Hitung jumlah
+                       jawaban berdasarkan nilai
+                    */
+
+                    if (
+                        nilaiPilihan === 5
+                    ) {
+
+                        tkp.nilai5++;
+
+                    }
+
+                    else if (
+                        nilaiPilihan === 4
+                    ) {
+
+                        tkp.nilai4++;
+
+                    }
+
+                    else if (
+                        nilaiPilihan === 3
+                    ) {
+
+                        tkp.nilai3++;
+
+                    }
+
+                    else if (
+                        nilaiPilihan === 2
+                    ) {
+
+                        tkp.nilai2++;
+
+                    }
+
+                    else if (
+                        nilaiPilihan === 1
+                    ) {
+
+                        tkp.nilai1++;
+
+                    }
+
+                }
 
             }
 
@@ -927,24 +1675,49 @@ function selesaiUjian() {
     );
 
 
-    const total =
-        soalUjian.length;
+    /* ==========================================
+       TOTAL NILAI
+    ========================================== */
+
+    const totalPoin =
+
+        twk.poin +
+
+        tiu.poin +
+
+        tkp.poin;
 
 
-    const nilai =
-        Math.round(
-            (benar / total) * 100
-        );
+    const totalMaksimal =
+
+        twk.maksimal +
+
+        tiu.maksimal +
+
+        tkp.maksimal;
 
 
-    tampilkanHasil(
-        benar,
-        salah,
-        tidakDijawab,
-        total,
-        nilai
-    );
+    /* ==========================================
+       KIRIM KE HALAMAN HASIL
+    ========================================== */
 
+tampilkanHasil(
+
+    twk,
+
+    tiu,
+
+    tkp,
+
+    totalPoin,
+
+    totalMaksimal,
+
+    jenisUjianAktif
+
+);
+
+/* penutup tampilkanHasil() */
 }
 
 
@@ -953,15 +1726,34 @@ function selesaiUjian() {
    ========================================== */
 
     function tampilkanHasil(
-    benar,
-    salah,
-    tidakDijawab,
-    total,
-    nilai
+
+    twk,
+
+    tiu,
+
+    tkp,
+
+    totalPoin,
+
+    totalMaksimal,
+
+    jenisUjian
+
 ) {
 
     const app =
-        document.getElementById("app");
+        document.getElementById(
+            "app"
+        );
+
+
+    const nilaiPersen =
+        Math.round(
+            (
+                totalPoin /
+                totalMaksimal
+            ) * 100
+        );
 
 
     app.innerHTML = `
@@ -970,123 +1762,253 @@ function selesaiUjian() {
 
             <div class="hasil-card">
 
+
+                <!-- HEADER -->
+
                 <div class="hasil-icon">
+
                     🎉
+
                 </div>
 
 
                 <h1>
+
                     Ujian Selesai!
+
                 </h1>
 
 
                 <p>
-                    Berikut hasil pengerjaan kamu.
+
+                    Berikut hasil ujian kamu.
+
                 </p>
 
+
+                <!-- NILAI TOTAL -->
 
                 <div class="nilai">
 
                     <strong>
-                        ${nilai}
+
+                        ${nilaiPersen}
+
                     </strong>
 
                     <span>
-                        Nilai
+
+                        Nilai Akhir
+
                     </span>
 
                 </div>
 
 
-                <div class="hasil-detail">
+                <!-- TOTAL POIN -->
 
+                <div class="total-poin">
 
-                    <div class="hasil-benar">
-
-                        <strong>
-                            ${benar}
-                        </strong>
-
-                        <span>
-                            Benar
-                        </span>
-
-                    </div>
-
-
-                    <div class="hasil-salah">
-
-                        <strong>
-                            ${salah}
-                        </strong>
-
-                        <span>
-                            Salah
-                        </span>
-
-                    </div>
-
-
-                    <div class="hasil-kosong">
-
-                        <strong>
-                            ${tidakDijawab}
-                        </strong>
-
-                        <span>
-                            Tidak Dijawab
-                        </span>
-
-                    </div>
-
-
-                    <div>
-
-                        <strong>
-                            ${total}
-                        </strong>
-
-                        <span>
-                            Total
-                        </span>
-
-                    </div>
-
+                    🏆 ${totalPoin} / ${totalMaksimal} Poin
 
                 </div>
 
+
+                <!-- TWK -->
+                
+                    ${
+    jenisUjian === "twk" ||
+    jenisUjian === "final"
+
+    ? `
+
+    <div class="hasil-kategori">
+
+        <h3>
+            🏛️ TWK
+        </h3>
+
+
+        <div class="kategori-nilai">
+
+            <strong>
+                ${twk.poin} / ${twk.maksimal}
+            </strong>
+
+            <span>
+                Poin
+            </span>
+
+        </div>
+
+
+        <div class="kategori-detail">
+
+            <span>
+                ✅ ${twk.benar} Benar
+            </span>
+
+            <span>
+                ❌ ${twk.salah} Salah
+            </span>
+
+            <span>
+                ⚪ ${twk.kosong} Kosong
+            </span>
+
+        </div>
+
+    </div>
+
+    `
+
+    : ""
+}
+
+
+                <!-- TIU -->
+
+                ${
+    jenisUjian === "tiu" ||
+    jenisUjian === "final"
+
+    ? `
+
+    <div class="hasil-kategori">
+
+        <h3>
+            🧠 TIU
+        </h3>
+
+
+        <div class="kategori-nilai">
+
+            <strong>
+                ${tiu.poin} / ${tiu.maksimal}
+            </strong>
+
+            <span>
+                Poin
+            </span>
+
+        </div>
+
+
+        <div class="kategori-detail">
+
+            <span>
+                ✅ ${tiu.benar} Benar
+            </span>
+
+            <span>
+                ❌ ${tiu.salah} Salah
+            </span>
+
+            <span>
+                ⚪ ${tiu.kosong} Kosong
+            </span>
+
+        </div>
+
+    </div>
+
+    `
+
+    : ""
+}
+
+
+                <!-- TKP -->
+
+                ${
+    jenisUjian === "tkp" ||
+    jenisUjian === "final"
+
+    ? `
+
+    <div class="hasil-kategori">
+
+        <h3>
+            🧠 TKP
+        </h3>
+
+
+        <div class="kategori-nilai">
+
+            <strong>
+                ${tkp.poin} / ${tkp.maksimal}
+            </strong>
+
+            <span>
+                Poin
+            </span>
+
+        </div>
+
+
+        <div class="kategori-detail">
+
+            <span>
+                🟢 Nilai 5: ${tkp.nilai5}
+            </span>
+
+            <span>
+                🔵 Nilai 4: ${tkp.nilai4}
+            </span>
+
+            <span>
+                🟡 Nilai 3: ${tkp.nilai3}
+            </span>
+
+            <span>
+                🟠 Nilai 2: ${tkp.nilai2}
+            </span>
+
+            <span>
+                🔴 Nilai 1: ${tkp.nilai1}
+            </span>
+
+            <span>
+                ⚪ Kosong: ${tkp.kosong}
+            </span>
+
+        </div>
+
+    </div>
+
+    `
+
+    : ""
+}
+
+
+                <!-- TOMBOL -->
 
                 <div class="hasil-actions">
 
+    <button
+        class="btn-review"
+        onclick="lihatHasilJawaban()"
+    >
+        🔍 Cek Jawaban
+    </button>
 
-                    <button
-                        class="btn-primary"
-                        onclick="tampilkanPembahasan('semua')"
-                    >
-                        📋 Lihat Hasil Soal
-                    </button>
+    <button
+        class="btn-primary"
+        onclick="cobaLagiUjian()"
+    >
+        🔄 Coba Lagi
+    </button>
 
+    <button
+        class="btn-secondary"
+        onclick="location.hash='soal'; location.reload();"
+    >
+        ← Kembali ke Website
+    </button>
 
-                    <button
-                        class="btn-primary"
-                        onclick="cobaLagiUjian()"
-                    >
-                        🔄 Coba Lagi
-                    </button>
+</div>
 
-
-                    <button
-                        class="btn-secondary"
-                        onclick="
-                            location.hash='soal';
-                            location.reload();
-                        "
-                    >
-                        ← Kembali ke Website
-                    </button>
-
-
-                </div>
 
             </div>
 
@@ -1098,438 +2020,7 @@ function selesaiUjian() {
 
 /* tampilkan pembahasan soal salah dan benar */
 
-    function tampilkanPembahasan(
-    filter = "semua"
-) {
 
-    const app =
-        document.getElementById("app");
-
-
-    let daftarSoalHTML = "";
-
-
-    soalUjian.forEach(
-        (soal, index) => {
-
-            const jawabanUserSoal =
-                jawabanUser[index];
-
-
-            const jawabanBenar =
-                soal.jawaban;
-
-
-            let status = "";
-
-
-            /* ==========================================
-               STATUS SOAL
-               ========================================== */
-
-            if (
-                jawabanUserSoal === null
-            ) {
-
-                status = "kosong";
-
-            }
-
-            else if (
-                jawabanUserSoal === jawabanBenar
-            ) {
-
-                status = "benar";
-
-            }
-
-            else {
-
-                status = "salah";
-
-            }
-
-
-            /* ==========================================
-               FILTER
-               ========================================== */
-
-            if (
-                filter !== "semua" &&
-                status !== filter
-            ) {
-
-                return;
-
-            }
-
-
-            /* ==========================================
-               TENTUKAN ICON
-               ========================================== */
-
-            let iconStatus = "";
-
-            let teksStatus = "";
-
-
-            if (
-                status === "benar"
-            ) {
-
-                iconStatus = "🟢";
-
-                teksStatus =
-                    "Jawaban Benar";
-
-            }
-
-
-            else if (
-                status === "salah"
-            ) {
-
-                iconStatus = "🔴";
-
-                teksStatus =
-                    "Jawaban Salah";
-
-            }
-
-
-            else {
-
-                iconStatus = "⚪";
-
-                teksStatus =
-                    "Tidak Dijawab";
-
-            }
-
-
-            /* ==========================================
-               BUAT PILIHAN JAWABAN
-               ========================================== */
-
-            let pilihanHTML = "";
-
-
-            if (soal.pilihan) {
-
-                Object.entries(
-                    soal.pilihan
-                ).forEach(
-                    ([huruf, teks]) => {
-
-                        let classPilihan =
-                            "review-pilihan";
-
-
-                        if (
-                            huruf === jawabanBenar
-                        ) {
-
-                            classPilihan +=
-                                " jawaban-benar";
-
-                        }
-
-
-                        if (
-                            huruf ===
-                            jawabanUserSoal
-                        ) {
-
-                            classPilihan +=
-                                " jawaban-user";
-
-                        }
-
-
-                        pilihanHTML += `
-
-                            <div
-                                class="${classPilihan}"
-                            >
-
-                                <strong>
-                                    ${huruf}.
-                                </strong>
-
-                                ${teks}
-
-                            </div>
-
-                        `;
-
-                    }
-                );
-
-            }
-
-
-            /* ==========================================
-               TAMPILKAN SOAL
-               ========================================== */
-
-            daftarSoalHTML += `
-
-                <div
-                    class="
-                        review-soal
-                        review-${status}
-                    "
-                >
-
-
-                    <div
-                        class="review-header"
-                    >
-
-                        <strong>
-                            Soal ${index + 1}
-                        </strong>
-
-
-                        <span
-                            class="
-                                status-review
-                                status-${status}
-                            "
-                        >
-
-                            ${iconStatus}
-                            ${teksStatus}
-
-                        </span>
-
-                    </div>
-
-
-                    <div
-                        class="review-pertanyaan"
-                    >
-
-                        ${
-                            soal.soal ||
-                            soal.pertanyaan ||
-                            ""
-                        }
-
-                    </div>
-
-
-                    <div
-                        class="review-pilihan-list"
-                    >
-
-                        ${pilihanHTML}
-
-                    </div>
-
-
-                    <div
-                        class="review-jawaban"
-                    >
-
-                        <p>
-
-                            <strong>
-                                Jawaban Anda:
-                            </strong>
-
-                            ${
-                                jawabanUserSoal
-                                ? jawabanUserSoal
-                                : "Tidak dijawab"
-                            }
-
-                        </p>
-
-
-                        <p
-                            class="
-                                jawaban-benar-text
-                            "
-                        >
-
-                            <strong>
-                                Jawaban Benar:
-                            </strong>
-
-                            ${jawabanBenar}
-
-                        </p>
-
-                    </div>
-
-
-                    ${
-                        soal.pembahasan
-                        ? `
-
-                        <div
-                            class="
-                                review-pembahasan
-                            "
-                        >
-
-                            <strong>
-                                💡 Pembahasan
-                            </strong>
-
-                            <p>
-                                ${soal.pembahasan}
-                            </p>
-
-                        </div>
-
-                        `
-                        : ""
-                    }
-
-
-                </div>
-
-            `;
-
-        }
-    );
-
-
-    app.innerHTML = `
-
-        <section class="review-page">
-
-
-            <div
-                class="review-container"
-            >
-
-
-                <div
-                    class="review-title"
-                >
-
-                    <h1>
-                        📝 Review Hasil Ujian
-                    </h1>
-
-
-                    <p>
-                        Lihat kembali jawaban
-                        yang telah kamu kerjakan.
-                    </p>
-
-                </div>
-
-
-                <!-- FILTER -->
-
-
-                <div
-                    class="filter-review"
-                >
-
-
-                    <button
-                        onclick="
-                            tampilkanPembahasan(
-                                'semua'
-                            )
-                        "
-                    >
-                        Semua
-                    </button>
-
-
-                    <button
-                        onclick="
-                            tampilkanPembahasan(
-                                'benar'
-                            )
-                        "
-                    >
-                        🟢 Benar
-                    </button>
-
-
-                    <button
-                        onclick="
-                            tampilkanPembahasan(
-                                'salah'
-                            )
-                        "
-                    >
-                        🔴 Salah
-                    </button>
-
-
-                    <button
-                        onclick="
-                            tampilkanPembahasan(
-                                'kosong'
-                            )
-                        "
-                    >
-                        ⚪ Tidak Dijawab
-                    </button>
-
-
-                </div>
-
-
-                <!-- DAFTAR SOAL -->
-
-
-                <div
-                    class="daftar-review"
-                >
-
-                    ${daftarSoalHTML}
-
-                </div>
-
-
-                <!-- TOMBOL -->
-
-
-                <div
-                    class="review-actions"
-                >
-
-
-                    <button
-                        class="btn-primary"
-                        onclick="
-                            hitungNilai()
-                        "
-                    >
-                        ← Kembali ke Hasil
-                    </button>
-
-
-                    <button
-                        class="btn-secondary"
-                        onclick="
-                            location.hash='soal';
-                            location.reload();
-                        "
-                    >
-                        Kembali ke Website
-                    </button>
-
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-    `;
-
-}
 
 /* ==========================================
    STATUS UJIAN CPNS
