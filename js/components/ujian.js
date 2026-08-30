@@ -828,19 +828,6 @@ function updateTombol() {
    ========================================== */
 
 function selesaiUjian() {
-   if (jenisUjianAktif === "final") {
-
-    if (timerFinal) {
-
-        clearInterval(timerFinal);
-
-        timerFinal = null;
-
-    }
-
-    localStorage.removeItem("final_waktu_mulai");
-
-}
 
     const belumDijawab =
         jawabanUser.filter(
@@ -866,8 +853,31 @@ function selesaiUjian() {
     }
 
 
+    /* ==========================================
+       HENTIKAN TIMER FINAL
+       ========================================== */
+
+    if (jenisUjianAktif === "final") {
+
+        if (timerFinal) {
+
+            clearInterval(timerFinal);
+
+            timerFinal = null;
+
+        }
+
+        localStorage.removeItem(
+            "final_waktu_mulai"
+        );
+
+    }
+
+
     // Tandai ujian selesai
-    tandaiUjianSelesai(jenisUjianAktif);
+    tandaiUjianSelesai(
+        jenisUjianAktif
+    );
 
 
     // Hitung nilai
@@ -875,27 +885,46 @@ function selesaiUjian() {
 
 }
 
-
 /* ==========================================
    HITUNG NILAI
    ========================================== */
 
-function hitungNilai() {
+    function hitungNilai() {
 
     let benar = 0;
 
+    let salah = 0;
 
-    soalUjian.forEach((soal, index) => {
+    let tidakDijawab = 0;
 
-        if (
-            jawabanUser[index] === soal.jawaban
-        ) {
 
-            benar++;
+    soalUjian.forEach(
+        (soal, index) => {
+
+            if (
+                jawabanUser[index] === null
+            ) {
+
+                tidakDijawab++;
+
+            }
+
+            else if (
+                jawabanUser[index] === soal.jawaban
+            ) {
+
+                benar++;
+
+            }
+
+            else {
+
+                salah++;
+
+            }
 
         }
-
-    });
+    );
 
 
     const total =
@@ -903,11 +932,15 @@ function hitungNilai() {
 
 
     const nilai =
-        Math.round((benar / total) * 100);
+        Math.round(
+            (benar / total) * 100
+        );
 
 
     tampilkanHasil(
         benar,
+        salah,
+        tidakDijawab,
         total,
         nilai
     );
@@ -919,8 +952,10 @@ function hitungNilai() {
    HASIL UJIAN
    ========================================== */
 
-function tampilkanHasil(
+    function tampilkanHasil(
     benar,
+    salah,
+    tidakDijawab,
     total,
     nilai
 ) {
@@ -939,13 +974,14 @@ function tampilkanHasil(
                     🎉
                 </div>
 
+
                 <h1>
                     Ujian Selesai!
                 </h1>
 
+
                 <p>
-                    Kamu telah menyelesaikan
-                    seluruh soal.
+                    Berikut hasil pengerjaan kamu.
                 </p>
 
 
@@ -964,7 +1000,9 @@ function tampilkanHasil(
 
                 <div class="hasil-detail">
 
-                    <div>
+
+                    <div class="hasil-benar">
+
                         <strong>
                             ${benar}
                         </strong>
@@ -972,21 +1010,38 @@ function tampilkanHasil(
                         <span>
                             Benar
                         </span>
+
                     </div>
 
 
-                    <div>
+                    <div class="hasil-salah">
+
                         <strong>
-                            ${total - benar}
+                            ${salah}
                         </strong>
 
                         <span>
                             Salah
                         </span>
+
+                    </div>
+
+
+                    <div class="hasil-kosong">
+
+                        <strong>
+                            ${tidakDijawab}
+                        </strong>
+
+                        <span>
+                            Tidak Dijawab
+                        </span>
+
                     </div>
 
 
                     <div>
+
                         <strong>
                             ${total}
                         </strong>
@@ -994,29 +1049,479 @@ function tampilkanHasil(
                         <span>
                             Total
                         </span>
+
                     </div>
+
 
                 </div>
 
 
                 <div class="hasil-actions">
 
-    <button
-        class="btn-primary"
-        onclick="cobaLagiUjian()"
-    >
-        🔄 Coba Lagi
-    </button>
+
+                    <button
+                        class="btn-primary"
+                        onclick="tampilkanPembahasan('semua')"
+                    >
+                        📋 Lihat Hasil Soal
+                    </button>
 
 
-    <button
-        class="btn-secondary"
-        onclick="location.hash='soal'; location.reload();"
-    >
-        ← Kembali ke Website
-    </button>
+                    <button
+                        class="btn-primary"
+                        onclick="cobaLagiUjian()"
+                    >
+                        🔄 Coba Lagi
+                    </button>
 
-</div>
+
+                    <button
+                        class="btn-secondary"
+                        onclick="
+                            location.hash='soal';
+                            location.reload();
+                        "
+                    >
+                        ← Kembali ke Website
+                    </button>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    `;
+
+}
+
+/* tampilkan pembahasan soal salah dan benar */
+
+    function tampilkanPembahasan(
+    filter = "semua"
+) {
+
+    const app =
+        document.getElementById("app");
+
+
+    let daftarSoalHTML = "";
+
+
+    soalUjian.forEach(
+        (soal, index) => {
+
+            const jawabanUserSoal =
+                jawabanUser[index];
+
+
+            const jawabanBenar =
+                soal.jawaban;
+
+
+            let status = "";
+
+
+            /* ==========================================
+               STATUS SOAL
+               ========================================== */
+
+            if (
+                jawabanUserSoal === null
+            ) {
+
+                status = "kosong";
+
+            }
+
+            else if (
+                jawabanUserSoal === jawabanBenar
+            ) {
+
+                status = "benar";
+
+            }
+
+            else {
+
+                status = "salah";
+
+            }
+
+
+            /* ==========================================
+               FILTER
+               ========================================== */
+
+            if (
+                filter !== "semua" &&
+                status !== filter
+            ) {
+
+                return;
+
+            }
+
+
+            /* ==========================================
+               TENTUKAN ICON
+               ========================================== */
+
+            let iconStatus = "";
+
+            let teksStatus = "";
+
+
+            if (
+                status === "benar"
+            ) {
+
+                iconStatus = "🟢";
+
+                teksStatus =
+                    "Jawaban Benar";
+
+            }
+
+
+            else if (
+                status === "salah"
+            ) {
+
+                iconStatus = "🔴";
+
+                teksStatus =
+                    "Jawaban Salah";
+
+            }
+
+
+            else {
+
+                iconStatus = "⚪";
+
+                teksStatus =
+                    "Tidak Dijawab";
+
+            }
+
+
+            /* ==========================================
+               BUAT PILIHAN JAWABAN
+               ========================================== */
+
+            let pilihanHTML = "";
+
+
+            if (soal.pilihan) {
+
+                Object.entries(
+                    soal.pilihan
+                ).forEach(
+                    ([huruf, teks]) => {
+
+                        let classPilihan =
+                            "review-pilihan";
+
+
+                        if (
+                            huruf === jawabanBenar
+                        ) {
+
+                            classPilihan +=
+                                " jawaban-benar";
+
+                        }
+
+
+                        if (
+                            huruf ===
+                            jawabanUserSoal
+                        ) {
+
+                            classPilihan +=
+                                " jawaban-user";
+
+                        }
+
+
+                        pilihanHTML += `
+
+                            <div
+                                class="${classPilihan}"
+                            >
+
+                                <strong>
+                                    ${huruf}.
+                                </strong>
+
+                                ${teks}
+
+                            </div>
+
+                        `;
+
+                    }
+                );
+
+            }
+
+
+            /* ==========================================
+               TAMPILKAN SOAL
+               ========================================== */
+
+            daftarSoalHTML += `
+
+                <div
+                    class="
+                        review-soal
+                        review-${status}
+                    "
+                >
+
+
+                    <div
+                        class="review-header"
+                    >
+
+                        <strong>
+                            Soal ${index + 1}
+                        </strong>
+
+
+                        <span
+                            class="
+                                status-review
+                                status-${status}
+                            "
+                        >
+
+                            ${iconStatus}
+                            ${teksStatus}
+
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="review-pertanyaan"
+                    >
+
+                        ${
+                            soal.soal ||
+                            soal.pertanyaan ||
+                            ""
+                        }
+
+                    </div>
+
+
+                    <div
+                        class="review-pilihan-list"
+                    >
+
+                        ${pilihanHTML}
+
+                    </div>
+
+
+                    <div
+                        class="review-jawaban"
+                    >
+
+                        <p>
+
+                            <strong>
+                                Jawaban Anda:
+                            </strong>
+
+                            ${
+                                jawabanUserSoal
+                                ? jawabanUserSoal
+                                : "Tidak dijawab"
+                            }
+
+                        </p>
+
+
+                        <p
+                            class="
+                                jawaban-benar-text
+                            "
+                        >
+
+                            <strong>
+                                Jawaban Benar:
+                            </strong>
+
+                            ${jawabanBenar}
+
+                        </p>
+
+                    </div>
+
+
+                    ${
+                        soal.pembahasan
+                        ? `
+
+                        <div
+                            class="
+                                review-pembahasan
+                            "
+                        >
+
+                            <strong>
+                                💡 Pembahasan
+                            </strong>
+
+                            <p>
+                                ${soal.pembahasan}
+                            </p>
+
+                        </div>
+
+                        `
+                        : ""
+                    }
+
+
+                </div>
+
+            `;
+
+        }
+    );
+
+
+    app.innerHTML = `
+
+        <section class="review-page">
+
+
+            <div
+                class="review-container"
+            >
+
+
+                <div
+                    class="review-title"
+                >
+
+                    <h1>
+                        📝 Review Hasil Ujian
+                    </h1>
+
+
+                    <p>
+                        Lihat kembali jawaban
+                        yang telah kamu kerjakan.
+                    </p>
+
+                </div>
+
+
+                <!-- FILTER -->
+
+
+                <div
+                    class="filter-review"
+                >
+
+
+                    <button
+                        onclick="
+                            tampilkanPembahasan(
+                                'semua'
+                            )
+                        "
+                    >
+                        Semua
+                    </button>
+
+
+                    <button
+                        onclick="
+                            tampilkanPembahasan(
+                                'benar'
+                            )
+                        "
+                    >
+                        🟢 Benar
+                    </button>
+
+
+                    <button
+                        onclick="
+                            tampilkanPembahasan(
+                                'salah'
+                            )
+                        "
+                    >
+                        🔴 Salah
+                    </button>
+
+
+                    <button
+                        onclick="
+                            tampilkanPembahasan(
+                                'kosong'
+                            )
+                        "
+                    >
+                        ⚪ Tidak Dijawab
+                    </button>
+
+
+                </div>
+
+
+                <!-- DAFTAR SOAL -->
+
+
+                <div
+                    class="daftar-review"
+                >
+
+                    ${daftarSoalHTML}
+
+                </div>
+
+
+                <!-- TOMBOL -->
+
+
+                <div
+                    class="review-actions"
+                >
+
+
+                    <button
+                        class="btn-primary"
+                        onclick="
+                            hitungNilai()
+                        "
+                    >
+                        ← Kembali ke Hasil
+                    </button>
+
+
+                    <button
+                        class="btn-secondary"
+                        onclick="
+                            location.hash='soal';
+                            location.reload();
+                        "
+                    >
+                        Kembali ke Website
+                    </button>
+
+
+                </div>
+
 
             </div>
 
