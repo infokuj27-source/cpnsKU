@@ -11,10 +11,11 @@
 const daftarFoto = [
 
     "assets/img/intro/intro1.png",
+    "assets/img/intro/intro2.jpg",
 
     "assets/img/intro/intro3.png",
-   "assets/img/intro/intro4.png",
-    "assets/img/intro/intro5.png"
+    "assets/img/intro/intro4.png",
+    "assets/img/intro/intro5.JPG"
 
 ];
 
@@ -110,7 +111,7 @@ function mulaiIntro() {
 
     if (introMusic) {
 
-        introMusic.volume = 0.7;
+        introMusic.volume = 0.8;
 
 
         introMusic.play()
@@ -155,7 +156,7 @@ function mulaiIntro() {
 
             introImage.style.opacity = "1";
 
-        }, 400);
+        }, 200);
 
     }
 
@@ -167,7 +168,7 @@ function mulaiIntro() {
     slideshow =
         setInterval(
             gantiFoto,
-            3000
+            6000
         );
 
 
@@ -185,7 +186,7 @@ function mulaiIntro() {
 
         }
 
-    }, 5000);
+    }, 7000);
 
 
     /* ==========================================
