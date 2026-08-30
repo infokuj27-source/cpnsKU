@@ -48,6 +48,12 @@ const introMusic =
     );
 
 
+const introMusic2 =
+    document.getElementById(
+        "introMusic2"
+    );
+
+
 /* ==========================================
    VARIABEL
    ========================================== */
