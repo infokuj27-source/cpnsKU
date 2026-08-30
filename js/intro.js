@@ -12,10 +12,10 @@ const daftarFoto = [
 
     "assets/img/intro/intro1.png",
     "assets/img/intro/intro2.jpg",
-
+    "assets/img/intro/intro5.jpg",
     "assets/img/intro/intro3.png",
     "assets/img/intro/intro4.png",
-    "assets/img/intro/intro5.jpg"
+    
 
 ];
 
