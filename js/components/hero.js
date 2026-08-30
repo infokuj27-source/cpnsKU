@@ -15,39 +15,29 @@ function createHero() {
     </h1>
 
     <p>
-
         Belajar CPNS lebih mudah melalui materi,
-
         soal latihan, tryout, serta informasi penting
-
-        dalam satu website.
-
+        dalam satu website. <a class="contact-link" href="https://wa.me/6281337416410"
+        target="_blank"> halo, saya Jayade! </a> scroll ke bawah untuk mendapar infromasi penting dan soal gratis
     </p>
 
-    <div class="hero-btn">
+    <div class="hero-buttons">
 
-        <a href="#materi" class="btn-primary">
+    <a href="#materi" class="btn-primary">
+        Mulai Belajar
+    </a>
 
-            Mulai Belajar
+    <a href="#tryout" class="btn-secondary">
+        Tryout Gratis
+    </a>
 
-        </a>
-
-        <a href="#soal" class="btn-secondary">
-
-            Tryout Gratis
-
-        </a>
+    <a href="#latihan" class="btn-latihan">
+        Latihan SKD
+    </a>
 
     </div>
 
 </div>
-
-<div class="hero-image" data-aos="fade-left">
-
-    <img src="assets/img/hero.png" alt="Hero">
-
-</div>
-
 </section>
 
 `;
