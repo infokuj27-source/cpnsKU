@@ -168,7 +168,7 @@ function mulaiIntro() {
     slideshow =
         setInterval(
             gantiFoto,
-            6000
+            4000
         );
 
 
