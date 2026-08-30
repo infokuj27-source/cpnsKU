@@ -76,7 +76,9 @@ function createExamMenu() {
 
     return `
 
-    <section class="exam-menu">
+    <section
+    id="latihan"
+    class="exam-menu">
 
         <div class="exam-menu-header">
 
