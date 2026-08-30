@@ -851,10 +851,23 @@ function lihatHasilJawaban() {
 
                     else {
 
-                        teksPilihan =
-                            pilihan;
+                    if (
+                    typeof pilihan === "object"
+                    )       {
+
+                    teksPilihan =
+                    pilihan.teks;
 
                     }
+
+                    else {
+
+                    teksPilihan =
+                    pilihan;
+
+                    }
+
+                 }   
 
 
                     pilihanHTML += `
@@ -870,6 +883,22 @@ function lihatHasilJawaban() {
                             </strong>
 
                             ${teksPilihan}
+
+                            ${
+                            jenisSoal === "tkp" &&
+                            typeof pilihan === "object"
+
+                            ? `
+
+                            <span
+                            class="nilai-pilihan-tkp"
+                            >Nilai ${pilihan.nilai}
+                            </span>
+
+                            `
+
+                        :  ""
+                    }
 
                             ${
                                 pilihanIndex ===
@@ -1162,27 +1191,33 @@ function tampilkanSoal() {
 
         else {
 
-            pilihanHTML += `
+    const teksPilihan =
+        typeof pilihan === "object"
+            ? pilihan.teks
+            : pilihan;
 
-                <label class="pilihan-soal">
 
-                    <input
-                        type="radio"
-                        name="jawaban"
-                        value="${index}"
-                        ${checked}
-                        onchange="simpanJawaban(${index})"
-                    >
+    pilihanHTML += `
 
-                    <span>
-                        ${huruf}. ${pilihan}
-                    </span>
+        <label class="pilihan-soal">
 
-                </label>
+            <input
+                type="radio"
+                name="jawaban"
+                value="${index}"
+                ${checked}
+                onchange="simpanJawaban(${index})"
+            >
 
-            `;
+            <span>
+                ${huruf}. ${teksPilihan}
+            </span>
 
-        }
+        </label>
+
+    `;
+
+}
 
     });
 
