@@ -18,7 +18,7 @@ function createHero() {
         Belajar CPNS lebih mudah melalui materi,
         soal latihan, tryout, serta informasi penting
         dalam satu website. <a class="contact-link" href="https://wa.me/6281337416410"
-        target="_blank"> halo, saya Jayade! </a> scroll ke bawah untuk mendapatkan infromasi penting dan soal gratis
+        target="_blank"> halo, saya Jayade! </a> scroll ke bawah untuk mendapar infromasi penting dan soal gratis
     </p>
 
     <div class="hero-buttons">
@@ -27,7 +27,7 @@ function createHero() {
         Mulai Belajar
     </a>
 
-    <a href="#tryout" class="btn-secondary">
+    <a href="#soal" class="btn-secondary">
         Tryout Gratis
     </a>
 
