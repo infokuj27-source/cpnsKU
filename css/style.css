@@ -2445,3 +2445,330 @@ transform:translateY(0);
 .nomor-soal-btn:hover {
     transform: translateY(-2px);
 }
+
+/* ==========================================
+   REVIEW HASIL UJIAN soal salah dan benar
+========================================== */
+
+.review-page {
+
+    padding: 120px 7% 80px;
+
+}
+
+
+.review-container {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+}
+
+
+.review-title {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.review-title h1 {
+
+    font-size: 2rem;
+
+}
+
+
+.review-title p {
+
+    color: #64748b;
+
+}
+
+
+/* ==========================================
+   FILTER
+========================================== */
+
+.filter-review {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 30px;
+
+}
+
+
+.filter-review button {
+
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    background: #e2e8f0;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+
+.filter-review button:hover {
+
+    background: #2563eb;
+
+    color: white;
+
+}
+
+
+/* ==========================================
+   CARD SOAL
+========================================== */
+
+.review-soal {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+
+        0 10px 30px
+        rgba(0, 0, 0, 0.08);
+
+}
+
+
+.review-benar {
+
+    border-left:
+        5px solid #22c55e;
+
+}
+
+
+.review-salah {
+
+    border-left:
+        5px solid #ef4444;
+
+}
+
+
+.review-kosong {
+
+    border-left:
+        5px solid #94a3b8;
+
+}
+
+
+/* ==========================================
+   HEADER SOAL
+========================================== */
+
+.review-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.status-review {
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+}
+
+
+.status-benar {
+
+    background: #dcfce7;
+
+    color: #15803d;
+
+}
+
+
+.status-salah {
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+}
+
+
+.status-kosong {
+
+    background: #e2e8f0;
+
+    color: #475569;
+
+}
+
+
+/* ==========================================
+   PERTANYAAN
+========================================== */
+
+.review-pertanyaan {
+
+    font-size: 1.05rem;
+
+    font-weight: 600;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ==========================================
+   PILIHAN
+========================================== */
+
+.review-pilihan {
+
+    padding: 12px 15px;
+
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+
+    background: #f8fafc;
+
+}
+
+
+.jawaban-benar {
+
+    background: #dcfce7;
+
+    border: 1px solid #22c55e;
+
+}
+
+
+.jawaban-user {
+
+    border: 2px solid #2563eb;
+
+}
+
+
+/* Jika jawaban user salah */
+
+.jawaban-user:not(.jawaban-benar) {
+
+    background: #fee2e2;
+
+    border-color: #ef4444;
+
+}
+
+
+/* ==========================================
+   JAWABAN
+========================================== */
+
+.review-jawaban {
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background: #f8fafc;
+
+    border-radius: 12px;
+
+}
+
+
+.jawaban-benar-text {
+
+    color: #15803d;
+
+}
+
+
+/* ==========================================
+   PEMBAHASAN
+========================================== */
+
+.review-pembahasan {
+
+    margin-top: 20px;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    background: #eff6ff;
+
+    border-left:
+        4px solid #2563eb;
+
+}
+
+
+.review-pembahasan p {
+
+    margin-top: 10px;
+
+    line-height: 1.7;
+
+}
+
+
+/* ==========================================
+   TOMBOL
+========================================== */
+
+.review-actions {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 35px;
+
+}
