@@ -24,15 +24,16 @@ const daftarFoto = [
    ELEMEN
    ========================================== */
 
-const introImage =
+/* musuk ke 1 intro1.mp3 */
+const introMusic =
     document.getElementById(
-        "introImage"
+        "introMusic2"
     );
 
-
-const btnMulai =
+/* musuk ke 2 intro.mp3 */
+const introMusic2 =
     document.getElementById(
-        "btnMulai"
+        "introMusic"
     );
 
 
