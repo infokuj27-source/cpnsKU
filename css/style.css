@@ -514,22 +514,15 @@ header{
 HERO
 ====================================*/
 
-.hero{
+.hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    min-height:100vh;
+    padding: 120px 7% 40px;
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:70px;
-
-    padding:140px 7% 80px;
-
-    position:relative;
-
+    text-align: center;
 }
 
 .hero-content{
@@ -569,44 +562,67 @@ HERO
 
 }
 
-.hero-btn{
-
-    display:flex;
-
-    gap:20px;
-
-    flex-wrap:wrap;
-
+.hero-btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.hero-image{
-    flex: 1;
 
-    display: flex;
+/* SAMAKAN UKURAN SEMUA TOMBOL */
 
-    justify-content: flex-end;
+.btn-primary,
+.btn-secondary,
+.btn-latihan {
+    height: 56px;
+
+    display: inline-flex;
 
     align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    padding: 0 40px;
+
+    border-radius: 50px;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    white-space: nowrap;
 }
 
-.hero-image img{
 
-    width:100%;
+/* TOMBOL LATIHAN SKD */
 
-    max-width:650px;
+.btn-latihan {
+    border: 2px solid #2563eb;
 
-    border-radius:24px;
+    background: white;
 
+    color: #2563eb;
+
+    transition: 0.3s ease;
 }
 
-.hero-image img:hover{
 
-    transform:
+.btn-latihan:hover {
+    background: #2563eb;
 
-    translateY(-10px)
+    color: white;
 
-    scale(1.02);
+    transform: translateY(-3px);
 
+    box-shadow:
+        0 10px 25px
+        rgba(37, 99, 235, 0.25);
 }
 
 /* ==============================
