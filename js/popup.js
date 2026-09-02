@@ -15,13 +15,14 @@ const popupData = [
 
     {
         gambar:
-            "assets/img/popup/popup1.jpeg",
+            "assets/img/popup/popup2.jpg",
 
         judul:
-            "📢 Jadwal Belajar CPNS HUB",
+            "📚 Informasi Penting CPNS",
 
         keterangan:
-            "Berikut adalah jadwal materi dan pembahasan CPNS HUB bulan September 2026."
+           "jadwal Pengunguman, Pendaftaran, SKD & SKBKedinasan."
+           
     },
 
 
@@ -30,10 +31,10 @@ const popupData = [
             "assets/img/popup/popup1.jpeg",
 
         judul:
-            "📚 Informasi Penting CPNS",
+            "📢 Jadwal Belajar CPNS HUB",
 
         keterangan:
-            "Ikuti jadwal belajar dan jangan lewatkan materi serta pembahasan yang telah disiapkan."
+              "Berikut adalah jadwal materi dan pembahasan CPNS HUB bulan September 2026."
     }
 
 ];
