@@ -1,0 +1,543 @@
+/* ==========================================
+   POPUP INFORMASI CPNS HUB
+   ========================================== */
+
+.popup-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, 0.65);
+
+    backdrop-filter:
+        blur(6px);
+
+    -webkit-backdrop-filter:
+        blur(6px);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 99999;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+
+}
+
+
+/* ==========================================
+   POPUP MUNCUL
+   ========================================== */
+
+.popup-overlay.popup-visible {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+}
+
+
+/* ==========================================
+   POPUP DITUTUP
+   ========================================== */
+
+.popup-overlay.popup-hidden {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================
+   BOX POPUP
+   ========================================== */
+
+.popup-container {
+
+    position: relative;
+
+    width: min(
+        700px,
+        92vw
+    );
+
+    max-height: 90vh;
+
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 12px;
+
+    box-shadow:
+        0 25px 80px
+        rgba(0, 0, 0, 0.45);
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+}
+
+
+/* ==========================================
+   ANIMASI POPUP MUNCUL
+   ========================================== */
+
+.popup-visible .popup-container {
+
+    transform:
+        scale(1);
+
+}
+
+
+/* ==========================================
+   ANIMASI POPUP DITUTUP
+   ========================================== */
+
+.popup-hidden .popup-container {
+
+    transform:
+        scale(0.85);
+
+}
+
+
+/* ==========================================
+   TOMBOL CLOSE
+   ========================================== */
+
+.popup-close {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 12px;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0, 0, 0, 0.65);
+
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.popup-close:hover {
+
+    background:
+        #ef4444;
+
+    transform:
+        rotate(90deg)
+        scale(1.08);
+
+}
+
+
+/* ==========================================
+   AREA SLIDER
+   ========================================== */
+
+.popup-slider {
+
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    /*
+       Izinkan halaman tetap
+       bisa scroll vertikal,
+       tetapi swipe horizontal
+       digunakan popup.
+    */
+
+    touch-action: pan-y;
+
+    cursor: grab;
+
+}
+
+
+.popup-slider:active {
+
+    cursor: grabbing;
+
+}
+
+
+/* ==========================================
+   GAMBAR
+   ========================================== */
+
+.popup-image {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    max-height: none;
+
+    object-fit: contain;
+
+    border-radius: 16px;
+
+    user-select: none;
+
+    -webkit-user-drag: none;
+
+}
+
+
+/* ==========================================
+   ANIMASI SLIDE
+   ========================================== */
+
+.popup-image.slide-next {
+
+    animation:
+        popupSlideNext
+        0.35s ease;
+
+}
+
+
+.popup-image.slide-prev {
+
+    animation:
+        popupSlidePrev
+        0.35s ease;
+
+}
+
+
+@keyframes popupSlideNext {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(60px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+@keyframes popupSlidePrev {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(-60px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================
+   INDIKATOR
+   ========================================== */
+
+.popup-indicators {
+
+    position: absolute;
+
+    bottom: 18px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    gap: 8px;
+
+    z-index: 10;
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================
+   BULATAN INDIKATOR
+   ========================================== */
+
+.popup-dot {
+
+    display: block;
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.65);
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.25);
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.popup-dot.active {
+
+    width: 28px;
+
+    border-radius: 20px;
+
+    background:
+        #2563eb;
+
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .popup-overlay {
+
+        padding: 10px;
+
+    }
+
+
+    .popup-container {
+
+        width: 96vw;
+
+        max-height: 90vh;
+
+        padding: 7px;
+
+        border-radius: 16px;
+
+    }
+
+
+    .popup-slider {
+
+        border-radius: 12px;
+
+    }
+
+
+    .popup-image {
+
+        max-height: 82vh;
+
+        border-radius: 12px;
+
+    }
+
+
+    .popup-close {
+
+        width: 36px;
+
+        height: 36px;
+
+        top: 8px;
+
+        right: 8px;
+
+        font-size: 20px;
+
+    }
+
+
+    .popup-indicators {
+
+        bottom: 12px;
+
+    }
+
+
+    .popup-dot {
+
+        width: 8px;
+
+        height: 8px;
+
+    }
+
+
+    .popup-dot.active {
+
+        width: 24px;
+
+    }
+
+}
+
+/* ==========================================
+   INFORMASI TEKS DI ATAS GAMBAR
+   ========================================== */
+
+.popup-info {
+
+    padding:
+        12px
+        18px
+        16px;
+
+    text-align: center;
+
+    background: white;
+
+}
+
+
+/* ==========================================
+   JUDUL INFORMASI
+   ========================================== */
+
+.popup-info h2 {
+
+    margin: 0 0 6px 0;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #0f172a;
+
+}
+
+
+/* ==========================================
+   KETERANGAN
+   ========================================== */
+
+.popup-info p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color: #64748b;
+
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .popup-info {
+
+        padding:
+            10px
+            12px
+            12px;
+
+    }
+
+
+    .popup-info h2 {
+
+        font-size: 17px;
+
+    }
+
+
+    .popup-info p {
+
+        font-size: 12px;
+
+        line-height: 1.5;
+
+    }
+
+}
