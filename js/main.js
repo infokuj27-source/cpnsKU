@@ -24,6 +24,7 @@ async function initWebsite() {
 
         ${await createFAQ()}
         ${createFooter()}
+        ${createLatihan()}
 
     `;
     AOS.init({
@@ -45,6 +46,7 @@ async function initWebsite() {
     initMobileMenu();
 
     initBackToTop();
+    initLatihan();
 
 }
 
