@@ -1,0 +1,1428 @@
+/* ==========================================
+   LATIHAN SOAL CPNS HUB
+   ========================================== */
+
+
+/* ==========================================
+   TOMBOL LINGKARAN
+   ========================================== */
+
+.btn-latihan {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    width: 65px;
+
+    height: 65px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #7c3aed
+        );
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    z-index: 9990;
+
+    box-shadow:
+        0 10px 30px
+        rgba(37, 99, 235, 0.35);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.btn-latihan:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.08);
+
+}
+
+
+/* ==========================================
+   POPUP
+   ========================================== */
+
+.latihan-menu {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(15, 23, 42, 0.65);
+
+    backdrop-filter:
+        blur(6px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 9989;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.latihan-menu.aktif {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+}
+
+
+/* ==========================================
+   BOX
+   ========================================== */
+
+.latihan-box {
+
+    width:
+        min(
+            600px,
+            94vw
+        );
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0, 0, 0, 0.3);
+
+}
+
+
+/* ==========================================
+   HALAMAN
+   ========================================== */
+
+.latihan-page {
+
+    display: none;
+
+}
+
+
+.latihan-page.aktif {
+
+    display: block;
+
+}
+
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+.latihan-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.latihan-header h2 {
+
+    margin:
+        5px 0;
+
+    font-size:
+        27px;
+
+    color:
+        #0f172a;
+
+}
+
+
+.latihan-header p {
+
+    margin: 0;
+
+    color:
+        #64748b;
+
+    font-size:
+        14px;
+
+}
+
+
+.latihan-icon {
+
+    display: inline-block;
+
+    font-size:
+        30px;
+
+    margin-bottom:
+        5px;
+
+}
+
+
+/* ==========================================
+   CLOSE
+   ========================================== */
+
+.latihan-close {
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        #f1f5f9;
+
+    color:
+        #475569;
+
+    font-size:
+        25px;
+
+    cursor:
+        pointer;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.latihan-close:hover {
+
+    background:
+        #ef4444;
+
+    color:
+        white;
+
+    transform:
+        rotate(90deg);
+
+}
+
+
+/* ==========================================
+   PILIHAN TWK / TIU / TKP
+   ========================================== */
+
+.latihan-pilihan {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        15px;
+
+}
+
+
+/* ==========================================
+   KATEGORI
+   ========================================== */
+
+.latihan-kategori {
+
+    border:
+        2px solid
+        #e2e8f0;
+
+    background:
+        #f8fafc;
+
+    border-radius:
+        18px;
+
+    padding:
+        20px 15px;
+
+    cursor:
+        pointer;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        10px;
+
+    min-height:
+        150px;
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.kategori-icon {
+
+    font-size:
+        35px;
+
+}
+
+
+.latihan-kategori strong {
+
+    display:
+        block;
+
+    font-size:
+        23px;
+
+}
+
+
+.latihan-kategori small {
+
+    display:
+        block;
+
+    margin-top:
+        5px;
+
+    font-size:
+        11px;
+
+    color:
+        #64748b;
+
+}
+
+
+/* ==========================================
+   WARNA
+   ========================================== */
+
+.latihan-twk {
+
+    border-color:
+        #2563eb;
+
+}
+
+
+.latihan-twk strong {
+
+    color:
+        #2563eb;
+
+}
+
+
+.latihan-twk:hover {
+
+    background:
+        #eff6ff;
+
+    transform:
+        translateY(-5px);
+
+}
+
+
+.latihan-tiu {
+
+    border-color:
+        #7c3aed;
+
+}
+
+
+.latihan-tiu strong {
+
+    color:
+        #7c3aed;
+
+}
+
+
+.latihan-tiu:hover {
+
+    background:
+        #f5f3ff;
+
+    transform:
+        translateY(-5px);
+
+}
+
+
+.latihan-tkp {
+
+    border-color:
+        #ea580c;
+
+}
+
+
+.latihan-tkp strong {
+
+    color:
+        #ea580c;
+
+}
+
+
+.latihan-tkp:hover {
+
+    background:
+        #fff7ed;
+
+    transform:
+        translateY(-5px);
+
+}
+
+
+/* ==========================================
+   TOMBOL KEMBALI
+   ========================================== */
+
+.latihan-back {
+
+    display:
+        block;
+
+    margin-bottom:
+        12px;
+
+    padding:
+        8px 14px;
+
+    border:
+        none;
+
+    border-radius:
+        10px;
+
+    background:
+        #f1f5f9;
+
+    color:
+        #475569;
+
+    font-size:
+        13px;
+
+    cursor:
+        pointer;
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.latihan-back:hover {
+
+    background:
+        #e2e8f0;
+
+}
+
+
+/* ==========================================
+   SUBBAB
+   ========================================== */
+
+.latihan-subbab-list {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        12px;
+
+}
+
+
+/* ==========================================
+   TOMBOL SUBBAB
+   ========================================== */
+
+.latihan-subbab {
+
+    width:
+        100%;
+
+    border:
+        2px solid
+        #e2e8f0;
+
+    background:
+        #f8fafc;
+
+    border-radius:
+        16px;
+
+    padding:
+        16px;
+
+    cursor:
+        pointer;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    text-align:
+        left;
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.latihan-subbab:hover {
+
+    background:
+        #eff6ff;
+
+    border-color:
+        #2563eb;
+
+    transform:
+        translateX(5px);
+
+}
+
+
+/* ==========================================
+   ICON SUBBAB
+   ========================================== */
+
+.subbab-icon {
+
+    width:
+        50px;
+
+    height:
+        50px;
+
+    flex-shrink:
+        0;
+
+    border-radius:
+        14px;
+
+    background:
+        white;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    font-size:
+        25px;
+
+    box-shadow:
+        0 4px 12px
+        rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* ==========================================
+   TEXT SUBBAB
+   ========================================== */
+
+.latihan-subbab strong {
+
+    display:
+        block;
+
+    font-size:
+        16px;
+
+    color:
+        #0f172a;
+
+}
+
+
+.latihan-subbab small {
+
+    display:
+        block;
+
+    margin-top:
+        4px;
+
+    color:
+        #64748b;
+
+    font-size:
+        12px;
+
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .btn-latihan {
+
+        width:
+            58px;
+
+        height:
+            58px;
+
+        right:
+            18px;
+
+        bottom:
+            18px;
+
+        font-size:
+            22px;
+
+    }
+
+
+    .latihan-menu {
+
+        padding:
+            12px;
+
+    }
+
+
+    .latihan-box {
+
+        width:
+            96vw;
+
+        max-height:
+            90vh;
+
+        padding:
+            22px;
+
+        border-radius:
+            20px;
+
+    }
+
+
+    .latihan-header h2 {
+
+        font-size:
+            23px;
+
+    }
+
+
+    .latihan-pilihan {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .latihan-kategori {
+
+        min-height:
+            85px;
+
+        flex-direction:
+            row;
+
+        justify-content:
+            flex-start;
+
+        text-align:
+            left;
+
+        padding:
+            15px 18px;
+
+    }
+
+
+    .kategori-icon {
+
+        width:
+            45px;
+
+        font-size:
+            30px;
+
+        text-align:
+            center;
+
+    }
+
+
+    .latihan-subbab {
+
+        padding:
+            14px;
+
+    }
+
+}
+
+/* ==========================================
+   HALAMAN LATIHAN SOAL
+   ========================================== */
+
+.latihan-soal-page {
+
+    display: none;
+
+}
+
+
+.latihan-soal-page.aktif {
+
+    display: block;
+
+}
+
+
+/* ==========================================
+   PROGRESS
+   ========================================== */
+
+.soal-progress {
+
+    margin:
+        10px 0 25px;
+
+}
+
+
+.soal-progress-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    color: #64748b;
+
+}
+
+
+.soal-progress-bar {
+
+    width: 100%;
+
+    height: 8px;
+
+    background: #e2e8f0;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.soal-progress-fill {
+
+    width: 0%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #7c3aed
+        );
+
+    border-radius: 20px;
+
+    transition:
+        width 0.3s ease;
+
+}
+
+
+/* ==========================================
+   CONTAINER SOAL
+   ========================================== */
+
+.soal-container {
+
+    padding:
+        10px 0;
+
+}
+
+
+/* ==========================================
+   PERTANYAAN
+   ========================================== */
+
+.soal-pertanyaan {
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    font-weight: 600;
+
+    color: #0f172a;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ==========================================
+   PILIHAN
+   ========================================== */
+
+.soal-pilihan {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+.soal-pilihan-item {
+
+    width: 100%;
+
+    border:
+        2px solid #e2e8f0;
+
+    background: #f8fafc;
+
+    border-radius: 15px;
+
+    padding:
+        16px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.soal-pilihan-item:hover {
+
+    border-color:
+        #2563eb;
+
+    background:
+        #eff6ff;
+
+    transform:
+        translateX(4px);
+
+}
+
+
+/* ==========================================
+   HURUF JAWABAN
+   ========================================== */
+
+.soal-huruf {
+
+    min-width:
+        38px;
+
+    height:
+        38px;
+
+    border-radius:
+        50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        #e2e8f0;
+
+    color:
+        #334155;
+
+    font-weight:
+        700;
+
+}
+
+
+/* ==========================================
+   PILIHAN TERPILIH
+   ========================================== */
+
+.soal-pilihan-item.dipilih {
+
+    border-color:
+        #2563eb;
+
+    background:
+        #eff6ff;
+
+}
+
+
+.soal-pilihan-item.dipilih
+.soal-huruf {
+
+    background:
+        #2563eb;
+
+    color:
+        white;
+
+}
+
+
+/* ==========================================
+   TEKS JAWABAN
+   ========================================== */
+
+.soal-jawaban-text {
+
+    flex: 1;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.5;
+
+    color:
+        #334155;
+
+}
+
+
+/* ==========================================
+   NAVIGASI
+   ========================================== */
+
+.soal-navigasi {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    gap:
+        15px;
+
+    margin-top:
+        30px;
+
+}
+
+
+.soal-btn {
+
+    border:
+        none;
+
+    border-radius:
+        12px;
+
+    padding:
+        13px 20px;
+
+    font-weight:
+        600;
+
+    cursor:
+        pointer;
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.soal-btn-primary {
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #7c3aed
+        );
+
+    color:
+        white;
+
+}
+
+
+.soal-btn-primary:hover {
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.soal-btn-secondary {
+
+    background:
+        #f1f5f9;
+
+    color:
+        #475569;
+
+}
+
+
+.soal-btn-secondary:hover {
+
+    background:
+        #e2e8f0;
+
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .soal-pertanyaan {
+
+        font-size:
+            17px;
+
+    }
+
+
+    .soal-pilihan-item {
+
+        padding:
+            13px;
+
+    }
+
+
+    .soal-navigasi {
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .soal-btn {
+
+        width:
+            100%;
+
+    }
+
+}
+/* ==========================================
+   HALAMAN SOAL
+   ========================================== */
+
+#latihanSoalPage {
+    display: none;
+}
+
+#latihanSoalPage.aktif {
+    display: block;
+}
+
+
+/* ==========================================
+   CONTAINER SOAL
+   ========================================== */
+
+.latihan-soal-container {
+
+    margin-top: 25px;
+
+}
+
+
+/* ==========================================
+   KARTU SOAL
+   ========================================== */
+
+.soal-card {
+
+    background: #f8fafc;
+
+    border: 2px solid #e2e8f0;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+}
+
+
+/* ==========================================
+   NOMOR SOAL
+   ========================================== */
+
+.soal-nomor {
+
+    display: inline-block;
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 7px 14px;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* ==========================================
+   PERTANYAAN
+   ========================================== */
+
+.soal-pertanyaan {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #0f172a;
+
+    margin-bottom: 25px;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================
+   PILIHAN JAWABAN
+   ========================================== */
+
+.soal-pilihan {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+.soal-jawaban {
+
+    width: 100%;
+
+    border: 2px solid #e2e8f0;
+
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 15px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.25s ease;
+
+}
+
+
+.soal-jawaban:hover {
+
+    border-color: #2563eb;
+
+    background: #eff6ff;
+
+    transform: translateX(4px);
+
+}
+
+
+/* ==========================================
+   LABEL A B C D E
+   ========================================== */
+
+.jawaban-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 35px;
+
+    height: 35px;
+
+    border-radius: 50%;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-weight: 700;
+
+    margin-right: 12px;
+
+}
+
+
+/* ==========================================
+   JAWABAN DIPILIH
+   ========================================== */
+
+.soal-jawaban.dipilih {
+
+    border-color: #2563eb;
+
+    background: #eff6ff;
+
+}
+
+
+.soal-jawaban.dipilih .jawaban-label {
+
+    background: #2563eb;
+
+    color: white;
+
+}
+
+
+/* ==========================================
+   NAVIGASI
+   ========================================== */
+
+.latihan-soal-navigasi {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+}
+
+
+.latihan-nav-btn {
+
+    border: none;
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 12px 18px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: 0.25s ease;
+
+}
+
+
+.latihan-nav-btn:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+.latihan-nav-btn:disabled {
+
+    background: #cbd5e1;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+}
+
+
+.nomor-soal {
+
+    font-weight: 700;
+
+    color: #475569;
+
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .soal-card {
+
+        padding: 18px;
+
+    }
+
+
+    .soal-pertanyaan {
+
+        font-size: 16px;
+
+    }
+
+
+    .latihan-soal-navigasi {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .latihan-nav-btn {
+
+        flex: 1;
+
+    }
+
+}
