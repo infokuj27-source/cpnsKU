@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "soal": "Contoh soal TIU Figural nomor 1",
+        "gambar": "",
+        "pilihan": {
+            "A": "Pilihan A",
+            "B": "Pilihan B",
+            "C": "Pilihan C",
+            "D": "Pilihan D",
+            "E": "Pilihan E"
+        },
+        "jawaban": "A",
+        "pembahasan": "Pembahasan soal nomor 1."
+    },
+    {
+        "id": 2,
+        "soal": "Contoh soal TIU Figural nomor 2",
+        "gambar": "",
+        "pilihan": {
+            "A": "Pilihan A",
+            "B": "Pilihan B",
+            "C": "Pilihan C",
+            "D": "Pilihan D",
+            "E": "Pilihan E"
+        },
+        "jawaban": "C",
+        "pembahasan": "Pembahasan soal nomor 2."
+    }
+]
