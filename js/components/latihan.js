@@ -1,10 +1,11 @@
 /* ==========================================
    LATIHAN SOAL CPNS HUB
+   VERSI BERSIH
    ========================================== */
 
 
 /* ==========================================
-   DATA KATEGORI
+   DATA KATEGORI LATIHAN
    ========================================== */
 
 const latihanKategoriData = {
@@ -173,6 +174,7 @@ let latihanKategoriAktif = "";
 let latihanSubbabAktif = "";
 
 
+
 /* ==========================================
    COMPONENT LATIHAN
    ========================================== */
@@ -197,7 +199,7 @@ function createLatihan() {
 
 
         <!-- ==================================
-             POPUP LATIHAN
+             MENU LATIHAN
              ================================== -->
 
         <div
@@ -333,6 +335,7 @@ function createLatihan() {
                 </div>
 
 
+
                 <!-- ==================================
                      HALAMAN SUBBAB
                      ================================== -->
@@ -355,19 +358,19 @@ function createLatihan() {
 
 
                             <span
-                                id="subbabIcon"
+                                id="latihanSubbabIcon"
                                 class="latihan-icon"
                             >
                                 📝
                             </span>
 
 
-                            <h2 id="subbabJudul">
+                            <h2 id="latihanSubbabJudul">
                                 Pilih Materi
                             </h2>
 
 
-                            <p id="subbabDeskripsi">
+                            <p id="latihanSubbabDeskripsi">
                                 Pilih jenis soal yang ingin kamu latihan
                             </p>
 
@@ -393,8 +396,9 @@ function createLatihan() {
                 </div>
 
 
+
                 <!-- ==================================
-                     HALAMAN SOAL
+                     HALAMAN SOAL LATIHAN
                      ================================== -->
 
                 <div
@@ -402,14 +406,12 @@ function createLatihan() {
                     class="latihan-page latihan-soal-page"
                 >
 
-                    <!-- HEADER SOAL -->
-
                     <div class="latihan-header">
 
                         <div>
 
                             <button
-                                id="btnKembaliSoal"
+                                id="btnKembaliLatihanSoal"
                                 class="latihan-back"
                             >
                                 ← Kembali
@@ -417,27 +419,27 @@ function createLatihan() {
 
 
                             <span
-                                id="soalIcon"
+                                id="latihanSoalIcon"
                                 class="latihan-icon"
                             >
                                 📝
                             </span>
 
 
-                            <h2 id="soalJudul">
+                            <h2 id="latihanSoalJudul">
                                 Latihan Soal
                             </h2>
 
 
-                            <p id="soalInfo">
-                                Soal nomor 1
+                            <p id="latihanSoalInfo">
+                                Latihan soal
                             </p>
 
                         </div>
 
 
                         <button
-                            id="btnTutupSoal"
+                            id="btnTutupLatihanSoal"
                             class="latihan-close"
                             aria-label="Tutup"
                         >
@@ -447,23 +449,26 @@ function createLatihan() {
                     </div>
 
 
-                    <!-- PROGRESS -->
 
-                    <div class="soal-progress">
+                    <!-- ==================================
+                         PROGRESS
+                         ================================== -->
 
-                        <div class="soal-progress-info">
+                    <div class="latihan-progress">
+
+                        <div class="latihan-progress-info">
 
                             <span>
 
                                 Soal
 
-                                <strong id="nomorSoal">
+                                <strong id="latihanNomorSoal">
                                     1
                                 </strong>
 
                                 dari
 
-                                <strong id="jumlahSoal">
+                                <strong id="latihanJumlahSoal">
                                     0
                                 </strong>
 
@@ -472,11 +477,11 @@ function createLatihan() {
                         </div>
 
 
-                        <div class="soal-progress-bar">
+                        <div class="latihan-progress-bar">
 
                             <div
-                                id="soalProgressFill"
-                                class="soal-progress-fill"
+                                id="latihanProgressFill"
+                                class="latihan-progress-fill"
                             ></div>
 
                         </div>
@@ -484,31 +489,37 @@ function createLatihan() {
                     </div>
 
 
-                    <!-- CONTAINER SOAL -->
+
+                    <!-- ==================================
+                         CONTAINER SOAL
+                         ================================== -->
 
                     <div
-                        id="soalContainer"
-                        class="soal-container"
+                        id="latihanSoalContainer"
+                        class="latihan-soal-container"
                     >
 
                     </div>
 
 
-                    <!-- NAVIGASI -->
 
-                    <div class="soal-navigasi">
+                    <!-- ==================================
+                         NAVIGASI
+                         ================================== -->
+
+                    <div class="latihan-soal-navigasi">
 
                         <button
-                            id="btnSoalSebelumnya"
-                            class="soal-btn soal-btn-secondary"
+                            id="btnLatihanSoalSebelumnya"
+                            class="latihan-nav-btn"
                         >
                             ← Sebelumnya
                         </button>
 
 
                         <button
-                            id="btnSoalBerikutnya"
-                            class="soal-btn soal-btn-primary"
+                            id="btnLatihanSoalBerikutnya"
+                            class="latihan-nav-btn"
                         >
                             Berikutnya →
                         </button>
@@ -527,81 +538,17 @@ function createLatihan() {
 }
 
 
-/* ==========================================
-   BACA DATA JSON
-   ========================================== */
-
-async function bacaDataLatihan(
-    kategori,
-    subbab
-) {
-
-    const path =
-        latihanDataPath?.[kategori]?.[subbab];
-
-
-    if (!path) {
-
-        console.error(
-            "Path JSON tidak ditemukan:",
-            kategori,
-            subbab
-        );
-
-        return [];
-
-    }
-
-
-    try {
-
-        const response =
-            await fetch(path);
-
-
-        if (!response.ok) {
-
-            throw new Error(
-                `Gagal membaca JSON: ${path}`
-            );
-
-        }
-
-
-        const data =
-            await response.json();
-
-
-        console.log(
-            "Data latihan berhasil dibaca:",
-            data
-        );
-
-
-        return data;
-
-    }
-
-    catch (error) {
-
-        console.error(
-            "Error membaca JSON:",
-            error
-        );
-
-
-        return [];
-
-    }
-
-}
-
 
 /* ==========================================
    INIT LATIHAN
    ========================================== */
 
 function initLatihan() {
+
+    console.log(
+        "🚀 Init Latihan Soal..."
+    );
+
 
     const btnLatihan =
         document.getElementById(
@@ -621,12 +568,13 @@ function initLatihan() {
     ) {
 
         console.warn(
-            "Element latihan belum ditemukan."
+            "⚠️ Element latihan belum ditemukan."
         );
 
         return;
 
     }
+
 
 
     /* ======================================
@@ -651,6 +599,7 @@ function initLatihan() {
         );
 
 
+
     /* ======================================
        TOMBOL
        ====================================== */
@@ -667,9 +616,9 @@ function initLatihan() {
         );
 
 
-    const btnTutupSoal =
+    const btnTutupLatihanSoal =
         document.getElementById(
-            "btnTutupSoal"
+            "btnTutupLatihanSoal"
         );
 
 
@@ -679,45 +628,224 @@ function initLatihan() {
         );
 
 
-    const btnKembaliSoal =
+    const btnKembaliLatihanSoal =
         document.getElementById(
-            "btnKembaliSoal"
+            "btnKembaliLatihanSoal"
         );
 
 
-    const btnSoalSebelumnya =
+    const btnSebelumnya =
         document.getElementById(
-            "btnSoalSebelumnya"
+            "btnLatihanSoalSebelumnya"
         );
 
 
-    const btnSoalBerikutnya =
+    const btnBerikutnya =
         document.getElementById(
-            "btnSoalBerikutnya"
+            "btnLatihanSoalBerikutnya"
         );
+
 
 
     /* ======================================
-       TAMPILKAN KATEGORI
+       BUKA MENU LATIHAN
        ====================================== */
 
-    function tampilkanKategori() {
+    btnLatihan.addEventListener(
+        "click",
+        function () {
+
+            latihanMenu.classList.add(
+                "aktif"
+            );
+
+            tampilkanHalamanKategori();
+
+        }
+    );
+
+
+
+    /* ======================================
+       TUTUP MENU
+       ====================================== */
+
+    function tutupLatihan() {
+
+        latihanMenu.classList.remove(
+            "aktif"
+        );
+
+    }
+
+
+    btnTutupLatihan?.addEventListener(
+        "click",
+        tutupLatihan
+    );
+
+
+    btnTutupSubbab?.addEventListener(
+        "click",
+        tutupLatihan
+    );
+
+
+    btnTutupLatihanSoal?.addEventListener(
+        "click",
+        tutupLatihan
+    );
+
+
+
+    /* ======================================
+       KLIK AREA LUAR
+       ====================================== */
+
+    latihanMenu.addEventListener(
+        "click",
+        function (event) {
+
+            if (
+                event.target === latihanMenu
+            ) {
+
+                tutupLatihan();
+
+            }
+
+        }
+    );
+
+
+
+    /* ======================================
+       HALAMAN KATEGORI
+       ====================================== */
+
+    function tampilkanHalamanKategori() {
 
         kategoriPage?.classList.add(
             "aktif"
         );
 
-
         subbabPage?.classList.remove(
             "aktif"
         );
-
 
         soalPage?.classList.remove(
             "aktif"
         );
 
     }
+
+
+
+    /* ======================================
+       HALAMAN SUBBAB
+       ====================================== */
+
+    function tampilkanHalamanSubbab() {
+
+        kategoriPage?.classList.remove(
+            "aktif"
+        );
+
+        subbabPage?.classList.add(
+            "aktif"
+        );
+
+        soalPage?.classList.remove(
+            "aktif"
+        );
+
+    }
+
+
+
+    /* ======================================
+       HALAMAN SOAL
+       ====================================== */
+
+    function tampilkanHalamanSoal() {
+
+        kategoriPage?.classList.remove(
+            "aktif"
+        );
+
+        subbabPage?.classList.remove(
+            "aktif"
+        );
+
+        soalPage?.classList.add(
+            "aktif"
+        );
+
+    }
+
+
+
+    /* ======================================
+       TOMBOL KEMBALI SUBBAB
+       ====================================== */
+
+    btnKembaliLatihan?.addEventListener(
+        "click",
+        function () {
+
+            tampilkanHalamanKategori();
+
+        }
+    );
+
+
+
+    /* ======================================
+       TOMBOL KEMBALI DARI SOAL
+       ====================================== */
+
+    btnKembaliLatihanSoal?.addEventListener(
+        "click",
+        function () {
+
+            tampilkanHalamanSubbab();
+
+        }
+    );
+
+
+
+    /* ======================================
+       KLIK KATEGORI
+       ====================================== */
+
+    const tombolKategori =
+        document.querySelectorAll(
+            "#latihanKategoriPage .latihan-kategori"
+        );
+
+
+    tombolKategori.forEach(
+        function (tombol) {
+
+            tombol.addEventListener(
+                "click",
+                function () {
+
+                    const kategori =
+                        this.dataset.kategori;
+
+
+                    tampilkanSubbab(
+                        kategori
+                    );
+
+                }
+            );
+
+        }
+    );
+
 
 
     /* ======================================
@@ -737,7 +865,7 @@ function initLatihan() {
         if (!data) {
 
             console.error(
-                "Kategori tidak ditemukan:",
+                "❌ Kategori tidak ditemukan:",
                 kategori
             );
 
@@ -750,67 +878,56 @@ function initLatihan() {
             kategori;
 
 
-        kategoriPage?.classList.remove(
-            "aktif"
-        );
+        tampilkanHalamanSubbab();
 
 
-        subbabPage?.classList.add(
-            "aktif"
-        );
 
-
-        soalPage?.classList.remove(
-            "aktif"
-        );
-
-
-        const subbabIcon =
+        const icon =
             document.getElementById(
-                "subbabIcon"
+                "latihanSubbabIcon"
             );
 
 
-        const subbabJudul =
+        const judul =
             document.getElementById(
-                "subbabJudul"
+                "latihanSubbabJudul"
             );
 
 
-        const subbabDeskripsi =
+        const deskripsi =
             document.getElementById(
-                "subbabDeskripsi"
+                "latihanSubbabDeskripsi"
             );
-
-
-        if (subbabIcon) {
-
-            subbabIcon.textContent =
-                data.icon;
-
-        }
-
-
-        if (subbabJudul) {
-
-            subbabJudul.textContent =
-                data.judul;
-
-        }
-
-
-        if (subbabDeskripsi) {
-
-            subbabDeskripsi.textContent =
-                data.deskripsi;
-
-        }
 
 
         const list =
             document.getElementById(
                 "latihanSubbabList"
             );
+
+
+        if (icon) {
+
+            icon.textContent =
+                data.icon;
+
+        }
+
+
+        if (judul) {
+
+            judul.textContent =
+                data.judul;
+
+        }
+
+
+        if (deskripsi) {
+
+            deskripsi.textContent =
+                data.deskripsi;
+
+        }
 
 
         if (!list) {
@@ -823,10 +940,17 @@ function initLatihan() {
         list.innerHTML = "";
 
 
+
+        /* ==================================
+           BUAT TOMBOL SUBBAB
+           ================================== */
+
         Object.entries(
             data.subbab
         ).forEach(
-            function ([key, subbab]) {
+            function (
+                [key, subbab]
+            ) {
 
                 const tombol =
                     document.createElement(
@@ -836,6 +960,10 @@ function initLatihan() {
 
                 tombol.className =
                     "latihan-subbab";
+
+
+                tombol.dataset.subbab =
+                    key;
 
 
                 tombol.innerHTML = `
@@ -862,6 +990,11 @@ function initLatihan() {
                 `;
 
 
+
+                /* ==========================
+                   KLIK SUBBAB
+                   ========================== */
+
                 tombol.addEventListener(
                     "click",
                     function () {
@@ -885,148 +1018,12 @@ function initLatihan() {
     }
 
 
-    /* ======================================
-       BUKA POPUP
-       ====================================== */
-
-    btnLatihan.addEventListener(
-        "click",
-        function () {
-
-            latihanMenu.classList.add(
-                "aktif"
-            );
-
-
-            tampilkanKategori();
-
-        }
-    );
-
 
     /* ======================================
-       TUTUP POPUP
+       TOMBOL SOAL SEBELUMNYA
        ====================================== */
 
-    function tutupLatihan() {
-
-        latihanMenu.classList.remove(
-            "aktif"
-        );
-
-    }
-
-
-    btnTutupLatihan?.addEventListener(
-        "click",
-        tutupLatihan
-    );
-
-
-    btnTutupSubbab?.addEventListener(
-        "click",
-        tutupLatihan
-    );
-
-
-    btnTutupSoal?.addEventListener(
-        "click",
-        tutupLatihan
-    );
-
-
-    /* ======================================
-       KLIK LUAR POPUP
-       ====================================== */
-
-    latihanMenu.addEventListener(
-        "click",
-        function (event) {
-
-            if (
-                event.target === latihanMenu
-            ) {
-
-                tutupLatihan();
-
-            }
-
-        }
-    );
-
-
-    /* ======================================
-       KEMBALI KE KATEGORI
-       ====================================== */
-
-    btnKembaliLatihan?.addEventListener(
-        "click",
-        function () {
-
-            tampilkanKategori();
-
-        }
-    );
-
-
-    /* ======================================
-       KEMBALI DARI SOAL KE SUBBAB
-       ====================================== */
-
-    btnKembaliSoal?.addEventListener(
-        "click",
-        function () {
-
-            soalPage?.classList.remove(
-                "aktif"
-            );
-
-
-            subbabPage?.classList.add(
-                "aktif"
-            );
-
-        }
-    );
-
-
-    /* ======================================
-       KATEGORI TWK / TIU / TKP
-       ====================================== */
-
-    const tombolKategori =
-        latihanMenu.querySelectorAll(
-            ".latihan-kategori"
-        );
-
-
-    tombolKategori.forEach(
-        function (tombol) {
-
-            tombol.addEventListener(
-                "click",
-                function () {
-
-                    const kategori =
-                        this.dataset.kategori;
-
-
-                    tampilkanSubbab(
-                        kategori
-                    );
-
-                }
-            );
-
-        }
-    );
-
-
-    /* ======================================
-       SOAL SEBELUMNYA
-       ====================================== */
-
-    btnSoalSebelumnya?.addEventListener(
+    btnSebelumnya?.addEventListener(
         "click",
         function () {
 
@@ -1036,7 +1033,7 @@ function initLatihan() {
 
                 latihanSoalIndex--;
 
-                tampilkanSoal();
+                tampilkanSoalLatihan();
 
             }
 
@@ -1044,11 +1041,12 @@ function initLatihan() {
     );
 
 
+
     /* ======================================
-       SOAL BERIKUTNYA
+       TOMBOL SOAL BERIKUTNYA
        ====================================== */
 
-    btnSoalBerikutnya?.addEventListener(
+    btnBerikutnya?.addEventListener(
         "click",
         function () {
 
@@ -1059,20 +1057,20 @@ function initLatihan() {
 
                 latihanSoalIndex++;
 
-                tampilkanSoal();
-
-            } else {
-
-                alert(
-                    "Latihan soal selesai! 🎉"
-                );
+                tampilkanSoalLatihan();
 
             }
 
         }
     );
 
+
+    console.log(
+        "✅ Init Latihan berhasil."
+    );
+
 }
+
 
 
 /* ==========================================
@@ -1085,10 +1083,33 @@ async function bukaLatihanSoal(
 ) {
 
     console.log(
-        "Membuka latihan:",
+        "📚 Membuka latihan:",
         kategori,
         subbab
     );
+
+
+    /* ======================================
+       CEK FUNGSI BACA DATA
+       ====================================== */
+
+    if (
+        typeof bacaDataLatihan !==
+        "function"
+    ) {
+
+        console.error(
+            "❌ bacaDataLatihan() tidak ditemukan."
+        );
+
+        alert(
+            "Sistem data latihan belum siap."
+        );
+
+        return;
+
+    }
+
 
 
     /* ======================================
@@ -1103,10 +1124,15 @@ async function bukaLatihanSoal(
 
 
     if (
-        !data ||
         !Array.isArray(data) ||
         data.length === 0
     ) {
+
+        console.warn(
+            "⚠️ Data soal kosong:",
+            kategori,
+            subbab
+        );
 
         alert(
             "Data soal belum tersedia."
@@ -1117,8 +1143,9 @@ async function bukaLatihanSoal(
     }
 
 
+
     /* ======================================
-       SIMPAN DATA
+       SIMPAN STATE
        ====================================== */
 
     latihanSoalData =
@@ -1133,6 +1160,7 @@ async function bukaLatihanSoal(
         {};
 
 
+
     latihanKategoriAktif =
         kategori;
 
@@ -1141,27 +1169,17 @@ async function bukaLatihanSoal(
         subbab;
 
 
-    console.log(
-        "Jumlah soal:",
-        latihanSoalData.length
-    );
-
 
     console.log(
-        "Data soal:",
-        latihanSoalData
+        "✅ Data latihan berhasil dibuka:",
+        data
     );
+
 
 
     /* ======================================
-       HALAMAN
+       TAMPILKAN HALAMAN SOAL
        ====================================== */
-
-    const subbabPage =
-        document.getElementById(
-            "latihanSubbabPage"
-        );
-
 
     const soalPage =
         document.getElementById(
@@ -1169,14 +1187,29 @@ async function bukaLatihanSoal(
         );
 
 
-    subbabPage?.classList.remove(
-        "aktif"
-    );
+    const subbabPage =
+        document.getElementById(
+            "latihanSubbabPage"
+        );
 
 
-    soalPage?.classList.add(
-        "aktif"
-    );
+    if (subbabPage) {
+
+        subbabPage.classList.remove(
+            "aktif"
+        );
+
+    }
+
+
+    if (soalPage) {
+
+        soalPage.classList.add(
+            "aktif"
+        );
+
+    }
+
 
 
     /* ======================================
@@ -1185,68 +1218,519 @@ async function bukaLatihanSoal(
 
     const soalJudul =
         document.getElementById(
-            "soalJudul"
+            "latihanSoalJudul"
+        );
+
+
+    const soalInfo =
+        document.getElementById(
+            "latihanSoalInfo"
         );
 
 
     const soalIcon =
         document.getElementById(
-            "soalIcon"
+            "latihanSoalIcon"
         );
+
+
+    const kategoriData =
+        latihanKategoriData[
+            kategori
+        ];
+
+
+    const subbabData =
+        kategoriData?.subbab?.[
+            subbab
+        ];
+
 
 
     if (soalJudul) {
 
         soalJudul.textContent =
+            subbabData?.judul ||
             `${kategori.toUpperCase()} - ${subbab.toUpperCase()}`;
+
+    }
+
+
+    if (soalInfo) {
+
+        soalInfo.textContent =
+            subbabData?.deskripsi ||
+            `Latihan soal ${kategori.toUpperCase()}`;
 
     }
 
 
     if (soalIcon) {
 
-        const kategoriData =
-            latihanKategoriData[
-                kategori
-            ];
-
-
         soalIcon.textContent =
-            kategoriData?.icon || "📝";
+            subbabData?.icon ||
+            kategoriData?.icon ||
+            "📝";
 
     }
+
 
 
     /* ======================================
        TAMPILKAN SOAL PERTAMA
        ====================================== */
 
-    tampilkanSoal();
+    tampilkanSoalLatihan();
 
 }
 
 
+
 /* ==========================================
-   TAMPILKAN SOAL
+   TAMPILKAN SOAL LATIHAN
    ========================================== */
 
-function tampilkanSoal() {
+function tampilkanSoalLatihan() {
 
     const container =
         document.getElementById(
-            "soalContainer"
+            "latihanSoalContainer"
         );
 
 
-    if (
-        !container ||
-        !latihanSoalData.length
-    ) {
+    if (!container) {
+
+        console.error(
+            "❌ latihanSoalContainer tidak ditemukan."
+        );
 
         return;
 
     }
 
+
+    if (
+        !latihanSoalData.length
+    ) {
+
+        container.innerHTML = `
+
+            <div class="soal-kosong">
+
+                <h3>
+                    😕 Soal belum tersedia
+                </h3>
+
+                <p>
+                    Belum ada data soal untuk latihan ini.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+
+    const soal =
+        latihanSoalData[
+            latihanSoalIndex
+        ];
+
+
+    if (!soal) {
+
+        console.error(
+            "❌ Soal tidak ditemukan:",
+            latihanSoalIndex
+        );
+
+        return;
+
+    }
+
+
+
+    /* ======================================
+       IDENTITAS SOAL
+       ====================================== */
+
+    const idSoal =
+        soal.id ??
+        latihanSoalIndex;
+
+
+
+    /* ======================================
+       PERTANYAAN
+       ====================================== */
+
+    const pertanyaan =
+        soal.soal ||
+        soal.pertanyaan ||
+        soal.question ||
+        "Pertanyaan tidak ditemukan.";
+
+
+
+    /* ======================================
+       PILIHAN
+       ====================================== */
+
+    const pilihan =
+        soal.pilihan ||
+        soal.options ||
+        {};
+
+
+
+    /* ======================================
+       GAMBAR
+       ====================================== */
+
+    let gambarHTML = "";
+
+
+    if (
+        soal.gambar &&
+        typeof soal.gambar === "string" &&
+        soal.gambar.trim() !== ""
+    ) {
+
+        gambarHTML = `
+
+            <div class="latihan-gambar-soal">
+
+                <img
+                    src="${soal.gambar}"
+                    alt="Gambar soal"
+                    loading="lazy"
+                >
+
+            </div>
+
+        `;
+
+    }
+
+
+
+    /* ======================================
+       BUAT PILIHAN
+       ====================================== */
+
+    const pilihanHTML =
+        buatPilihanLatihan(
+            pilihan,
+            idSoal
+        );
+
+
+
+    /* ======================================
+       RENDER SOAL
+       ====================================== */
+
+    container.innerHTML = `
+
+        <div
+            class="latihan-soal-card"
+            data-soal-id="${idSoal}"
+        >
+
+
+            <div class="latihan-soal-nomor">
+
+                Soal ${latihanSoalIndex + 1}
+
+            </div>
+
+
+            <div class="latihan-soal-pertanyaan">
+
+                ${pertanyaan}
+
+            </div>
+
+
+            ${gambarHTML}
+
+
+            <div class="latihan-pilihan-jawaban">
+
+                ${pilihanHTML}
+
+            </div>
+
+
+            <div
+                id="latihanPembahasan"
+                class="latihan-pembahasan"
+            ></div>
+
+
+        </div>
+
+    `;
+
+
+
+    /* ======================================
+       UPDATE PROGRESS
+       ====================================== */
+
+    updateProgressLatihan();
+
+
+
+    /* ======================================
+       AKTIFKAN PILIHAN
+       ====================================== */
+
+    aktifkanPilihanLatihan();
+
+}
+
+
+
+/* ==========================================
+   BUAT PILIHAN JAWABAN
+   ========================================== */
+
+function buatPilihanLatihan(
+    pilihan,
+    idSoal
+) {
+
+    /* ======================================
+       FORMAT OBJECT
+       ====================================== */
+
+    if (
+        pilihan &&
+        typeof pilihan === "object" &&
+        !Array.isArray(pilihan)
+    ) {
+
+        return Object.entries(
+            pilihan
+        )
+        .map(
+            function (
+                [huruf, teks]
+            ) {
+
+                return buatTombolPilihan(
+                    huruf,
+                    teks,
+                    idSoal
+                );
+
+            }
+        )
+        .join("");
+
+    }
+
+
+
+    /* ======================================
+       FORMAT ARRAY
+       ====================================== */
+
+    if (
+        Array.isArray(pilihan)
+    ) {
+
+        const huruf =
+            ["A", "B", "C", "D", "E"];
+
+
+        return pilihan
+            .map(
+                function (
+                    jawaban,
+                    index
+                ) {
+
+                    let teks =
+                        jawaban;
+
+
+                    if (
+                        typeof jawaban ===
+                        "object"
+                    ) {
+
+                        teks =
+                            jawaban.teks ||
+                            jawaban.text ||
+                            jawaban.jawaban ||
+                            jawaban.value ||
+                            "";
+
+                    }
+
+
+                    return buatTombolPilihan(
+                        huruf[index],
+                        teks,
+                        idSoal
+                    );
+
+                }
+            )
+            .join("");
+
+    }
+
+
+
+    return `
+
+        <p class="latihan-format-error">
+
+            Format pilihan jawaban tidak ditemukan.
+
+        </p>
+
+    `;
+
+}
+
+
+
+/* ==========================================
+   BUAT SATU TOMBOL PILIHAN
+   ========================================== */
+
+function buatTombolPilihan(
+    huruf,
+    teks,
+    idSoal
+) {
+
+    return `
+
+        <button
+            type="button"
+            class="latihan-pilihan-jawaban-btn"
+            data-jawaban="${huruf}"
+            data-soal-id="${idSoal}"
+        >
+
+            <span class="latihan-jawaban-huruf">
+
+                ${huruf}
+
+            </span>
+
+
+            <span class="latihan-jawaban-teks">
+
+                ${teks}
+
+            </span>
+
+        </button>
+
+    `;
+
+}
+
+
+
+/* ==========================================
+   AKTIFKAN PILIHAN JAWABAN
+   ========================================== */
+
+function aktifkanPilihanLatihan() {
+
+    const tombol =
+        document.querySelectorAll(
+            "#latihanSoalContainer .latihan-pilihan-jawaban-btn"
+        );
+
+
+    tombol.forEach(
+        function (button) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    const jawaban =
+                        this.dataset.jawaban;
+
+
+                    const idSoal =
+                        this.dataset.soalId;
+
+
+
+                    /* ==========================
+                       SIMPAN JAWABAN
+                       ========================== */
+
+                    latihanJawabanUser[
+                        idSoal
+                    ] = jawaban;
+
+
+
+                    /* ==========================
+                       HAPUS PILIHAN LAMA
+                       ========================== */
+
+                    tombol.forEach(
+                        function (btn) {
+
+                            btn.classList.remove(
+                                "dipilih"
+                            );
+
+                        }
+                    );
+
+
+
+                    /* ==========================
+                       AKTIFKAN PILIHAN
+                       ========================== */
+
+                    this.classList.add(
+                        "dipilih"
+                    );
+
+
+
+                    console.log(
+                        "Jawaban dipilih:",
+                        jawaban
+                    );
+
+
+
+                    /* ==========================
+                       PEMBAHASAN
+                       ========================== */
+
+                    tampilkanPembahasanLatihan();
+
+                }
+            );
+
+        }
+    );
+
+
+
+    /* ======================================
+       TANDAI JAWABAN SEBELUMNYA
+       ====================================== */
 
     const soal =
         latihanSoalData[
@@ -1261,180 +1745,216 @@ function tampilkanSoal() {
     }
 
 
-    /* ======================================
-       ELEMENT INFO
-       ====================================== */
-
-    const nomorSoal =
-        document.getElementById(
-            "nomorSoal"
-        );
+    const idSoal =
+        soal.id ??
+        latihanSoalIndex;
 
 
-    const jumlahSoal =
-        document.getElementById(
-            "jumlahSoal"
-        );
-
-
-    const soalInfo =
-        document.getElementById(
-            "soalInfo"
-        );
-
-
-    const progressFill =
-        document.getElementById(
-            "soalProgressFill"
-        );
-
-
-    const btnSebelumnya =
-        document.getElementById(
-            "btnSoalSebelumnya"
-        );
-
-
-    const btnBerikutnya =
-        document.getElementById(
-            "btnSoalBerikutnya"
-        );
-
-
-    /* ======================================
-       DATA PERTANYAAN
-       ====================================== */
-
-    const pertanyaan =
-        soal.soal ||
-        soal.pertanyaan ||
-        soal.question ||
-        "Pertanyaan tidak ditemukan";
-
-
-    /* ======================================
-       GAMBAR
-       ====================================== */
-
-    let gambarHTML = "";
+    const jawabanTersimpan =
+        latihanJawabanUser[
+            idSoal
+        ];
 
 
     if (
-        soal.gambar &&
-        soal.gambar.trim() !== ""
+        jawabanTersimpan
     ) {
 
-        gambarHTML = `
+        const tombolDipilih =
+            document.querySelector(
+                `#latihanSoalContainer .latihan-pilihan-jawaban-btn[data-jawaban="${jawabanTersimpan}"]`
+            );
 
-            <div class="soal-gambar">
 
-                <img
-                    src="${soal.gambar}"
-                    alt="Gambar soal"
-                >
+        tombolDipilih?.classList.add(
+            "dipilih"
+        );
 
-            </div>
+    }
 
-        `;
+}
+
+
+
+/* ==========================================
+   PEMBAHASAN
+   ========================================== */
+
+function tampilkanPembahasanLatihan() {
+
+    const soal =
+        latihanSoalData[
+            latihanSoalIndex
+        ];
+
+
+    if (!soal) {
+
+        return;
 
     }
 
 
-    /* ======================================
-       PILIHAN
-       ====================================== */
+    const pembahasan =
+        soal.pembahasan;
 
-    const pilihanHTML =
-        buatPilihanJawaban(
-            soal.pilihan
+
+    const jawabanBenar =
+        soal.jawaban;
+
+
+
+    const container =
+        document.getElementById(
+            "latihanPembahasan"
         );
 
 
-    /* ======================================
-       TAMPILKAN SOAL
-       ====================================== */
+    if (!container) {
+
+        return;
+
+    }
+
+
+
+    if (
+        !pembahasan &&
+        !jawabanBenar
+    ) {
+
+        container.innerHTML =
+            "";
+
+        return;
+
+    }
+
+
 
     container.innerHTML = `
 
-        <div class="soal-card">
+        <div class="latihan-pembahasan-box">
+
+            ${
+                jawabanBenar
+                    ? `
+                        <strong>
+                            Jawaban: ${jawabanBenar}
+                        </strong>
+                      `
+                    : ""
+            }
 
 
-            <div class="soal-pertanyaan">
-
-                ${pertanyaan}
-
-            </div>
-
-
-            ${gambarHTML}
-
-
-            <div class="soal-pilihan-list">
-
-                ${pilihanHTML}
-
-            </div>
-
+            ${
+                pembahasan
+                    ? `
+                        <p>
+                            ${pembahasan}
+                        </p>
+                      `
+                    : ""
+            }
 
         </div>
 
     `;
 
+}
 
-    /* ======================================
-       INFO NOMOR
-       ====================================== */
+
+
+/* ==========================================
+   UPDATE PROGRESS
+   ========================================== */
+
+function updateProgressLatihan() {
 
     const nomor =
-        latihanSoalIndex + 1;
+        document.getElementById(
+            "latihanNomorSoal"
+        );
+
+
+    const jumlah =
+        document.getElementById(
+            "latihanJumlahSoal"
+        );
+
+
+    const progress =
+        document.getElementById(
+            "latihanProgressFill"
+        );
+
+
+    const btnSebelumnya =
+        document.getElementById(
+            "btnLatihanSoalSebelumnya"
+        );
+
+
+    const btnBerikutnya =
+        document.getElementById(
+            "btnLatihanSoalBerikutnya"
+        );
 
 
     const total =
         latihanSoalData.length;
 
 
-    if (nomorSoal) {
+    const sekarang =
+        latihanSoalIndex + 1;
 
-        nomorSoal.textContent =
-            nomor;
+
+
+    /* ======================================
+       NOMOR
+       ====================================== */
+
+    if (nomor) {
+
+        nomor.textContent =
+            sekarang;
 
     }
 
 
-    if (jumlahSoal) {
+    if (jumlah) {
 
-        jumlahSoal.textContent =
+        jumlah.textContent =
             total;
 
     }
 
-
-    if (soalInfo) {
-
-        soalInfo.textContent =
-            `Latihan soal ${latihanKategoriAktif.toUpperCase()}`;
-
-    }
 
 
     /* ======================================
        PROGRESS BAR
        ====================================== */
 
-    if (progressFill) {
+    if (progress) {
 
-        const progress =
-            (nomor / total) * 100;
+        const persen =
+            total > 0
+                ? (
+                    sekarang /
+                    total
+                ) * 100
+                : 0;
 
 
-        progressFill.style.width =
-            `${progress}%`;
+        progress.style.width =
+            `${persen}%`;
 
     }
 
 
+
     /* ======================================
-       TOMBOL SEBELUMNYA
+       SEBELUMNYA
        ====================================== */
 
     if (btnSebelumnya) {
@@ -1445,8 +1965,9 @@ function tampilkanSoal() {
     }
 
 
+
     /* ======================================
-       TOMBOL BERIKUTNYA
+       BERIKUTNYA
        ====================================== */
 
     if (btnBerikutnya) {
@@ -1463,182 +1984,6 @@ function tampilkanSoal() {
 
             btnBerikutnya.textContent =
                 "Berikutnya →";
-
-        }
-
-    }
-
-
-    /* ======================================
-       AKTIFKAN PILIHAN
-       ====================================== */
-
-    aktifkanPilihanJawaban();
-
-}
-
-
-/* ==========================================
-   BUAT PILIHAN JAWABAN
-   ========================================== */
-
-function buatPilihanJawaban(
-    pilihan
-) {
-
-    /* ======================================
-       JIKA PILIHAN TIDAK ADA
-       ====================================== */
-
-    if (
-        !pilihan ||
-        typeof pilihan !== "object"
-    ) {
-
-        return `
-
-            <p class="soal-error">
-
-                Pilihan jawaban tidak ditemukan.
-
-            </p>
-
-        `;
-
-    }
-
-
-    /* ======================================
-       JSON OBJECT
-       A, B, C, D, E
-       ====================================== */
-
-    return Object.entries(
-        pilihan
-    ).map(
-        function ([huruf, teks]) {
-
-            return `
-
-                <button
-                    type="button"
-                    class="soal-jawaban"
-                    data-jawaban="${huruf}"
-                >
-
-                    <span class="jawaban-label">
-
-                        ${huruf}
-
-                    </span>
-
-
-                    <span class="jawaban-teks">
-
-                        ${teks}
-
-                    </span>
-
-                </button>
-
-            `;
-
-        }
-    ).join("");
-
-}
-
-
-/* ==========================================
-   AKTIFKAN PILIHAN JAWABAN
-   ========================================== */
-
-function aktifkanPilihanJawaban() {
-
-    const tombol =
-        document.querySelectorAll(
-            "#soalContainer .soal-jawaban"
-        );
-
-
-    tombol.forEach(
-        function (button) {
-
-            button.addEventListener(
-                "click",
-                function () {
-
-                    const jawaban =
-                        this.dataset.jawaban;
-
-
-                    /* SIMPAN JAWABAN */
-
-                    latihanJawabanUser[
-                        latihanSoalIndex
-                    ] =
-                        jawaban;
-
-
-                    /* HAPUS PILIHAN SEBELUMNYA */
-
-                    tombol.forEach(
-                        function (btn) {
-
-                            btn.classList.remove(
-                                "dipilih"
-                            );
-
-                        }
-                    );
-
-
-                    /* TANDAI PILIHAN */
-
-                    this.classList.add(
-                        "dipilih"
-                    );
-
-
-                    console.log(
-                        "Jawaban soal",
-                        latihanSoalIndex + 1,
-                        ":",
-                        jawaban
-                    );
-
-                }
-            );
-
-        }
-    );
-
-
-    /* ======================================
-       JIKA SUDAH PERNAH DIPILIH
-       ====================================== */
-
-    const jawabanTersimpan =
-        latihanJawabanUser[
-            latihanSoalIndex
-        ];
-
-
-    if (
-        jawabanTersimpan
-    ) {
-
-        const tombolDipilih =
-            document.querySelector(
-                `#soalContainer .soal-jawaban[data-jawaban="${jawabanTersimpan}"]`
-            );
-
-
-        if (tombolDipilih) {
-
-            tombolDipilih.classList.add(
-                "dipilih"
-            );
 
         }
 
